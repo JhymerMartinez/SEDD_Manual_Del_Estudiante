@@ -1,0 +1,412 @@
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configuraciones Generales &mdash; SEDD - Manual De Usuario  documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="SEDD - Manual De Usuario  documentation" href="../../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+<link rel="stylesheet" href="../../_static/style.css">
+<div id="cabecera">
+  <a href="http://www.unl.edu.ec/"><img src="../../_static/unl.gif" id="logo" border="0" alt="unl" width="90" hight="110"/></a>
+</div>
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">SEDD - Manual De Usuario</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="../../index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Indice General<b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="simple">
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">En esta Página<b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Configuraciones Generales</a><ul>
+<li><a class="reference internal" href="#introduccion">Introducción</a></li>
+<li><a class="reference internal" href="#importaciones-necesarias">Importaciones Necesarias</a></li>
+<li><a class="reference internal" href="#contenido-de-settings-py">Contenido de <strong>settings.py</strong></a><ul>
+<li><a class="reference internal" href="#activando-la-depuracion">Activando la depuración</a></li>
+<li><a class="reference internal" href="#ruta-del-login">Ruta del login</a></li>
+<li><a class="reference internal" href="#administradores">Administradores</a></li>
+<li><a class="reference internal" href="#conexion-con-la-base-de-datos">Conexión con la Base de Datos</a></li>
+<li><a class="reference internal" href="#zona-horaria-lenguaje-y-mas">Zona horaria, lenguaje y mas</a></li>
+<li><a class="reference internal" href="#configuracion-de-la-ruta-para-archivos-estaticos">Configuración de la ruta para archivos estáticos</a></li>
+<li><a class="reference internal" href="#configuracion-de-templates-y-urls">Configuración de templates y urls</a></li>
+<li><a class="reference internal" href="#instalacion-de-aplicaciones">Instalación de aplicaciones</a></li>
+<li><a class="reference internal" href="#logs-backends-y-demas-configuraciones">Logs, Backends y demás Configuraciones</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li>
+  <a href="../../_sources/library/Settings/settings.txt"
+     rel="nofollow">Ver código</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Buscar" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="configuraciones-generales">
+<span id="settings-title"></span><h1>Configuraciones Generales<a class="headerlink" href="#configuraciones-generales" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduccion">
+<span id="settings-intro"></span><h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">¶</a></h2>
+<p>Una parte muy importante del proyecto es saber configurar adecuadamente el archivo <tt class="docutils literal"><span class="pre">settings.py</span></tt>, encargado de la conexión a la base de datos, la zona horaria, el idioma, los directorios principales del proyecto, las aplicaciones del proyecto, entre otras.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Para mas información revisar <a class="reference external" href="http://www.maestrosdelweb.com/editorial/curso-django-instalacion-y-primera-aplicacion/">Primera aplicación en Django</a> o en la documentación oficial: <a class="reference external" href="https://docs.djangoproject.com/en/1.5/ref/settings/">Settings</a> y <a class="reference external" href="https://docs.djangoproject.com/en/1.5/topics/settings/">Django settings</a>.</p>
+</div>
+</div>
+<div class="section" id="importaciones-necesarias">
+<span id="settings-imports"></span><h2>Importaciones Necesarias<a class="headerlink" href="#importaciones-necesarias" title="Permalink to this headline">¶</a></h2>
+<p>Para el presente proyecto se hará uso del paquete <tt class="docutils literal"><span class="pre">os</span></tt> de python que será utilizado para la generación automática de las rutas necerarias para el proyecto:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="contenido-de-settings-py">
+<span id="settings-content"></span><h2>Contenido de <strong>settings.py</strong><a class="headerlink" href="#contenido-de-settings-py" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="activando-la-depuracion">
+<span id="settings-content-debug"></span><h3>Activando la depuración<a class="headerlink" href="#activando-la-depuracion" title="Permalink to this headline">¶</a></h3>
+<p>Se activa la depuración con el fín de mantener contantemente informado sobre algún error que se presente durante el desarrollo de la aplicación:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">DEBUG</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">TEMPLATE_DEBUG</span> <span class="o">=</span> <span class="n">DEBUG</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ruta-del-login">
+<span id="settings-content-login"></span><h3>Ruta del login<a class="headerlink" href="#ruta-del-login" title="Permalink to this headline">¶</a></h3>
+<p>Se establece la ruta para el registro:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">LOGIN_URL</span> <span class="o">=</span> <span class="s">&#39;/login/&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="administradores">
+<span id="settings-content-admin"></span><h3>Administradores<a class="headerlink" href="#administradores" title="Permalink to this headline">¶</a></h3>
+<p>Información sobre los administradores:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ADMINS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="c"># (&#39;Your Name&#39;, &#39;your_email@example.com&#39;),</span>
+<span class="p">)</span>
+
+<span class="n">MANAGERS</span> <span class="o">=</span> <span class="n">ADMINS</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="conexion-con-la-base-de-datos">
+<span id="settings-content-bd-conection"></span><h3>Conexión con la Base de Datos<a class="headerlink" href="#conexion-con-la-base-de-datos" title="Permalink to this headline">¶</a></h3>
+<p>Para este ejemplo usaremos una conexión con una base de datos postgres:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s">&#39;django.db.backends.postgresql_psycopg2&#39;</span><span class="p">,</span>
+        <span class="s">&#39;NAME&#39;</span><span class="p">:</span> <span class="s">&#39;nombre_de_la_BD&#39;</span><span class="p">,</span>
+        <span class="s">&#39;USER&#39;</span><span class="p">:</span> <span class="s">&#39;nombre_de_usuario&#39;</span><span class="p">,</span>
+        <span class="s">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s">&#39;mi_password&#39;</span><span class="p">,</span>
+        <span class="s">&#39;HOST&#39;</span><span class="p">:</span> <span class="s">&#39;localhost&#39;</span><span class="p">,</span>
+        <span class="s">&#39;PORT&#39;</span><span class="p">:</span> <span class="s">&#39;5432&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="zona-horaria-lenguaje-y-mas">
+<span id="settings-content-time-zone"></span><h3>Zona horaria, lenguaje y mas<a class="headerlink" href="#zona-horaria-lenguaje-y-mas" title="Permalink to this headline">¶</a></h3>
+<p>Configuraciones relacionadas con el lenguaje y la zona horaria:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s">&#39;America/Guayaquil&#39;</span>
+
+<span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s">&#39;es-EC&#39;</span>
+<span class="n">SITE_ID</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">USE_I18N</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="n">USE_L10N</span> <span class="o">=</span> <span class="bp">True</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuracion-de-la-ruta-para-archivos-estaticos">
+<span id="settings-content-static-files"></span><h3>Configuración de la ruta para archivos estáticos<a class="headerlink" href="#configuracion-de-la-ruta-para-archivos-estaticos" title="Permalink to this headline">¶</a></h3>
+<p>Rutas usadas por la aplicación para encontrar los archivos estáticos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">MEDIA_ROOT</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+
+<span class="n">MEDIA_URL</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+
+<span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+
+<span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s">&#39;/static/&#39;</span>
+
+<span class="n">ADMIN_MEDIA_PREFIX</span> <span class="o">=</span> <span class="s">&#39;/static/admin/&#39;</span>
+
+<span class="n">STATICFILES_DIRS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s">&#39;</span><span class="si">%s%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">),</span> <span class="s">&#39;/static/&#39;</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">STATICFILES_FINDERS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s">&#39;django.contrib.staticfiles.finders.FileSystemFinder&#39;</span><span class="p">,</span>
+    <span class="s">&#39;django.contrib.staticfiles.finders.AppDirectoriesFinder&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c">#clave encriptada</span>
+
+<span class="n">SECRET_KEY</span> <span class="o">=</span> <span class="s">&#39;cpj4-75y1$65e$ysn9m49d0oo6(fr4!p4b</span><span class="si">%u</span><span class="s">y_%*m3#3=!h6c+&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuracion-de-templates-y-urls">
+<span id="settings-content-templates-urls"></span><h3>Configuración de templates y urls<a class="headerlink" href="#configuracion-de-templates-y-urls" title="Permalink to this headline">¶</a></h3>
+<p>Configuraciones para los templates y urls usados en la aplicación:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">TEMPLATE_LOADERS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s">&#39;django.template.loaders.filesystem.Loader&#39;</span><span class="p">,</span>
+    <span class="s">&#39;django.template.loaders.app_directories.Loader&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">TEMPLATE_CONTEXT_PROCESSORS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s">&quot;django.contrib.auth.context_processors.auth&quot;</span><span class="p">,</span>
+    <span class="s">&quot;django.core.context_processors.debug&quot;</span><span class="p">,</span>
+    <span class="s">&quot;django.core.context_processors.i18n&quot;</span><span class="p">,</span>
+    <span class="s">&quot;django.core.context_processors.media&quot;</span><span class="p">,</span>
+    <span class="s">&quot;django.core.context_processors.static&quot;</span><span class="p">,</span>
+    <span class="s">&quot;django.core.context_processors.request&quot;</span><span class="p">,</span>
+    <span class="s">&quot;django.contrib.messages.context_processors.messages&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">MIDDLEWARE_CLASSES</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s">&#39;django.middleware.common.CommonMiddleware&#39;</span><span class="p">,</span>
+    <span class="s">&#39;django.contrib.sessions.middleware.SessionMiddleware&#39;</span><span class="p">,</span>
+    <span class="s">&#39;django.middleware.csrf.CsrfViewMiddleware&#39;</span><span class="p">,</span>
+    <span class="s">&#39;django.contrib.auth.middleware.AuthenticationMiddleware&#39;</span><span class="p">,</span>
+    <span class="s">&#39;django.contrib.messages.middleware.MessageMiddleware&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Rutas para las urls:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ROOT_URLCONF</span> <span class="o">=</span> <span class="s">&#39;proyecto.urls&#39;</span>
+</pre></div>
+</div>
+<p>Ruta de los templates:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">TEMPLATE_DIRS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s">&#39;</span><span class="si">%s%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">),</span> <span class="s">&#39;/templates&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion-de-aplicaciones">
+<span id="settings-content-installed-apps"></span><h3>Instalación de aplicaciones<a class="headerlink" href="#instalacion-de-aplicaciones" title="Permalink to this headline">¶</a></h3>
+<p>Aplicaciones adicionales para el correcto funcionamiento de la aplicación:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+    <span class="s">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+    <span class="s">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+    <span class="s">&#39;django.contrib.sites&#39;</span><span class="p">,</span>
+    <span class="s">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+    <span class="s">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+
+    <span class="c"># Activando la administración:</span>
+
+    <span class="s">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+
+    <span class="c"># Instalando la aplicación principal</span>
+
+    <span class="s">&#39;proyecto.app&#39;</span><span class="p">,</span>
+
+    <span class="c"># se instalo la libreria Werkzeug para mejorar el DEBUG</span>
+    <span class="c">#que a su vez es llamada mediante django_extensions</span>
+
+    <span class="s">&#39;django_extensions&#39;</span><span class="p">,</span>
+
+    <span class="c"># para migraciones a la BD</span>
+
+    <span class="s">&#39;south&#39;</span><span class="p">,</span>
+
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="logs-backends-y-demas-configuraciones">
+<span id="settings-content-logs-backends"></span><h3>Logs, Backends y demás Configuraciones<a class="headerlink" href="#logs-backends-y-demas-configuraciones" title="Permalink to this headline">¶</a></h3>
+<p>Configuraciones adicionales para los logs, backends y correos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">LOGGING</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;version&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s">&#39;disable_existing_loggers&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span> <span class="c">#False</span>
+    <span class="s">&#39;formatters&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;verbose&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">&#39;format&#39;</span><span class="p">:</span> <span class="s">&#39;[</span><span class="si">%(levelname)s</span><span class="s"> </span><span class="si">%(asctime)s</span><span class="s"> </span><span class="si">%(module)s</span><span class="s">]:  </span><span class="si">%(message)s</span><span class="s">&#39;</span>
+        <span class="p">},</span>
+        <span class="s">&#39;simple&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">&#39;format&#39;</span><span class="p">:</span> <span class="s">&#39;</span><span class="si">%(levelname)s</span><span class="s"> </span><span class="si">%(message)s</span><span class="s">&#39;</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;mail_admins&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">&#39;level&#39;</span><span class="p">:</span> <span class="s">&#39;ERROR&#39;</span><span class="p">,</span>
+            <span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;django.utils.log.AdminEmailHandler&#39;</span>
+        <span class="p">},</span>
+        <span class="s">&#39;filelogapp&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">&#39;level&#39;</span><span class="p">:</span> <span class="s">&#39;DEBUG&#39;</span><span class="p">,</span>
+            <span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;logging.FileHandler&#39;</span><span class="p">,</span>
+            <span class="s">&#39;formatter&#39;</span><span class="p">:</span> <span class="s">&#39;verbose&#39;</span><span class="p">,</span>
+            <span class="s">&#39;filename&#39;</span><span class="p">:</span> <span class="s">&#39;</span><span class="si">%s%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">),</span> <span class="s">&#39;/tmp/sedd.log&#39;</span><span class="p">)</span>
+        <span class="p">},</span>
+
+    <span class="p">},</span>
+    <span class="s">&#39;loggers&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;django.request&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;mail_admins&#39;</span><span class="p">],</span>
+            <span class="s">&#39;level&#39;</span><span class="p">:</span> <span class="s">&#39;ERROR&#39;</span><span class="p">,</span>
+            <span class="s">&#39;propagate&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s">&#39;logapp&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;filelogapp&#39;</span><span class="p">],</span>
+            <span class="s">&#39;level&#39;</span><span class="p">:</span> <span class="s">&#39;DEBUG&#39;</span><span class="p">,</span>
+            <span class="s">&#39;propogate&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">AUTHENTICATION_BACKENDS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="c">#&#39;proyecto.auth_backends.SGAAuthBackend&#39;,</span>
+    <span class="s">&#39;django.contrib.auth.backends.ModelBackend&#39;</span><span class="p">,</span>
+    <span class="s">&#39;proyecto.auth_backends.DNIAuthBackend&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Adicionales:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">###################################################</span>
+<span class="c"># Cuenta web del SGA</span>
+<span class="c">#==================================================</span>
+<span class="n">SGAWS_USER</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="n">SGAWS_PASS</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="c">#==================================================</span>
+
+<span class="c">###################################################</span>
+<span class="c"># Antigua SEDD MySQL database</span>
+<span class="c">#==================================================</span>
+<span class="n">OLD_HOST</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="n">OLD_DBNAME</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="n">OLD_USER</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="n">OLD_PASS</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="c">#==================================================</span>
+
+<span class="c">###################################################</span>
+<span class="c"># Cuenta de correo</span>
+<span class="c">#==================================================</span>
+<span class="n">EMAIL_USE_TLS</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">EMAIL_HOST</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="n">EMAIL_HOST_USER</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="n">EMAIL_HOST_PASSWORD</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="n">EMAIL_PORT</span> <span class="o">=</span> <span class="mi">587</span>
+<span class="c">#==================================================</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Regresar a la cabecera</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, Jhymer Martínez.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,665 @@
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Manejo de Administración &mdash; SEDD - Manual De Usuario  documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="SEDD - Manual De Usuario  documentation" href="../../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+<link rel="stylesheet" href="../../_static/style.css">
+<div id="cabecera">
+  <a href="http://www.unl.edu.ec/"><img src="../../_static/unl.gif" id="logo" border="0" alt="unl" width="90" hight="110"/></a>
+</div>
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">SEDD - Manual De Usuario</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="../../index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Indice General<b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="simple">
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">En esta Página<b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Manejo de Administración</a><ul>
+<li><a class="reference internal" href="#introduccion">Introducción</a></li>
+<li><a class="reference internal" href="#importaciones-necesarias">Importaciones Necesarias</a></li>
+<li><a class="reference internal" href="#clase-preguntaadmin">Clase PreguntaAdmin</a></li>
+<li><a class="reference internal" href="#clase-seccionadmin">Clase SeccionAdmin</a></li>
+<li><a class="reference internal" href="#clase-cuestionarioadmin">Clase CuestionarioAdmin</a></li>
+<li><a class="reference internal" href="#clase-periodoevaluacionadmin">Clase PeriodoEvaluacionAdmin</a></li>
+<li><a class="reference internal" href="#clase-periodoacademicoadmin">Clase PeriodoAcademicoAdmin</a></li>
+<li><a class="reference internal" href="#clase-estudianteperiodoacademicoadmin">Clase EstudiantePeriodoAcademicoAdmin</a></li>
+<li><a class="reference internal" href="#clase-estudianteasignaturadocenteadmin">Clase EstudianteAsignaturaDocenteAdmin</a></li>
+<li><a class="reference internal" href="#clase-asignaturadocenteadmin">Clase AsignaturaDocenteAdmin</a></li>
+<li><a class="reference internal" href="#clase-docenteperiodoacademicoadmin">Clase DocentePeriodoAcademicoAdmin</a></li>
+<li><a class="reference internal" href="#clase-direccioncarreraadmin">Clase DireccionCarreraAdmin</a></li>
+<li><a class="reference internal" href="#clase-asignaturaadmin">Clase AsignaturaAdmin</a></li>
+<li><a class="reference internal" href="#clase-usuarioadmin">Clase UsuarioAdmin</a></li>
+<li><a class="reference internal" href="#clase-configuracionadmin">Clase ConfiguracionAdmin</a></li>
+<li><a class="reference internal" href="#clase-evaluacionadmin">Clase EvaluacionAdmin</a></li>
+<li><a class="reference internal" href="#clase-resultadosadmin">Clase ResultadosAdmin</a></li>
+<li><a class="reference internal" href="#clase-tabulacionadmin">Clase TabulacionAdmin</a></li>
+<li><a class="reference internal" href="#clase-tipoinformanteadmin">Clase TipoInformanteAdmin</a></li>
+<li><a class="reference internal" href="#clases-y-ofertas-en-enlinea">Clases y Ofertas en EnLinea</a><ul>
+<li><a class="reference internal" href="#clase-itempreguntaenlinea">Clase ItemPreguntaEnLinea</a></li>
+<li><a class="reference internal" href="#clase-preguntaenlinea">Clase PreguntaEnLinea</a></li>
+<li><a class="reference internal" href="#clase-subseccionenlinea">Clase SubSeccionEnLinea</a></li>
+<li><a class="reference internal" href="#clase-ofertaacademicasgaenlinea">Clase OfertaAcademicaSGAEnLinea</a></li>
+<li><a class="reference internal" href="#clase-estudianteasignaturadocenteenlinea">Clase EstudianteAsignaturaDocenteEnLinea</a></li>
+<li><a class="reference internal" href="#clase-asignaturadocenteenlinea">Clase AsignaturaDocenteEnLinea</a></li>
+<li><a class="reference internal" href="#clase-contestacionenlinea">Clase ContestacionEnLinea</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#agregacion-de-clases-a-la-administracion">Agregación de Clases a la Administración</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li>
+  <a href="../../_sources/library/Admin/admin.txt"
+     rel="nofollow">Ver código</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Buscar" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="manejo-de-administracion">
+<span id="admin-title"></span><h1>Manejo de Administración<a class="headerlink" href="#manejo-de-administracion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduccion">
+<span id="admin-intro"></span><h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">¶</a></h2>
+<p>El Sitio de administración de Django constituye una Web, limitada a administradores, que permite agregar, editar y eliminar el contenido del sitio. También nos ayuda con la gestión de usuarios si usamos los modelos propios de django</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Para ayuda revisar <a class="reference external" href="http://www.cristalab.com/tutoriales/python-en-la-web-con-django-vi-web-de-administracion-c104286l/">Curso Django: web de administración</a> o en la docuemntación oficial: <a class="reference external" href="https://docs.djangoproject.com/en/1.5/ref/contrib/admin/">The Django admin site</a>.</p>
+</div>
+</div>
+<div class="section" id="importaciones-necesarias">
+<span id="admin-imports"></span><h2>Importaciones Necesarias<a class="headerlink" href="#importaciones-necesarias" title="Permalink to this headline">¶</a></h2>
+<p>Importación del módulo principal para la administración:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+</pre></div>
+</div>
+<p>Para el uso de mensajes personalizados:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">messages</span>
+</pre></div>
+</div>
+<p>Uso de formularios:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
+</pre></div>
+</div>
+<p>Importación del paquete completo de <a class="reference internal" href="../Models/models.html#models-title"><em>Los Modelos</em></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">proyecto.app</span> <span class="kn">import</span> <span class="n">models</span>
+</pre></div>
+</div>
+<p>Importación del <a class="reference internal" href="../Forms/forms.html#form-estudianteasignaturadocenteadminform"><em>Formulario EstudianteAsignaturaDocente</em></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">proyecto.app.forms</span> <span class="kn">import</span> <span class="n">EstudianteAsignaturaDocenteAdminForm</span>
+</pre></div>
+</div>
+<p>Importación del <a class="reference internal" href="../Forms/forms.html#form-asignaturadocenteadminform"><em>Formulario AsignaturaDocente</em></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">proyecto.app.forms</span> <span class="kn">import</span> <span class="n">AsignaturaDocenteAdminForm</span>
+</pre></div>
+</div>
+<p>Para uso de logs:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logg</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&#39;logapp&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-preguntaadmin">
+<span id="admin-preguntaadmin"></span><h2>Clase PreguntaAdmin<a class="headerlink" href="#clase-preguntaadmin" title="Permalink to this headline">¶</a></h2>
+<p>Derivada de la <a class="reference internal" href="../Models/models.html#class-pregunta"><em>Clase Pregunta</em></a> con el fín de agregar nuevas funcionalidades específicas de administración:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">PreguntaAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">inlines</span> <span class="o">=</span> <span class="p">(</span><span class="n">ItemPreguntaEnLinea</span><span class="p">,)</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;seccion&#39;</span><span class="p">,</span><span class="s">&#39;orden&#39;</span><span class="p">,</span> <span class="s">&#39;codigo&#39;</span><span class="p">,</span> <span class="s">&#39;texto&#39;</span><span class="p">,</span> <span class="s">&#39;descripcion&#39;</span><span class="p">,</span> <span class="s">&#39;tipo&#39;</span><span class="p">)</span>
+    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;texto&#39;</span><span class="p">,</span> <span class="s">&#39;descripcion&#39;</span><span class="p">)</span>
+    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;seccion__cuestionario__periodoEvaluacion__periodoAcademico&#39;</span><span class="p">,</span>
+                   <span class="s">&#39;seccion__cuestionario__periodoEvaluacion&#39;</span><span class="p">,</span> <span class="s">&#39;seccion__cuestionario&#39;</span><span class="p">)</span>
+    <span class="n">list_per_page</span> <span class="o">=</span> <span class="mi">30</span>
+</pre></div>
+</div>
+<p>Método sobreescrito.
+Se crean y se agregan los items por defecto solo cuando se trata de la creación de una nueva pregunta:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">save_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">form</span><span class="p">,</span> <span class="n">change</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">change</span><span class="p">:</span>
+        <span class="n">obj</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="k">return</span>
+</pre></div>
+</div>
+<p><tt class="docutils literal"><span class="pre">request</span></tt> es un objeto de tipo WSGIRequest:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">tipo</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s">&#39;tipo&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Solo sí : <strong>Tipo de pregunta:  SeleccionUnica</strong>:</p>
+<div class="highlight-python"><pre>    if tipo=='2':
+        longitud = request.POST['longitud']
+        numeracion = request.POST['numeracion']
+        if longitud == '' or numeracion == '':
+            return
+        # Si se trata de una pregunta de Seleccion por predeterminada
+        obj.save()
+        longitud = int(longitud)
+        if numeracion == '1':
+            for n in range(1, longitud+1):
+                item = models.ItemPregunta(texto=str(n), pregunta=obj, orden=n)
+                item.save()
+        elif numeracion.lower() == 'a':
+            for i,n in enumerate(letters):
+                item = models.ItemPregunta(texto=n, pregunta=obj, orden=i)
+                item.save()
+    # Cualquier otro tipo de pregunta
+    else:
+        obj.save()
+
+class Media:
+    js = ['js/tiny_mce/tiny_mce.js', 'js/tmce_config.js',]</pre>
+</div>
+</div>
+<div class="section" id="clase-seccionadmin">
+<span id="admin-seccionadmin"></span><h2>Clase SeccionAdmin<a class="headerlink" href="#clase-seccionadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">SeccionAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">inlines</span> <span class="o">=</span> <span class="p">(</span><span class="n">SubSeccionEnLinea</span><span class="p">,)</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;cuestionario&#39;</span><span class="p">,</span> <span class="s">&#39;codigo&#39;</span><span class="p">,</span> <span class="s">&#39;nombre&#39;</span><span class="p">,</span> <span class="s">&#39;titulo&#39;</span><span class="p">,</span> <span class="s">&#39;descripcion&#39;</span><span class="p">,</span> <span class="s">&#39;orden&#39;</span><span class="p">,</span> <span class="s">&#39;ponderacion&#39;</span><span class="p">)</span>
+    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;nombre&#39;</span><span class="p">,)</span>
+    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;cuestionario__periodoEvaluacion__periodoAcademico&#39;</span><span class="p">,</span> <span class="s">&#39;cuestionario__periodoEvaluacion&#39;</span><span class="p">,</span>
+                   <span class="s">&#39;cuestionario&#39;</span><span class="p">,</span> <span class="s">&#39;superseccion&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-cuestionarioadmin">
+<span id="admin-cuestionarioadmin"></span><h2>Clase CuestionarioAdmin<a class="headerlink" href="#clase-cuestionarioadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">CuestionarioAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">actions</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;clonar_cuestionario&#39;</span><span class="p">]</span>
+    <span class="c">###inlines = (&#39;SeccionEnLinea&#39;,)</span>
+    <span class="n">save_as</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;periodoEvaluacion__periodoAcademico&#39;</span><span class="p">,</span> <span class="s">&#39;periodoEvaluacion&#39;</span><span class="p">)</span>
+
+    <span class="c"># Accion para copiar un cuestionario en el Admin</span>
+    <span class="k">def</span> <span class="nf">clonar_cuestionario</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">queryset</span><span class="p">):</span>
+        <span class="n">cantidad</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">cantidad</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">objeto</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">all</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">objeto</span><span class="o">.</span><span class="n">clonar</span><span class="p">()</span>
+            <span class="n">mensaje</span> <span class="o">=</span> <span class="s">u&#39;Se ha clonado satisfactoriamente el Cuestinario&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message_user</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">mensaje</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">mensaje</span> <span class="o">=</span> <span class="s">u&#39;Debe seleccionar uno solo Cuestionario! Ha seleccionado </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">cantidad</span><span class="p">))</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">mensaje</span><span class="p">)</span>
+
+    <span class="n">clonar_cuestionario</span><span class="o">.</span><span class="n">short_description</span> <span class="o">=</span> <span class="s">&quot;Crear Copia de Cuestionario&quot;</span>
+
+    <span class="k">class</span> <span class="nc">Media</span><span class="p">:</span>
+        <span class="n">js</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;js/tiny_mce/tiny_mce.js&#39;</span><span class="p">,</span> <span class="s">&#39;js/tmce_config.js&#39;</span><span class="p">,]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-periodoevaluacionadmin">
+<span id="admin-periodoevaluacionadmin"></span><h2>Clase PeriodoEvaluacionAdmin<a class="headerlink" href="#clase-periodoevaluacionadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">PeriodoEvaluacionAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">filter_horizontal</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;areasSGA&#39;</span><span class="p">,)</span>
+    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;periodoAcademico&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-periodoacademicoadmin">
+<span id="admin-periodoacademicoadmin"></span><h2>Clase PeriodoAcademicoAdmin<a class="headerlink" href="#clase-periodoacademicoadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">PeriodoAcademicoAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">filter_horizontal</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;ofertasAcademicasSGA&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-estudianteperiodoacademicoadmin">
+<span id="admin-estudianteperiodoacademicoadmin"></span><h2>Clase EstudiantePeriodoAcademicoAdmin<a class="headerlink" href="#clase-estudianteperiodoacademicoadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">EstudiantePeriodoAcademicoAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;cedula&#39;</span><span class="p">,</span> <span class="s">&#39;__unicode__&#39;</span><span class="p">,</span> <span class="s">&#39;periodoAcademico&#39;</span><span class="p">)</span>
+    <span class="n">list_per_page</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;usuario__username&#39;</span><span class="p">,</span><span class="s">&#39;usuario__cedula&#39;</span><span class="p">,</span><span class="s">&#39;usuario__last_name&#39;</span><span class="p">,</span><span class="s">&#39;usuario__first_name&#39;</span><span class="p">)</span>
+    <span class="n">inlines</span> <span class="o">=</span> <span class="p">(</span><span class="n">EstudianteAsignaturaDocenteEnLinea</span><span class="p">,)</span>
+    <span class="n">raw_id_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;usuario&#39;</span><span class="p">,)</span>
+    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;periodoAcademico&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-estudianteasignaturadocenteadmin">
+<span id="admin-estudianteasignaturadocenteadmin"></span><h2>Clase EstudianteAsignaturaDocenteAdmin<a class="headerlink" href="#clase-estudianteasignaturadocenteadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">EstudianteAsignaturaDocenteAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">raw_id_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;asignaturaDocente&#39;</span><span class="p">,</span><span class="s">&#39;estudiante&#39;</span><span class="p">)</span>
+    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;estudiante__usuario__cedula&#39;</span><span class="p">,</span> <span class="s">&#39;estudiante__usuario__first_name&#39;</span><span class="p">,</span>
+                     <span class="s">&#39;estudiante__usuario__last_name&#39;</span><span class="p">,</span> <span class="s">&#39;asignaturaDocente__asignatura__carrera&#39;</span><span class="p">,</span>
+                     <span class="s">&#39;asignaturaDocente__asignatura__semestre&#39;</span> <span class="p">)</span>
+    <span class="n">list_per_page</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;estudiante&#39;</span><span class="p">,</span> <span class="s">&#39;get_asignatura&#39;</span><span class="p">,</span> <span class="s">&#39;get_area&#39;</span><span class="p">,</span> <span class="s">&#39;get_carrera&#39;</span><span class="p">,</span> <span class="s">&#39;get_semestre&#39;</span><span class="p">,</span> <span class="s">&#39;get_paralelo&#39;</span><span class="p">)</span>
+    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;estudiante__periodoAcademico&#39;</span><span class="p">,)</span>
+
+    <span class="c"># Permitir filtros</span>
+    <span class="k">def</span> <span class="nf">lookup_allowed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s">&#39;asignaturaDocente__asignatura__semestre&#39;</span><span class="p">,):</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">EstudianteAsignaturaDocenteAdmin</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">lookup_allowed</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-asignaturadocenteadmin">
+<span id="admin-asignaturadocenteadmin"></span><h2>Clase AsignaturaDocenteAdmin<a class="headerlink" href="#clase-asignaturadocenteadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">AsignaturaDocenteAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">actions</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;clonar_asignaturadocente&#39;</span><span class="p">]</span>
+    <span class="n">raw_id_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;asignatura&#39;</span><span class="p">,</span><span class="s">&#39;docente&#39;</span><span class="p">)</span>
+    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;docente__usuario__cedula&#39;</span><span class="p">,</span> <span class="s">&#39;docente__usuario__first_name&#39;</span><span class="p">,</span>
+                     <span class="s">&#39;docente__usuario__last_name&#39;</span><span class="p">,</span><span class="s">&#39;asignatura__carrera&#39;</span><span class="p">,</span> <span class="s">&#39;asignatura__nombre&#39;</span><span class="p">,</span>
+                     <span class="s">&#39;asignatura__idSGA&#39;</span> <span class="p">)</span>
+    <span class="n">list_per_page</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span> <span class="s">&#39;get_nombre_corto&#39;</span><span class="p">,</span> <span class="s">&#39;get_carrera&#39;</span><span class="p">,</span> <span class="s">&#39;get_semestre&#39;</span><span class="p">,</span> <span class="s">&#39;get_paralelo&#39;</span><span class="p">)</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;docente&#39;</span><span class="p">,</span><span class="s">&#39;asignatura&#39;</span><span class="p">)</span>
+    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;docente__periodoAcademico&#39;</span><span class="p">,)</span>
+
+    <span class="k">def</span> <span class="nf">validar_clonar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">queryset</span><span class="p">):</span>
+        <span class="n">paralelo</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s">&#39;paralelo&#39;</span><span class="p">]</span>
+        <span class="n">mensaje</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">paralelo</span> <span class="o">==</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+            <span class="n">mensaje</span> <span class="o">=</span> <span class="s">&#39;Debe especificar un Paralelo&#39;</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">mensaje</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="n">cantidad</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">cantidad</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">mensaje</span> <span class="o">=</span> <span class="s">u&#39;Debe seleccionar uno solo Objeto, ha seleccionado </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">cantidad</span><span class="p">))</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">mensaje</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="n">asignaturaDocente</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">all</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">paralelo</span> <span class="o">==</span> <span class="n">asignaturaDocente</span><span class="o">.</span><span class="n">asignatura</span><span class="o">.</span><span class="n">paralelo</span><span class="p">:</span>
+            <span class="n">mensaje</span> <span class="o">=</span> <span class="s">&quot;Se trata del mismo Paralelo, debe clonar la AsignaturaDocente en uno diferente&quot;</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">mensaje</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="n">asignatura</span> <span class="o">=</span> <span class="n">asignaturaDocente</span><span class="o">.</span><span class="n">asignatura</span>
+        <span class="c"># Paralelo que tiene el semestre al cual pertenece AsignaturaDocente</span>
+        <span class="n">consulta</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Asignatura</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">area</span><span class="o">=</span><span class="n">asignatura</span><span class="o">.</span><span class="n">area</span><span class="p">,</span> <span class="n">carrera</span><span class="o">=</span><span class="n">asignatura</span><span class="o">.</span><span class="n">carrera</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">semestre</span><span class="o">=</span><span class="n">asignatura</span><span class="o">.</span><span class="n">semestre</span><span class="p">)</span>
+        <span class="n">paralelos</span> <span class="o">=</span> <span class="n">consulta</span><span class="o">.</span><span class="n">values_list</span><span class="p">(</span><span class="s">&#39;paralelo&#39;</span><span class="p">,</span> <span class="n">flat</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">paralelo</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">paralelos</span><span class="p">:</span>
+            <span class="n">mensaje</span> <span class="o">=</span> <span class="s">&quot;No existe este paralelo en el Semestre {0} de la Carrera {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">asignatura</span><span class="o">.</span><span class="n">semestre</span><span class="p">,</span> <span class="n">asignatura</span><span class="o">.</span><span class="n">carrera</span><span class="p">)</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">mensaje</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">return</span> <span class="bp">True</span>
+
+    <span class="k">def</span> <span class="nf">clonar_asignaturadocente</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">queryset</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Permite crear una Asignatura con el Docente respectivo pero en otro paralelo</span>
+<span class="sd">        de la misma carrera y el mismo semestre. Funcionalidad creada especialmente para</span>
+<span class="sd">        crear aquellas unidades que no existen en el SGA en el caso de las carreras del</span>
+<span class="sd">        Area de la Salud Humana.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">validar_clonar</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">queryset</span><span class="p">):</span>
+            <span class="n">paralelo</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s">&#39;paralelo&#39;</span><span class="p">]</span>
+            <span class="n">asignaturaDocente</span> <span class="o">=</span> <span class="n">queryset</span><span class="o">.</span><span class="n">all</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">asignatura</span> <span class="o">=</span> <span class="n">asignaturaDocente</span><span class="o">.</span><span class="n">asignatura</span>
+            <span class="n">docente</span> <span class="o">=</span> <span class="n">asignaturaDocente</span><span class="o">.</span><span class="n">docente</span>
+            <span class="sd">&quot;&quot;&quot; Obtener los estudiantes del paralelo que no tiene esta asignatura &quot;&quot;&quot;</span>
+            <span class="n">consulta</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">EstudianteAsignaturaDocente</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+                <span class="n">asignaturaDocente__asignatura__area</span><span class="o">=</span><span class="n">asignatura</span><span class="o">.</span><span class="n">area</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+                <span class="n">asignaturaDocente__asignatura__carrera</span><span class="o">=</span><span class="n">asignatura</span><span class="o">.</span><span class="n">carrera</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+                <span class="n">asignaturaDocente__asignatura__semestre</span><span class="o">=</span><span class="n">asignatura</span><span class="o">.</span><span class="n">semestre</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+                <span class="n">asignaturaDocente__asignatura__paralelo</span><span class="o">=</span><span class="n">paralelo</span> <span class="c"># El paralelo en el cual se clonará</span>
+            <span class="p">)</span>
+            <span class="n">estudiantes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">ead</span><span class="o">.</span><span class="n">estudiante</span> <span class="k">for</span> <span class="n">ead</span> <span class="ow">in</span> <span class="n">consulta</span><span class="o">.</span><span class="n">all</span><span class="p">()])</span>
+            <span class="sd">&quot;&quot;&quot; Creación de la Nueva Asignatura y AsignaturaDocente &quot;&quot;&quot;</span>
+            <span class="c"># Se clona el objeto Asignatura , será una nueva entidad</span>
+            <span class="n">asignatura</span><span class="o">.</span><span class="n">pk</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="n">id_unidad</span> <span class="o">=</span> <span class="n">asignatura</span><span class="o">.</span><span class="n">idSGA</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;:&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">asignatura</span><span class="o">.</span><span class="n">idSGA</span> <span class="o">=</span> <span class="s">u&quot;{0}:SEDD&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_unidad</span><span class="p">)</span>
+            <span class="n">asignatura</span><span class="o">.</span><span class="n">paralelo</span> <span class="o">=</span> <span class="n">paralelo</span> <span class="c"># El Paralelo en el cual se clonará</span>
+            <span class="n">asignatura</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="s">u&quot;{0} (Clonado)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">asignatura</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span>
+            <span class="c"># Grabado en la base de datos</span>
+            <span class="n">asignatura</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="c"># Se graba el nuevo Asignatura-Docente</span>
+            <span class="n">models</span><span class="o">.</span><span class="n">AsignaturaDocente</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">docente</span><span class="o">=</span><span class="n">docente</span><span class="p">,</span> <span class="n">asignatura</span><span class="o">=</span><span class="n">asignatura</span><span class="p">)</span>
+            <span class="sd">&quot;&quot;&quot; Se asigna la nueva Asignatura-Docente a todos los estudiantes del Paralelo &quot;&quot;&quot;</span>
+            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">estudiantes</span><span class="p">:</span>
+                <span class="n">models</span><span class="o">.</span><span class="n">EstudianteAsignaturaDocente</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">estudiante</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">asignaturaDocente</span><span class="o">=</span><span class="n">asignaturaDocente</span><span class="p">)</span>
+            <span class="n">mensaje</span> <span class="o">=</span> <span class="s">&quot;Se agregó la asignatura {0} al paralelo {1} (con {2} estudiantes)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">asignatura</span><span class="p">,</span><span class="n">paralelo</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">estudiantes</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message_user</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">mensaje</span><span class="p">)</span>
+
+    <span class="n">clonar_asignaturadocente</span><span class="o">.</span><span class="n">short_description</span> <span class="o">=</span> <span class="s">u&#39;Clonar Asignatura-Docente en otro Paralelo&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-docenteperiodoacademicoadmin">
+<span id="admin-docenteperiodoacademicoadmin"></span><h2>Clase DocentePeriodoAcademicoAdmin<a class="headerlink" href="#clase-docenteperiodoacademicoadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">DocentePeriodoAcademicoAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;cedula&#39;</span><span class="p">,</span> <span class="s">&#39;__unicode__&#39;</span><span class="p">,</span> <span class="s">&#39;periodoAcademico&#39;</span><span class="p">)</span>
+    <span class="n">list_per_page</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;usuario__cedula&#39;</span><span class="p">,</span><span class="s">&#39;usuario__last_name&#39;</span><span class="p">,</span><span class="s">&#39;usuario__first_name&#39;</span><span class="p">)</span>
+    <span class="n">inlines</span> <span class="o">=</span> <span class="p">(</span><span class="n">AsignaturaDocenteEnLinea</span><span class="p">,)</span>
+    <span class="n">raw_id_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;usuario&#39;</span><span class="p">,)</span>
+    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;periodoAcademico&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-direccioncarreraadmin">
+<span id="admin-direccioncarreraadmin"></span><h2>Clase DireccionCarreraAdmin<a class="headerlink" href="#clase-direccioncarreraadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">DireccionCarreraAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">actions</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;actualizar_periodo_academico&#39;</span><span class="p">]</span>
+    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;director__periodoAcademico&#39;</span><span class="p">,)</span>
+    <span class="n">raw_id_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;director&#39;</span><span class="p">,)</span>
+
+    <span class="k">def</span> <span class="nf">actualizar_periodo_academico</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">queryset</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Promueve los directores de carrera al presente Periodo Academico</span>
+<span class="sd">        seleccionando el mismo docente pero del periodo actual.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">periodoAcademico</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Configuracion</span><span class="o">.</span><span class="n">getPeriodoAcademicoActual</span><span class="p">()</span>
+        <span class="n">cont</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">dc</span> <span class="ow">in</span> <span class="n">queryset</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">docente_actual</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DocentePeriodoAcademico</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                    <span class="n">usuario</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">director</span><span class="o">.</span><span class="n">usuario</span><span class="p">,</span> <span class="n">periodoAcademico</span><span class="o">=</span><span class="n">periodoAcademico</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">docente_actual</span><span class="p">:</span>
+                    <span class="n">dc</span><span class="o">.</span><span class="n">director</span> <span class="o">=</span> <span class="n">docente_actual</span>
+                    <span class="n">cont</span> <span class="o">=</span> <span class="n">cont</span> <span class="o">+</span> <span class="mi">1</span>
+                    <span class="n">dc</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+            <span class="k">except</span> <span class="n">models</span><span class="o">.</span><span class="n">DocentePeriodoAcademico</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>
+                <span class="n">logg</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&#39;Docente {0} no encontrado en periodo Actual {1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">dc</span><span class="o">.</span><span class="n">director</span><span class="p">,</span> <span class="n">periodoAcademico</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_user</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s">&#39;Actualizadas {0} Direcciones de Carrera&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cont</span><span class="p">))</span>
+
+    <span class="n">actualizar_periodo_academico</span><span class="o">.</span><span class="n">short_description</span> <span class="o">=</span> <span class="s">u&#39;Actualizar Coordinadores al Periodo Academico Actual&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-asignaturaadmin">
+<span id="admin-asignaturaadmin"></span><h2>Clase AsignaturaAdmin<a class="headerlink" href="#clase-asignaturaadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">AsignaturaAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;carrera&#39;</span><span class="p">,</span><span class="s">&#39;semestre&#39;</span><span class="p">,</span><span class="s">&#39;paralelo&#39;</span><span class="p">,</span> <span class="s">&#39;__unicode__&#39;</span><span class="p">)</span>
+    <span class="n">list_display_links</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;__unicode__&#39;</span><span class="p">,)</span>
+    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;idSGA&#39;</span><span class="p">,</span><span class="s">&#39;area&#39;</span><span class="p">,</span><span class="s">&#39;carrera&#39;</span><span class="p">,</span><span class="s">&#39;semestre&#39;</span><span class="p">,</span><span class="s">&#39;paralelo&#39;</span><span class="p">,</span><span class="s">&#39;nombre&#39;</span><span class="p">,)</span>
+    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;periodoAcademico&#39;</span><span class="p">,</span> <span class="s">&#39;area&#39;</span><span class="p">,</span><span class="s">&#39;carrera&#39;</span><span class="p">,</span><span class="s">&#39;semestre&#39;</span><span class="p">,</span><span class="s">&#39;tipo&#39;</span><span class="p">,)</span>
+    <span class="n">list_per_page</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="c"># TODO: combobox</span>
+    <span class="c">#readonly_fields = (&#39;area&#39;,&#39;carrera&#39;,&#39;semestre&#39;,&#39;paralelo&#39;,&#39;tipo&#39;,)</span>
+    <span class="n">fieldsets</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="s">&#39;Datos Académicos&#39;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="s">&#39;fields&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s">&#39;area&#39;</span><span class="p">,</span> <span class="s">&#39;carrera&#39;</span><span class="p">,</span> <span class="s">&#39;semestre&#39;</span><span class="p">,</span> <span class="s">&#39;paralelo&#39;</span><span class="p">)</span>
+            <span class="p">}),</span>
+        <span class="p">(</span><span class="s">&#39;Asignatura&#39;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="s">&#39;fields&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s">&#39;nombre&#39;</span><span class="p">,</span> <span class="s">&#39;tipo&#39;</span><span class="p">,</span> <span class="s">&#39;creditos&#39;</span><span class="p">)</span>
+            <span class="p">}),</span>
+        <span class="p">(</span><span class="s">&#39;Duracion&#39;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="s">&#39;fields&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s">&#39;duracion&#39;</span><span class="p">,</span> <span class="s">&#39;inicio&#39;</span><span class="p">,</span> <span class="s">&#39;fin&#39;</span><span class="p">,</span> <span class="s">&#39;periodoAcademico&#39;</span><span class="p">)</span>
+            <span class="p">}),</span>
+
+        <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-usuarioadmin">
+<span id="admin-usuarioadmin"></span><h2>Clase UsuarioAdmin<a class="headerlink" href="#clase-usuarioadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">UsuarioAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;username&#39;</span><span class="p">,</span><span class="s">&#39;cedula&#39;</span><span class="p">)</span>
+    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;username&#39;</span><span class="p">,</span><span class="s">&#39;cedula&#39;</span><span class="p">,</span><span class="s">&#39;get_full_name&#39;</span><span class="p">,)</span>
+    <span class="n">list_display_links</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;cedula&#39;</span><span class="p">,</span><span class="s">&#39;get_full_name&#39;</span><span class="p">,)</span>
+    <span class="n">list_per_page</span> <span class="o">=</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-configuracionadmin">
+<span id="admin-configuracionadmin"></span><h2>Clase ConfiguracionAdmin<a class="headerlink" href="#clase-configuracionadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">ConfiguracionAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">actions</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="nf">has_add_permission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+    <span class="k">def</span> <span class="nf">has_delete_permission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-evaluacionadmin">
+<span id="admin-evaluacionadmin"></span><h2>Clase EvaluacionAdmin<a class="headerlink" href="#clase-evaluacionadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">EvaluacionAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="c"># Si no se especifica fields no se muestra la vista de modificacion</span>
+    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;estudianteAsignaturaDocente__estudiante__usuario__cedula&#39;</span><span class="p">,</span>
+                     <span class="s">&#39;estudianteAsignaturaDocente__asignaturaDocente__docente__usuario__cedula&#39;</span><span class="p">,</span>
+                     <span class="s">&#39;docentePeriodoAcademico__usuario__cedula&#39;</span><span class="p">,</span>
+                     <span class="s">&#39;directorCarrera__usuario__cedula&#39;</span><span class="p">)</span>
+    <span class="n">list_per_page</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;cuestionario__periodoEvaluacion__periodoAcademico&#39;</span><span class="p">,</span> <span class="s">&#39;cuestionario__periodoEvaluacion&#39;</span><span class="p">,</span>
+                   <span class="s">&#39;cuestionario__informante&#39;</span><span class="p">,</span>  <span class="s">&#39;fechaInicio&#39;</span><span class="p">,</span> <span class="s">&#39;fechaFin&#39;</span><span class="p">,)</span>
+    <span class="n">date_hierarchy</span> <span class="o">=</span> <span class="s">&#39;fechaFin&#39;</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;cuestionario&#39;</span><span class="p">,</span> <span class="s">&#39;fechaFin&#39;</span><span class="p">,</span> <span class="s">&#39;horaFin&#39;</span><span class="p">)</span>
+    <span class="n">readonly_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;cuestionario&#39;</span><span class="p">,</span> <span class="s">&#39;fechaFin&#39;</span><span class="p">,</span> <span class="s">&#39;horaFin&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">has_add_permission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-resultadosadmin">
+<span id="admin-resultadosadmin"></span><h2>Clase ResultadosAdmin<a class="headerlink" href="#clase-resultadosadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">ResultadosAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-tabulacionadmin">
+<span id="admin-tabulacionadmin"></span><h2>Clase TabulacionAdmin<a class="headerlink" href="#clase-tabulacionadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">TabulacionAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;periodoEvaluacion__periodoAcademico&#39;</span><span class="p">,</span> <span class="s">&#39;periodoEvaluacion&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-tipoinformanteadmin">
+<h2>Clase TipoInformanteAdmin<a class="headerlink" href="#clase-tipoinformanteadmin" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">TipoInformanteAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clases-y-ofertas-en-enlinea">
+<span id="admin-online"></span><h2>Clases y Ofertas en EnLinea<a class="headerlink" href="#clases-y-ofertas-en-enlinea" title="Permalink to this headline">¶</a></h2>
+<p>A continuación una lista de clases que se caracterizan por adquirir <a class="reference internal" href="../Models/models.html#models-title"><em>Los Modelos</em></a> del paquete <tt class="docutils literal"><span class="pre">models</span></tt> con el fin de adicionar ciertos atributos</p>
+<div class="section" id="clase-itempreguntaenlinea">
+<span id="admin-online-itempreguntaenlinea"></span><h3>Clase ItemPreguntaEnLinea<a class="headerlink" href="#clase-itempreguntaenlinea" title="Permalink to this headline">¶</a></h3>
+<p>Esta clase obtiene el modelo de la <a class="reference internal" href="../Models/models.html#class-itempregunta"><em>Clase ItemPregunta</em></a> y se aumenta ciertos atributos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">ItemPreguntaEnLinea</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">StackedInline</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ItemPregunta</span>
+    <span class="n">extra</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-preguntaenlinea">
+<span id="admin-online-preguntaenlinea"></span><h3>Clase PreguntaEnLinea<a class="headerlink" href="#clase-preguntaenlinea" title="Permalink to this headline">¶</a></h3>
+<p>Esta clase obtiene el modelo de la <a class="reference internal" href="../Models/models.html#class-pregunta"><em>Clase Pregunta</em></a> y se aumenta ciertos atributos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">PreguntaEnLinea</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">TabularInline</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Pregunta</span>
+    <span class="n">extra</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-subseccionenlinea">
+<span id="admin-online-subseccionenlinea"></span><h3>Clase SubSeccionEnLinea<a class="headerlink" href="#clase-subseccionenlinea" title="Permalink to this headline">¶</a></h3>
+<p>Esta clase obtiene el modelo de la <a class="reference internal" href="../Models/models.html#class-seccion"><em>Clase Seccion</em></a> y se aumenta ciertos atributos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">SubSeccionEnLinea</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">TabularInline</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Seccion</span>
+    <span class="n">extra</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">verbose_name</span> <span class="o">=</span> <span class="s">u&#39;Subsección&#39;</span>
+    <span class="n">verbose_name_plural</span> <span class="o">=</span> <span class="s">&#39;Subsecciones&#39;</span>
+    <span class="n">exclude</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;cuestionario&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-ofertaacademicasgaenlinea">
+<span id="admin-online-ofertaacademicasgaenlinea"></span><h3>Clase OfertaAcademicaSGAEnLinea<a class="headerlink" href="#clase-ofertaacademicasgaenlinea" title="Permalink to this headline">¶</a></h3>
+<p>Esta clase obtiene el modelo de la <a class="reference internal" href="../Models/models.html#class-ofertaacademicasga"><em>Clase OfertaAcademicaSGA</em></a> y se aumenta ciertos atributos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">OfertaAcademicaSGAEnLinea</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">TabularInline</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">OfertaAcademicaSGA</span>
+    <span class="n">extra</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-estudianteasignaturadocenteenlinea">
+<span id="admin-online-estudianteasignaturadocenteenlinea"></span><h3>Clase EstudianteAsignaturaDocenteEnLinea<a class="headerlink" href="#clase-estudianteasignaturadocenteenlinea" title="Permalink to this headline">¶</a></h3>
+<p>Esta clase obtiene el modelo de la <a class="reference internal" href="../Models/models.html#class-estudianteasignaturadocente"><em>Clase EstudianteAsignaturaDocente</em></a> y se aumenta ciertos atributos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">EstudianteAsignaturaDocenteEnLinea</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">StackedInline</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">EstudianteAsignaturaDocente</span>
+    <span class="n">extra</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">verbose_name</span> <span class="o">=</span> <span class="s">&#39;Asignaturas de Estudiante&#39;</span>
+    <span class="n">raw_id_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;asignaturaDocente&#39;</span><span class="p">,)</span>
+    <span class="c"># fields = (&#39;carrera&#39;,&#39;semestre&#39;,&#39;paralelo&#39;,&#39;asignaturaDocente&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-asignaturadocenteenlinea">
+<span id="admin-online-asignaturadocenteenlinea"></span><h3>Clase AsignaturaDocenteEnLinea<a class="headerlink" href="#clase-asignaturadocenteenlinea" title="Permalink to this headline">¶</a></h3>
+<p>Esta clase obtiene el modelo de la <a class="reference internal" href="../Models/models.html#class-asignaturadocente"><em>Clase AsignaturaDocente</em></a> y se aumenta ciertos atributos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">AsignaturaDocenteEnLinea</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">TabularInline</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">AsignaturaDocente</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">AsignaturaDocenteAdminForm</span>
+    <span class="n">extra</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">verbose_name</span> <span class="o">=</span> <span class="s">&#39;Asignaturas de Docente&#39;</span>
+    <span class="n">raw_id_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;asignatura&#39;</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clase-contestacionenlinea">
+<span id="admin-online-contestacionenlinea"></span><h3>Clase ContestacionEnLinea<a class="headerlink" href="#clase-contestacionenlinea" title="Permalink to this headline">¶</a></h3>
+<p>Esta clase obtiene el modelo de la <a class="reference internal" href="../Models/models.html#class-contestacion"><em>Clase Contestacion</em></a> y se aumenta ciertos atributos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">ContestacionEnLinea</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">TabularInline</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Contestacion</span>
+    <span class="n">extra</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="n">verbose_name</span> <span class="o">=</span> <span class="s">&#39;Respuesta&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="agregacion-de-clases-a-la-administracion">
+<span id="admin-register"></span><h2>Agregación de Clases a la Administración<a class="headerlink" href="#agregacion-de-clases-a-la-administracion" title="Permalink to this headline">¶</a></h2>
+<p>En esta sección se asignan las distintas clases utilizadas para realizar operaciones de administración:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Cuestionario</span><span class="p">,</span><span class="n">CuestionarioAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Seccion</span><span class="p">,</span><span class="n">SeccionAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Pregunta</span><span class="p">,</span><span class="n">PreguntaAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">PeriodoAcademico</span><span class="p">,</span><span class="n">PeriodoAcademicoAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">PeriodoEvaluacion</span><span class="p">,</span><span class="n">PeriodoEvaluacionAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">EstudiantePeriodoAcademico</span><span class="p">,</span> <span class="n">EstudiantePeriodoAcademicoAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">DocentePeriodoAcademico</span><span class="p">,</span> <span class="n">DocentePeriodoAcademicoAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">DireccionCarrera</span><span class="p">,</span> <span class="n">DireccionCarreraAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">EstudianteAsignaturaDocente</span><span class="p">,</span> <span class="n">EstudianteAsignaturaDocenteAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">AsignaturaDocente</span><span class="p">,</span> <span class="n">AsignaturaDocenteAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Asignatura</span><span class="p">,</span> <span class="n">AsignaturaAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Usuario</span><span class="p">,</span> <span class="n">UsuarioAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Configuracion</span><span class="p">,</span> <span class="n">ConfiguracionAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Evaluacion</span><span class="p">,</span> <span class="n">EvaluacionAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Tabulacion</span><span class="p">,</span> <span class="n">TabulacionAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">TipoInformante</span><span class="p">,</span> <span class="n">TipoInformanteAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Resultados</span><span class="p">,</span> <span class="n">ResultadosAdmin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Regresar a la cabecera</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, Jhymer Martínez.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

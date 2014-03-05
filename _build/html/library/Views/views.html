@@ -1,0 +1,1365 @@
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Las vistas y controladores &mdash; SEDD - Manual De Usuario  documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="SEDD - Manual De Usuario  documentation" href="../../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+<link rel="stylesheet" href="../../_static/style.css">
+<div id="cabecera">
+  <a href="http://www.unl.edu.ec/"><img src="../../_static/unl.gif" id="logo" border="0" alt="unl" width="90" hight="110"/></a>
+</div>
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">SEDD - Manual De Usuario</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="../../index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Indice General<b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="simple">
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">En esta Página<b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Las vistas y controladores</a><ul>
+<li><a class="reference internal" href="#introduccion">Introducción</a></li>
+<li><a class="reference internal" href="#importaciones-de-los-modulos-de-django">Importaciones de los modulos de Django</a></li>
+<li><a class="reference internal" href="#importaciones-de-las-demas-clases-del-sistema">Importaciones de las demás clases del Sistema</a></li>
+<li><a class="reference internal" href="#portada">Portada</a></li>
+<li><a class="reference internal" href="#ingreso-al-sistema">Ingreso al Sistema</a></li>
+<li><a class="reference internal" href="#pagina-inicial">Página Inicial</a></li>
+<li><a class="reference internal" href="#evaluaciones-de-los-estudiantes">Evaluaciones de los Estudiantes</a></li>
+<li><a class="reference internal" href="#evaluacion-de-pares-academicos-a-docentes">Evaluacion de Pares Académicos a Docentes</a></li>
+<li><a class="reference internal" href="#evaluaciones-de-directores-a-docentes">Evaluaciones de Directores a Docentes</a></li>
+<li><a class="reference internal" href="#listado-de-encuestas">Listado de Encuestas</a></li>
+<li><a class="reference internal" href="#generacion-de-la-encuesta">Generación de la Encuesta</a></li>
+<li><a class="reference internal" href="#grabacion-de-la-encuesta">Grabación de la Encuesta</a></li>
+<li><a class="reference internal" href="#ofertas-sga">Ofertas SGA</a></li>
+<li><a class="reference internal" href="#resumen-de-evaluaciones-en-modo-administrador">Resumen de Evaluaciones en modo Administrador</a><ul>
+<li><a class="reference internal" href="#resumen-de-evaluaciones">Resumen de Evaluaciones</a></li>
+<li><a class="reference internal" href="#calculos-de-resumen">Calculos de Resumen</a></li>
+<li><a class="reference internal" href="#menu-academico">Menú Académico</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#calculo-y-presentacion-de-resultados">Cálculo y Presentación de resultados</a><ul>
+<li><a class="reference internal" href="#resultados-por-carrera">Resultados por Carrera</a></li>
+<li><a class="reference internal" href="#menu-de-resultados-por-carrera">Menú de resultados por Carrera</a></li>
+<li><a class="reference internal" href="#presentacion-de-resultados">Presentación de Resultados</a></li>
+<li><a class="reference internal" href="#resultados-para-los-administradores">Resultados para los Administradores</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li>
+  <a href="../../_sources/library/Views/views.txt"
+     rel="nofollow">Ver código</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Buscar" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="las-vistas-y-controladores">
+<span id="views-controllers-title"></span><h1>Las vistas y controladores<a class="headerlink" href="#las-vistas-y-controladores" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduccion">
+<span id="views-controllers-intro"></span><h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">¶</a></h2>
+<p>Un función de vista o una vista, como es conocida generalmente, es una función en Python que hace una solicitud Web y devuelve una respuesta Web, esta respuesta puede ser el contenido de una página, un error 404, una imagen, un documento XML, entre muchas cosas más.</p>
+<p>Comunmente se hace uso del archivo <tt class="docutils literal"><span class="pre">views.py</span></tt> para la redacción del código necesario. Pero para el desarrollo del presente sistema se ha modificado el nombre del archivo a <tt class="docutils literal"><span class="pre">controllers.py</span></tt> ubicado en <tt class="docutils literal"><span class="pre">sedd\proyecto\app</span></tt>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Para mas información revisar <a class="reference external" href="http://www.maestrosdelweb.com/editorial/curso-django-las-vistas/">CURSO DJANGO: LAS VISTAS</a>.</p>
+</div>
+</div>
+<div class="section" id="importaciones-de-los-modulos-de-django">
+<span id="views-controllers-imports-django"></span><h2>Importaciones de los modulos de Django<a class="headerlink" href="#importaciones-de-los-modulos-de-django" title="Permalink to this headline">¶</a></h2>
+<p>Primero antes de todo se agrega el sistema de codificación para que acepte caracteres especiales:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#encoding:utf-8</span>
+</pre></div>
+</div>
+<p>Luego agregamos todos los paquetes necesarios para el correcto funcionamiento de las vistas:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+<span class="kn">from</span> <span class="nn">django.core.context_processors</span> <span class="kn">import</span> <span class="n">csrf</span>
+<span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render_to_response</span>
+<span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">redirect</span>
+<span class="kn">from</span> <span class="nn">django.template</span> <span class="kn">import</span> <span class="n">RequestContext</span>
+<span class="kn">from</span> <span class="nn">django.template.loader</span> <span class="kn">import</span> <span class="n">render_to_string</span>
+</pre></div>
+</div>
+<p>Para la autenticación:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">auth</span>
+</pre></div>
+</div>
+<p>Anotaciones para confirmación del login:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">django.contrib.auth.decorators</span> <span class="kn">import</span> <span class="n">login_required</span>
+</pre></div>
+</div>
+<p>Formularios y restricciones:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
+<span class="kn">from</span> <span class="nn">django.forms.forms</span> <span class="kn">import</span> <span class="n">NON_FIELD_ERRORS</span>
+</pre></div>
+</div>
+<p>Consultas avanzadas , mensajes de error y algunas otras adiciones:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">messages</span>
+<span class="kn">from</span> <span class="nn">django.db.models</span> <span class="kn">import</span> <span class="n">Q</span>
+<span class="kn">from</span> <span class="nn">django.utils</span> <span class="kn">import</span> <span class="n">simplejson</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="importaciones-de-las-demas-clases-del-sistema">
+<span id="views-controllers-imports-sistem"></span><h2>Importaciones de las demás clases del Sistema<a class="headerlink" href="#importaciones-de-las-demas-clases-del-sistema" title="Permalink to this headline">¶</a></h2>
+<p>Haciendo uso de los <a class="reference internal" href="../Models/models.html#models-title"><em>Los Modelos</em></a> para usar sus metodo y funciones:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">Configuracion</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">Cuestionario</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">Seccion</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">Pregunta</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">Evaluacion</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">Contestacion</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">AsignaturaDocente</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">EstudianteAsignaturaDocente</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">EstudiantePeriodoAcademico</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">DocentePeriodoAcademico</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">DireccionCarrera</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">Asignatura</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">PeriodoAcademico</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">PeriodoEvaluacion</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">Tabulacion</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">TabulacionSatisfaccion2012</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">TabulacionAdicionales2012</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">TabulacionEvaluacion2013</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">OfertaAcademicaSGA</span>
+<span class="kn">from</span> <span class="nn">proyecto.app.models</span> <span class="kn">import</span> <span class="n">AreaSGA</span>
+</pre></div>
+</div>
+<p>Importación de todos los archivos ubicados en <tt class="docutils literal"><span class="pre">sedd\proyecto\app\forms.py</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">proyecto.app.forms</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>Módulos para autenticación haciendo uso de la red institucional para acceso al SGA:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">proyecto.tools.sgaws.cliente</span> <span class="kn">import</span> <span class="n">SGA</span>
+<span class="kn">from</span> <span class="nn">proyecto.settings</span> <span class="kn">import</span> <span class="n">SGAWS_USER</span><span class="p">,</span> <span class="n">SGAWS_PASS</span>
+</pre></div>
+</div>
+<p>Importaciones para trabajar con fechas y logs:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logg</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">&#39;logapp&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="portada">
+<span id="views-controllers-front"></span><h2>Portada<a class="headerlink" href="#portada" title="Permalink to this headline">¶</a></h2>
+<p>Mediante el uso de la Clase configuración obtenemos el periodo de evaluación actual y a su vez lo envía y renderiza la plantilla <a class="reference internal" href="../Templates/templates.html#template-user-portada-html"><em>Portada</em></a> . La información es enviada haciendo uso de la variable <tt class="docutils literal"><span class="pre">datos</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">portada</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">pea</span> <span class="o">=</span> <span class="n">Configuracion</span><span class="o">.</span><span class="n">getPeriodoEvaluacionActual</span><span class="p">()</span>
+    <span class="n">datos</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">periodoEvaluacionActual</span><span class="o">=</span><span class="n">pea</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&quot;app/portada.html&quot;</span><span class="p">,</span><span class="n">datos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ingreso-al-sistema">
+<span id="views-controllers-login-logout"></span><h2>Ingreso al Sistema<a class="headerlink" href="#ingreso-al-sistema" title="Permalink to this headline">¶</a></h2>
+<p>Para el acceso se hace uso de un registro común mediante un usuario y contraseña. Dichos datos son obtenidos de un formulario y comparados con la información de la base de datos para realizar su verificación:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Se implementó mensajes de error personalizados en caso de que se presente algún error en los datos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">form</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="s">&#39;username&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;Cedula&quot;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+                                          <span class="n">widget</span><span class="o">=</span><span class="n">forms</span><span class="o">.</span><span class="n">TextInput</span><span class="p">(</span><span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="s">&#39;Cedula&#39;</span><span class="p">,}),</span>
+                                          <span class="n">error_messages</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;required&#39;</span><span class="p">:</span><span class="s">&#39;Ingrese nombre de usuario&#39;</span><span class="p">})</span>
+
+
+<span class="n">form</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="s">&#39;password&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;Clave SGA&quot;</span><span class="p">,</span>
+                                          <span class="n">widget</span><span class="o">=</span><span class="n">forms</span><span class="o">.</span><span class="n">PasswordInput</span><span class="p">(</span><span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="s">&#39;Clave SGA-UNL&#39;</span><span class="p">,}),</span>
+                                          <span class="n">error_messages</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;required&#39;</span><span class="p">:</span><span class="s">&#39;Ingrese el password&#39;</span><span class="p">})</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">:</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;username&#39;</span><span class="p">)</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;password&#39;</span><span class="p">)</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">auth</span><span class="o">.</span><span class="n">authenticate</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Controles necesarios en caso de que el usuario este o no activo:</p>
+<div class="highlight-python"><pre>    if user is not None and user.is_active:
+        auth.login(request, user)
+        if not Configuracion.getPeriodoAcademicoActual() or not Configuracion.getPeriodoEvaluacionActual():
+            return redirect('/logout')
+        else:
+            return redirect('/index')
+    else:
+        form.full_clean()
+        form._errors[NON_FIELD_ERRORS] = form.error_class(['Error de usuario o contraseña'])
+data.update(csrf(request))</pre>
+</div>
+<p>Renderiza la plantilla que se presentará <a class="reference internal" href="../Templates/templates.html#template-user-login-html"><em>Login</em></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&quot;app/login.html&quot;</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>El siguiente método se ejecutará para el cierre de sesión del usuario. Su redirección es hacia la raíz (<a class="reference internal" href="../Templates/templates.html#template-user-portada-html"><em>Portada</em></a>) del proyecto:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">logout</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">auth</span><span class="o">.</span><span class="n">logout</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pagina-inicial">
+<span id="views-controllers-index"></span><h2>Página Inicial<a class="headerlink" href="#pagina-inicial" title="Permalink to this headline">¶</a></h2>
+<p>Una véz realizado el registro, el siguiente paso es el acceso a la página inicial.
+La anotación <tt class="docutils literal"><span class="pre">&#64;login_required()</span></tt> permite dar acceso al metodo <tt class="docutils literal"><span class="pre">index()</span></tt> solo en caso de que exista un acceso previo al Sistema caso contrario redirecciona a la página de <a class="reference internal" href="#views-controllers-login-logout"><em>Ingreso al Sistema</em></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s">&#39;/login/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">periodoAcademico</span> <span class="o">=</span> <span class="n">Configuracion</span><span class="o">.</span><span class="n">getPeriodoAcademicoActual</span><span class="p">()</span>
+    <span class="n">usuario</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span>
+    <span class="n">noEstudiante</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">noDocente</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">periodoEvaluacion</span> <span class="o">=</span> <span class="n">Configuracion</span><span class="o">.</span><span class="n">getPeriodoEvaluacionActual</span><span class="p">()</span>
+    <span class="n">datos</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Se obtiene solo las siglas de las areas del periodo de evaluacion actual:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">areas_periodo</span> <span class="o">=</span> <span class="n">periodoEvaluacion</span><span class="o">.</span><span class="n">areasSGA</span><span class="o">.</span><span class="n">values_list</span><span class="p">(</span><span class="s">&#39;siglas&#39;</span><span class="p">,</span> <span class="n">flat</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>En caso de que se trate de un estudiante:</p>
+<div class="highlight-python"><pre>try:
+    estudiante = EstudiantePeriodoAcademico.objects.get(periodoAcademico=periodoAcademico, usuario=usuario)</pre>
+</div>
+<p>Aqui se toma en cuenta solo las carreras que estan dentro de las areas asignadas al presente Periodo de Evaluación:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">carreras_estudiante</span> <span class="o">=</span> <span class="n">estudiante</span><span class="o">.</span><span class="n">asignaturasDocentesEstudiante</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+    <span class="n">asignaturaDocente__asignatura__area__in</span><span class="o">=</span><span class="n">areas_periodo</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">(</span>
+    <span class="s">&#39;asignaturaDocente__asignatura__carrera&#39;</span><span class="p">,</span><span class="s">&#39;asignaturaDocente__asignatura__area&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Se agrega a sesión un diccionario con las carreras del estudiante registrado:</p>
+<div class="highlight-python"><pre>    carreras_estudiante = [ dict(num_carrera=i, nombre=c['asignaturaDocente__asignatura__carrera'],
+                                 area=c['asignaturaDocente__asignatura__area'])
+                            for i,c in enumerate(carreras_estudiante) ]
+    request.session['estudiante'] = estudiante
+    request.session['carreras_estudiante'] = carreras_estudiante
+except EstudiantePeriodoAcademico.DoesNotExist:
+    noEstudiante = True</pre>
+</div>
+<p>En caso de tratarse de un docente:</p>
+<div class="highlight-python"><pre>try:
+    docente = DocentePeriodoAcademico.objects.get(periodoAcademico=periodoAcademico, usuario=usuario)
+    request.session['docente'] = docente
+    if 'ACE' in docente.get_areas():
+        cuestionarios_docente = periodoEvaluacion.cuestionarios.filter(informante__tipo='DocenteIdiomas')
+    else:
+        cuestionarios_docente = periodoEvaluacion.cuestionarios.filter(informante__tipo='Docente')
+    request.session['cuestionarios_docente'] = cuestionarios_docente
+    docente_autoevaluaciones = list()
+    cuestionarios_evaluados = [e.cuestionario for e in docente.evaluaciones.all()]
+    for c in cuestionarios_docente:
+        if c in cuestionarios_evaluados:
+            docente_autoevaluaciones.append(dict(cuestionario=c, evaluado=True))
+        else:
+            docente_autoevaluaciones.append(dict(cuestionario=c, evaluado=False))
+    request.session['docente_autoevaluaciones'] = docente_autoevaluaciones</pre>
+</div>
+<p>En caso de tratarse de un docente DIRECTOR/COORDINADOR DE CARRERA:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">docente</span><span class="o">.</span><span class="n">direcciones</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;director_carrera&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">docente</span>
+    <span class="k">if</span> <span class="s">&#39;ACE&#39;</span> <span class="ow">in</span> <span class="n">docente</span><span class="o">.</span><span class="n">get_areas</span><span class="p">():</span>
+        <span class="n">cuestionarios_directivos</span> <span class="o">=</span> <span class="n">periodoEvaluacion</span><span class="o">.</span><span class="n">cuestionarios</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">informante__tipo</span><span class="o">=</span><span class="s">&#39;DirectivoIdiomas&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">cuestionarios_directivos</span> <span class="o">=</span> <span class="n">periodoEvaluacion</span><span class="o">.</span><span class="n">cuestionarios</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">informante__tipo</span><span class="o">=</span><span class="s">&#39;Directivo&#39;</span><span class="p">)</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;cuestionarios_directivos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cuestionarios_directivos</span>
+</pre></div>
+</div>
+<p>Se agregan las carreras en las que el docente es coordinador o director, incluyendo también el nombre del área a la que pertenece:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">carreras_director</span> <span class="o">=</span> <span class="p">[</span> <span class="nb">dict</span><span class="p">(</span><span class="n">num_carrera</span><span class="o">=</span><span class="n">i</span><span class="p">,</span>
+                          <span class="n">nombre</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">carrera</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;|&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
+                          <span class="n">area</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">carrera</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;|&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span>
+                     <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">dc</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">docente</span><span class="o">.</span><span class="n">direcciones</span><span class="o">.</span><span class="n">all</span><span class="p">())</span> <span class="p">]</span>
+<span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carreras_director&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">carreras_director</span>
+</pre></div>
+</div>
+<p>Si el docente es también PAR ACADEMICO:</p>
+<div class="highlight-python"><pre>elif docente.parAcademico:
+    if 'ACE' in docente.get_areas():
+        cuestionarios_pares_academicos = periodoEvaluacion.cuestionarios.filter(
+            informante__tipo='ParAcademicoIdiomas')
+    else:
+        cuestionarios_pares_academicos = periodoEvaluacion.cuestionarios.filter(
+            informante__tipo='ParAcademico')
+    request.session['cuestionarios_pares_academicos'] = cuestionarios_pares_academicos
+    areas_periodo = periodoEvaluacion.areasSGA.values_list('siglas', flat=True)
+    carreras_pares_academicos = docente.asignaturasDocente.filter(asignatura__area__in=areas_periodo).values(
+        'asignatura__carrera','asignatura__area').distinct()</pre>
+</div>
+<p>De igual manera se almacena un diccionario de carreras del para academico en la session:</p>
+<div class="highlight-python"><pre>carreras_pares_academicos = [ dict(num_carrera=i, nombre=c['asignatura__carrera'],
+                                   area=c['asignatura__area'])
+                              for i,c in enumerate(carreras_pares_academicos) ]
+carreras_aux = [ c['nombre'] for c in carreras_pares_academicos ]
+if docente.carrera and docente.carrera not in carreras_aux:</pre>
+</div>
+<p>En docente solo existe el nombre de la carrera:</p>
+<div class="highlight-python"><pre>    carreras_pares_academicos.append(dict(num_carrera=len(carreras_pares_academicos),
+                                          nombre=docente.carrera,
+                                          area=''))
+aux_carreras = [c['nombre'] for c in carreras_pares_academicos]
+aux_areas = [c['area'] for c in carreras_pares_academicos]</pre>
+</div>
+<p>A continuación también se toma en cuenta los Pares Academicos de Frances y Ruso:</p>
+<div class="highlight-python"><pre>        if 'ACE' in aux_areas and 'Curso de Ingles' in aux_carreras:
+            carreras_pares_academicos.append(dict(num_carrera=len(carreras_pares_academicos),
+                                                  nombre=u'Curso de Francés',
+                                                  area='ACE'))
+            carreras_pares_academicos.append(dict(num_carrera=len(carreras_pares_academicos),
+                                                  nombre=u'Curso de Ruso',
+                                                  area='ACE'))
+        request.session['carreras_pares_academicos'] = carreras_pares_academicos
+
+except DocentePeriodoAcademico.DoesNotExist:
+    noDocente = True</pre>
+</div>
+<p>Si por algún motivo intenta acceder un uuario que no es Estudiante ni Docente en el Periodo Academico Actual:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">noEstudiante</span> <span class="ow">and</span> <span class="n">noDocente</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">&#39;/login/&#39;</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&#39;app/index.html&#39;</span><span class="p">,</span> <span class="n">datos</span><span class="p">,</span> <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="evaluaciones-de-los-estudiantes">
+<span id="views-controllers-evaluation-students"></span><h2>Evaluaciones de los Estudiantes<a class="headerlink" href="#evaluaciones-de-los-estudiantes" title="Permalink to this headline">¶</a></h2>
+<p>Contiene la lógica necesaria para llevar a cabo la evaluación de los Estudiantes:</p>
+<div class="highlight-python"><pre>@login_required(login_url='/login/')
+def estudiante_asignaturas_docentes(request, num_carrera):</pre>
+</div>
+<p>Se recupera el estudiante y sus datos almacenados en sesión:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">estudiante</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;estudiante&#39;</span><span class="p">]</span>
+<span class="n">carrera</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="s">&#39;nombre&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carreras_estudiante&#39;</span><span class="p">]</span>
+           <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="s">&#39;num_carrera&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_carrera</span><span class="p">)</span> <span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">area</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carreras_estudiante&#39;</span><span class="p">]</span>
+           <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="s">&#39;num_carrera&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_carrera</span><span class="p">)</span> <span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carrera&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">carrera</span>
+<span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">area</span>
+<span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;num_carrera&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_carrera</span>
+</pre></div>
+</div>
+<p>Obtenemos los id de las AsignaturasDocente:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ids</span> <span class="o">=</span> <span class="n">estudiante</span><span class="o">.</span><span class="n">asignaturasDocentesEstudiante</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+    <span class="n">asignaturaDocente__asignatura__carrera</span><span class="o">=</span><span class="n">carrera</span><span class="p">,</span> <span class="n">asignaturaDocente__asignatura__area</span><span class="o">=</span><span class="n">area</span><span class="p">)</span><span class="o">.</span><span class="n">values_list</span><span class="p">(</span>
+    <span class="s">&#39;asignaturaDocente__id&#39;</span><span class="p">,</span> <span class="n">flat</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
+<span class="n">asignaturasDocentes</span> <span class="o">=</span> <span class="n">AsignaturaDocente</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">id__in</span><span class="o">=</span><span class="n">ids</span><span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s">&#39;asignatura__nombre&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>El código siguiente es necesario para obtener solo asignaturas distintas:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">asignaturas</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">ad</span><span class="o">.</span><span class="n">asignatura</span> <span class="k">for</span> <span class="n">ad</span> <span class="ow">in</span> <span class="n">asignaturasDocentes</span><span class="p">])</span>
+<span class="n">asignaturas_docentes</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+<p>Los Objetos presentes acontinuación serán renderizados en la vista:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">periodoEvaluacion</span> <span class="o">=</span> <span class="n">Configuracion</span><span class="o">.</span><span class="n">getPeriodoEvaluacionActual</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">asignaturas</span><span class="p">:</span>
+    <span class="n">diccionario</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">diccionario</span><span class="p">[</span><span class="s">&#39;asignatura&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="n">diccionario</span><span class="p">[</span><span class="s">&#39;docentes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+<p>Una asignatura puede tener mas de un docente:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">docentes</span> <span class="o">=</span> <span class="p">[</span><span class="n">ad</span><span class="o">.</span><span class="n">docente</span> <span class="k">for</span> <span class="n">ad</span> <span class="ow">in</span> <span class="n">asignaturasDocentes</span> <span class="k">if</span> <span class="n">ad</span><span class="o">.</span><span class="n">asignatura</span> <span class="o">==</span> <span class="n">a</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">docentes</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">a</span><span class="o">.</span><span class="n">area</span> <span class="o">==</span> <span class="s">&#39;MED&#39;</span><span class="p">:</span>
+        <span class="n">cuestionarios</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">periodoEvaluacion</span><span class="o">.</span><span class="n">cuestionarios</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+                         <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">informante</span><span class="o">.</span><span class="n">tipo</span> <span class="o">==</span> <span class="s">&#39;EstudianteMED&#39;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">a</span><span class="o">.</span><span class="n">area</span> <span class="o">==</span> <span class="s">&#39;ACE&#39;</span><span class="p">:</span>
+        <span class="n">cuestionarios</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">periodoEvaluacion</span><span class="o">.</span><span class="n">cuestionarios</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+                         <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">informante</span><span class="o">.</span><span class="n">tipo</span> <span class="o">==</span> <span class="s">&#39;EstudianteIdiomas&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Aplicable a Modalidad Prescencial:</p>
+<div class="highlight-python"><pre>elif a.semestre == u"1":
+    cuestionarios = [c for c in periodoEvaluacion.cuestionarios.all()
+                     if c.informante.tipo == 'EstudianteNovel']</pre>
+</div>
+<p>Si tienen los mismos cuestionarios que el resto de semestres:</p>
+<div class="highlight-python"><pre>else:
+    cuestionarios = [c for c in periodoEvaluacion.cuestionarios.all()
+                     if c.informante.tipo == 'Estudiante']
+
+estudianteAsignaturaDocente = estudiante.asignaturasDocentesEstudiante.get(
+    asignaturaDocente__asignatura=a, asignaturaDocente__docente=d
+    )</pre>
+</div>
+<p>Si ya ha contestado todos los cuestionario disponibles para el docente &#8216;d&#8217;:</p>
+<div class="highlight-python"><pre>num_evaluaciones = estudianteAsignaturaDocente.evaluaciones.count()
+if num_evaluaciones &gt; 0 and num_evaluaciones == len(cuestionarios):
+    diccionario['docentes'].append(dict(docente=d, evaluado=True))
+else:</pre>
+</div>
+<p>Si no ha contestado aun todos los cuestionario disponibles para el docente &#8216;d&#8217;:</p>
+<div class="highlight-python"><pre>        diccionario['docentes'].append(dict(docente=d, evaluado=False))
+asignaturas_docentes.append(diccionario)</pre>
+</div>
+<p>Para regresar posteriormente a esta vista:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;num_carrera&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_carrera</span><span class="p">)</span>
+<span class="n">title</span> <span class="o">=</span> <span class="s">u&quot;{0}&gt;&gt;{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">area</span><span class="p">,</span><span class="n">carrera</span><span class="p">)</span>
+<span class="n">datos</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">asignaturas_docentes</span><span class="o">=</span><span class="n">asignaturas_docentes</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Renderización de la plantilla <a class="reference internal" href="../Templates/templates.html#template-user-asignaturas-docentes-html"><em>Asignaturas y Docentes</em></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&quot;app/asignaturas_docentes.html&quot;</span><span class="p">,</span> <span class="n">datos</span><span class="p">,</span> <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="evaluacion-de-pares-academicos-a-docentes">
+<span id="views-controllers-evaluation-academic-couple-teachers"></span><h2>Evaluacion de Pares Académicos a Docentes<a class="headerlink" href="#evaluacion-de-pares-academicos-a-docentes" title="Permalink to this headline">¶</a></h2>
+<p>El siguiente método contiene la lógica necesaria para realizar la Evaluación del Par Académico al Docente:</p>
+<div class="highlight-python"><pre>def pares_academicos_docentes(request, num_carrera):</pre>
+</div>
+<p>El Par Academico de la Carrera elije el docente a evaluar:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">par_academico</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;docente&#39;</span><span class="p">]</span>
+<span class="n">carrera</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="s">&#39;nombre&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carreras_pares_academicos&#39;</span><span class="p">]</span>
+           <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="s">&#39;num_carrera&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_carrera</span><span class="p">)][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">area</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carreras_pares_academicos&#39;</span><span class="p">]</span>
+           <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="s">&#39;num_carrera&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_carrera</span><span class="p">)][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carrera&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">carrera</span>
+<span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">area</span>
+<span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;num_carrera&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_carrera</span>
+</pre></div>
+</div>
+<p>Obtenemos los id de los Docentes que dictan Asignaturas en la carrera seleccionada:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ids_docentes</span> <span class="o">=</span> <span class="n">AsignaturaDocente</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+    <span class="n">docente__periodoAcademico</span><span class="o">=</span><span class="n">Configuracion</span><span class="o">.</span><span class="n">getPeriodoAcademicoActual</span><span class="p">(),</span>
+    <span class="n">asignatura__carrera</span><span class="o">=</span><span class="n">carrera</span><span class="p">,</span>
+    <span class="n">asignatura__area</span><span class="o">=</span><span class="n">area</span><span class="p">)</span><span class="o">.</span><span class="n">values_list</span><span class="p">(</span>
+    <span class="s">&#39;docente__id&#39;</span><span class="p">,</span> <span class="n">flat</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Se agregan también los docentes que no tengan Asignaturas pero que pertenezcan a la Carrera:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">docentes</span> <span class="o">=</span> <span class="n">DocentePeriodoAcademico</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+    <span class="n">Q</span><span class="p">(</span><span class="n">periodoAcademico</span><span class="o">=</span><span class="n">Configuracion</span><span class="o">.</span><span class="n">getPeriodoAcademicoActual</span><span class="p">())</span> <span class="ow">and</span>
+    <span class="p">(</span><span class="n">Q</span><span class="p">(</span><span class="n">id__in</span><span class="o">=</span><span class="n">ids_docentes</span><span class="p">)</span> <span class="ow">or</span> <span class="n">Q</span><span class="p">(</span><span class="n">carrera</span><span class="o">=</span><span class="n">carrera</span><span class="p">)))</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span>
+    <span class="s">&#39;usuario__last_name&#39;</span><span class="p">,</span> <span class="s">&#39;usuario__first_name&#39;</span><span class="p">)</span>
+<span class="n">docentes_evaluaciones</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="n">cuestionarios_pares_a</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;cuestionarios_pares_academicos&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>A continuación una comprobación para verificar si los ciertos cuestionarios ya han sido evaluados:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">docentes</span><span class="p">:</span>
+    <span class="n">cuestionarios_evaluados</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">e</span><span class="o">.</span><span class="n">cuestionario</span> <span class="ow">in</span> <span class="n">cuestionarios_pares_a</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">evaluaciones</span><span class="o">.</span><span class="n">all</span><span class="p">()])</span>
+</pre></div>
+</div>
+<p>Comparación entre cuestionarios evaluados y cuestionarios establecidos:</p>
+<div class="highlight-python"><pre>    if cuestionarios_evaluados &gt;= len(cuestionarios_pares_a):
+        docentes_evaluaciones.append(dict(docente=d, evaluado=True))
+    else:
+        docentes_evaluaciones.append(dict(docente=d, evaluado=False))
+docentes_evaluaciones.sort(
+    lambda x,y: cmp(x['docente'].usuario.first_name, y['docente'].usuario.first_name) or
+    cmp(x['docente'].usuario.last_name, y['docente'].usuario.last_name)
+    )
+title = u"{0}&gt;&gt;{1}".format(area, carrera)
+datos = dict(docentes_evaluaciones=docentes_evaluaciones, title=title)</pre>
+</div>
+<p>Renderización al template :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>template-user-pares_academicos_docentes.html`con envio de datos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&#39;app/pares_academicos_docentes.html&#39;</span><span class="p">,</span> <span class="n">datos</span><span class="p">,</span> <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="evaluaciones-de-directores-a-docentes">
+<span id="views-controllers-evaluation-directors-teachers"></span><h2>Evaluaciones de Directores a Docentes<a class="headerlink" href="#evaluaciones-de-directores-a-docentes" title="Permalink to this headline">¶</a></h2>
+<p>A continuaciónse presenta la lógica necesaria para la evaluación de Directores a Docentes Académicos.
+El  Director de Carrera elije los docentes a evaluar:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">director_docentes</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">num_carrera</span><span class="p">):</span>
+    <span class="n">director_carrera</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;director_carrera&#39;</span><span class="p">]</span>
+    <span class="n">carrera</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="s">&#39;nombre&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carreras_director&#39;</span><span class="p">]</span>
+               <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="s">&#39;num_carrera&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_carrera</span><span class="p">)][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carreras_director&#39;</span><span class="p">]</span>
+               <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="s">&#39;num_carrera&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_carrera</span><span class="p">)][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carrera&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">carrera</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">area</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;num_carrera&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_carrera</span>
+</pre></div>
+</div>
+<p>Obtenemos los id de los Docentes que dictan Asignaturas en la carrera seleccionada:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ids_docentes</span> <span class="o">=</span> <span class="n">AsignaturaDocente</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+    <span class="n">docente__periodoAcademico</span><span class="o">=</span><span class="n">Configuracion</span><span class="o">.</span><span class="n">getPeriodoAcademicoActual</span><span class="p">(),</span>
+    <span class="n">asignatura__carrera</span><span class="o">=</span><span class="n">carrera</span><span class="p">,</span>
+    <span class="n">asignatura__area</span><span class="o">=</span><span class="n">area</span><span class="p">)</span><span class="o">.</span><span class="n">values_list</span><span class="p">(</span>
+    <span class="s">&#39;docente__id&#39;</span><span class="p">,</span> <span class="n">flat</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Se agregan también los docentes que no tengan Asignaturas pero que pertenezcan a la Carrera:</p>
+<div class="highlight-python"><pre>docentes = DocentePeriodoAcademico.objects.filter(
+    Q(periodoAcademico=Configuracion.getPeriodoAcademicoActual()) and
+    (Q(id__in=ids_docentes) or Q(carrera=carrera))).order_by(
+    'usuario__last_name', 'usuario__first_name')
+direccion = DireccionCarrera.objects.get(carrera=u'{0}|{1}'.format(carrera, area))
+docentes_evaluaciones = list()
+cuestionarios = request.session['cuestionarios_directivos']
+for d in docentes:</pre>
+</div>
+<p>Cuestionarios disponibles ya han sido evaluados? Forma pythonica de comparar, contar y sumar:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">cuestionarios_evaluados</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">e</span><span class="o">.</span><span class="n">cuestionario</span> <span class="ow">in</span> <span class="n">cuestionarios</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">evaluaciones</span><span class="o">.</span><span class="n">all</span><span class="p">()])</span>
+</pre></div>
+</div>
+<p>Compara cuestionarios evaluados con cuestionarios establecidos:</p>
+<div class="highlight-python"><pre>    if cuestionarios_evaluados &gt;= len(cuestionarios):
+        docentes_evaluaciones.append(dict(docente=d, evaluado=True))
+    else:
+        docentes_evaluaciones.append(dict(docente=d, evaluado=False))
+docentes_evaluaciones.sort(
+    lambda x,y: cmp(x['docente'].usuario.first_name, y['docente'].usuario.first_name) or
+    cmp(x['docente'].usuario.last_name, y['docente'].usuario.last_name)
+    )
+title = u"{0}&gt;&gt;{1}".format(area, carrera)
+datos = dict(docentes_evaluaciones=docentes_evaluaciones, direccion=direccion,title=title)</pre>
+</div>
+<p>Renderización al template :ref:<a href="#id3"><span class="problematic" id="id4">`</span></a>template-user-director_docentes.html`con envio de datos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&#39;app/director_docentes.html&#39;</span><span class="p">,</span> <span class="n">datos</span><span class="p">,</span> <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listado-de-encuestas">
+<span id="views-controllers-poll"></span><h2>Listado de Encuestas<a class="headerlink" href="#listado-de-encuestas" title="Permalink to this headline">¶</a></h2>
+<p>Elsiguiente código tiene la finalidad el listar las encuestas para los informantes en el presente periodo de evaluación:</p>
+<div class="highlight-python"><pre>def encuestas(request, id_docente, id_asignatura=0, id_tinformante=0, id_cuestionario=0):</pre>
+</div>
+<p>El parámetro <tt class="docutils literal"><span class="pre">id_docente</span></tt> representa el Docente a ser evaluado
+El parámetro <tt class="docutils literal"><span class="pre">id_asignatura</span></tt> contiene la asignatura que dicta el docente a evaluar
+El parámetro <tt class="docutils literal"><span class="pre">id_informante</span></tt> contiene el Id Tipo Informante, por ejemplo: 1 Estudiante, 5 Docente, 6 Directivo
+El parámetro <tt class="docutils literal"><span class="pre">id_cuestionario</span></tt> Solo se usa en el caso de cuestionarios para docentes.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">datos</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">title</span><span class="o">=</span><span class="s">&#39;&#39;</span>
+<span class="n">periodoEvaluacionActual</span> <span class="o">=</span> <span class="n">Configuracion</span><span class="o">.</span><span class="n">getPeriodoEvaluacionActual</span><span class="p">()</span>
+<span class="n">cuestionarios</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">periodo_finalizado</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">periodo_no_iniciado</span> <span class="o">=</span> <span class="bp">False</span>
+</pre></div>
+</div>
+<p>En caso de Periodo no iniciado aun:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">periodoEvaluacionActual</span><span class="o">.</span><span class="n">noIniciado</span><span class="p">():</span>
+    <span class="n">periodo_no_iniciado</span> <span class="o">=</span> <span class="bp">True</span>
+</pre></div>
+</div>
+<p>En caso de Periodo Vigente:</p>
+<div class="highlight-python"><pre>elif periodoEvaluacionActual.vigente():</pre>
+</div>
+<p>Si se ha ingresado como ESTUDIANTE:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">id_tinformante</span> <span class="o">==</span> <span class="s">&#39;1&#39;</span><span class="p">:</span>
+    <span class="n">estudiante</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;estudiante&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Se maneja las siglas del Area en la session:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">area</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span>
+<span class="n">carrera</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carrera&#39;</span><span class="p">]</span>
+<span class="n">asignaturaDocente</span> <span class="o">=</span> <span class="n">AsignaturaDocente</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">docente__id</span><span class="o">=</span><span class="n">id_docente</span><span class="p">,</span> <span class="n">asignatura__id</span><span class="o">=</span><span class="n">id_asignatura</span><span class="p">)</span>
+<span class="n">estudianteAsignaturaDocente</span> <span class="o">=</span> <span class="n">EstudianteAsignaturaDocente</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+    <span class="n">estudiante</span><span class="o">=</span><span class="n">estudiante</span><span class="p">,</span> <span class="n">asignaturaDocente</span><span class="o">=</span><span class="n">asignaturaDocente</span><span class="p">)</span>
+<span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;estudianteAsignaturaDocente&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">estudianteAsignaturaDocente</span>
+<span class="n">title</span> <span class="o">=</span> <span class="s">u&quot;{0}&gt;&gt;{1}&gt;&gt;{2}&gt;&gt;{3}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="n">carrera</span><span class="p">,</span> <span class="n">asignaturaDocente</span><span class="o">.</span><span class="n">asignatura</span><span class="o">.</span><span class="n">nombre</span><span class="p">,</span>
+                                     <span class="n">asignaturaDocente</span><span class="o">.</span><span class="n">docente</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">asignaturaDocente</span><span class="o">.</span><span class="n">asignatura</span><span class="o">.</span><span class="n">area</span> <span class="o">==</span> <span class="s">&#39;MED&#39;</span><span class="p">:</span>
+    <span class="n">cuestionarios</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">periodoEvaluacionActual</span><span class="o">.</span><span class="n">cuestionarios</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+                     <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">informante</span><span class="o">.</span><span class="n">tipo</span> <span class="o">==</span> <span class="s">&#39;EstudianteMED&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Estudiante (Asignatura) del Instituto de Idiomas:</p>
+<div class="highlight-python"><pre>elif asignaturaDocente.asignatura.area == "ACE":
+    cuestionarios = [c for c in periodoEvaluacionActual.cuestionarios.all()
+                     if c.informante.tipo == 'EstudianteIdiomas']</pre>
+</div>
+<p>Estudiante del Primer Semestre:</p>
+<div class="highlight-python"><pre>elif asignaturaDocente.asignatura.semestre == u"1":
+    cuestionarios = [c for c in periodoEvaluacionActual.cuestionarios.all()
+                     if c.informante.tipo == 'EstudianteNovel']</pre>
+</div>
+<p>Si los cuestionarios son los mismos para todos los semestres.</p>
+<blockquote>
+<div></div></blockquote>
+<p>Estudiante del segundo semestre en adelante:</p>
+<div class="highlight-python"><pre>else:
+    cuestionarios = [c for c in periodoEvaluacionActual.cuestionarios.all()
+                 if c.informante.tipo == 'Estudiante']</pre>
+</div>
+<p>Si ya ha contestado todos los cuestionario disponibles. Para esto se realiza una comprobación para verificar si existen cuestionarios disponibles:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">evaluados</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">e</span><span class="o">.</span><span class="n">cuestionario</span> <span class="ow">in</span> <span class="n">cuestionarios</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">estudianteAsignaturaDocente</span><span class="o">.</span><span class="n">evaluaciones</span><span class="o">.</span><span class="n">all</span><span class="p">()])</span>
+</pre></div>
+</div>
+<p>Comparación entre cuestionarios evaluados y cuestionarios establecidos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">evaluados</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cuestionarios</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">&#39;/estudiante/asignaturas/docentes/&#39;</span> <span class="o">+</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;num_carrera&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>La siguiente sección de código es ejecutado en el caso de que el usuario ha ingresado como docente y es DIRECTOR DE CARRERA:</p>
+<div class="highlight-python"><pre>elif id_tinformante == '6': #Tambien DirectorIdiomas
+
+    # Se maneja las siglas del Area en la sesion
+
+    director_carrera = request.session['director_carrera']
+    area = request.session.get('area', None)
+    carrera = request.session.get('carrera', None)
+    docente_evaluar = DocentePeriodoAcademico.objects.get(id=id_docente)
+    request.session['docente_evaluar'] = docente_evaluar
+    title = u"{0}&gt;&gt;{1}&gt;&gt;Coordinador: {2}".format(area, carrera, director_carrera)
+    cuestionarios = request.session['cuestionarios_directivos']
+    datos.update(dict(docente_evaluar=docente_evaluar))
+
+    # Cuestionarios disponibles ya han sido evaluados? Forma pythonica de comparar, contar y sumar
+
+    evaluados = sum([e.cuestionario in cuestionarios for e in docente_evaluar.evaluaciones.all()])</pre>
+</div>
+<p>Comparación entre cuestionarios evaluados y cuestionarios establecidos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">evaluados</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cuestionarios</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">&#39;/director/docentes/&#39;</span> <span class="o">+</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;num_carrera&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>La siguiente sección de código es ejecutado en el caso de que el usuario ha ingresado como docente y es PAR ACADEMICO:</p>
+<div class="highlight-python"><pre>elif id_tinformante == '10': #Tambien ParAcademicoIdiomas
+
+    # Se maneja las siglas del Area en la sesion
+
+    par_academico = request.session['docente']
+    area = request.session.get('area', None)
+    carrera = request.session.get('carrera', None)
+    docente_evaluar = DocentePeriodoAcademico.objects.get(id=id_docente)
+    request.session['docente_evaluar'] = docente_evaluar
+    title = u"{0}&gt;&gt;{1}&gt;&gt;Par Académico: {2}".format(area, carrera, par_academico)
+    cuestionarios = request.session['cuestionarios_pares_academicos']
+    datos.update(dict(docente_evaluar=docente_evaluar))
+
+    # Cuestionarios disponibles ya han sido evaluados? Forma pythonica de comparar, contar y sumar
+
+    evaluados = sum([e.cuestionario in cuestionarios for e in docente_evaluar.evaluaciones.all()])</pre>
+</div>
+<p>Comparación cuestionarios evaluados y cuestionarios establecidos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">evaluados</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cuestionarios</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">&#39;/pares_academicos/docentes/&#39;</span> <span class="o">+</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;num_carrera&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>La siguiente sección de código es ejecutado en el caso de que el usuario es DOCENTE:</p>
+<div class="highlight-python"><pre>elif id_tinformante == '5' and id_cuestionario: # Tambien DocenteIdiomas</pre>
+</div>
+<p>Se filtra la petición de encuestas de autoevaluacion de docentes desde el index por este controlador para reutilizar la validación de vigencia de PeridoEvaluacion:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">&#39;/encuesta/responder/&#39;</span> <span class="o">+</span> <span class="n">id_cuestionario</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Si ha expirado el periodo de Evaluacion:</p>
+<div class="highlight-python"><pre>elif periodoEvaluacionActual.finalizado():
+    periodo_finalizado = True
+datos.update(dict(cuestionarios=cuestionarios, title=title,
+             periodo_no_iniciado=periodo_no_iniciado, periodo_finalizado=periodo_finalizado))</pre>
+</div>
+<p>Renderización al template :ref:<a href="#id5"><span class="problematic" id="id6">`</span></a>template-user-encuestas.html`con envio de datos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&quot;app/encuestas.html&quot;</span><span class="p">,</span> <span class="n">datos</span><span class="p">,</span> <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="generacion-de-la-encuesta">
+<span id="views-controllers-poll-create"></span><h2>Generación de la Encuesta<a class="headerlink" href="#generacion-de-la-encuesta" title="Permalink to this headline">¶</a></h2>
+<p>La finalidad de este código es generar y presentar la encuesta que será comletada por los estudiantes, Directores de carrera, pares académicos y Docentes en general para autoevaluacion:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">encuesta_responder</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">id_cuestionario</span><span class="p">):</span>
+    <span class="n">datos</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="n">cuestionario</span> <span class="o">=</span> <span class="n">Cuestionario</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">id_cuestionario</span><span class="p">)</span>
+    <span class="n">evaluacion</span> <span class="o">=</span> <span class="n">Evaluacion</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">cuestionario</span><span class="o">.</span><span class="n">informante</span><span class="o">.</span><span class="n">tipo</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;Estudiante&#39;</span><span class="p">):</span>
+        <span class="n">area</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span>
+        <span class="n">carrera</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carrera&#39;</span><span class="p">]</span>
+        <span class="n">estudianteAsignaturaDocente</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;estudianteAsignaturaDocente&#39;</span><span class="p">]</span>
+        <span class="n">evaluacion</span><span class="o">.</span><span class="n">estudianteAsignaturaDocente</span> <span class="o">=</span> <span class="n">estudianteAsignaturaDocente</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="s">u&quot;{0}&gt;&gt;{1}&gt;&gt;{2}&gt;&gt;{3}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="n">carrera</span><span class="p">,</span>
+                                             <span class="n">estudianteAsignaturaDocente</span><span class="o">.</span><span class="n">asignaturaDocente</span><span class="o">.</span><span class="n">asignatura</span><span class="o">.</span><span class="n">nombre</span><span class="p">,</span>
+                                             <span class="n">estudianteAsignaturaDocente</span><span class="o">.</span><span class="n">asignaturaDocente</span><span class="o">.</span><span class="n">docente</span>
+                                             <span class="p">)</span>
+        <span class="n">datos</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">asignaturaDocente</span><span class="o">=</span><span class="n">estudianteAsignaturaDocente</span><span class="o">.</span><span class="n">asignaturaDocente</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Encuesta para DIRECTORES DE CARRERA:</p>
+<div class="highlight-python"><pre>elif cuestionario.informante.tipo.startswith('Directivo'):
+    area = request.session['area']
+    carrera = request.session['carrera']
+    director_carrera = request.session['director_carrera']
+    docente_evaluar = request.session['docente_evaluar']
+    title = u"{0}&gt;&gt;{1}&gt;&gt;{2}".format(area, carrera, docente_evaluar)
+    evaluacion.directorCarrera = director_carrera
+    evaluacion.carreraDirector = u'{0}|{1}'.format(carrera, area)
+    evaluacion.docentePeriodoAcademico = docente_evaluar</pre>
+</div>
+<p>Encuesta para PARES ACADEMICOS:</p>
+<div class="highlight-python"><pre>elif cuestionario.informante.tipo.startswith('ParAcademico'):
+    area = request.session['area']
+    carrera = request.session['carrera']
+    par_academico = request.session['docente']
+    docente_evaluar = request.session['docente_evaluar']
+    title = u"{0}&gt;&gt;{1}&gt;&gt;{2}".format(area, carrera, docente_evaluar)
+    evaluacion.parAcademico = par_academico
+    evaluacion.docentePeriodoAcademico = docente_evaluar</pre>
+</div>
+<p>Encuesta para Autoevaluacion de DOCENTES:</p>
+<div class="highlight-python"><pre>elif cuestionario.informante.tipo.startswith('Docente'):</pre>
+</div>
+<p>En caso de que el docente sea a la vez director de carrera:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">docente</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;director_carrera&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="n">docente</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;docente&#39;</span><span class="p">]</span>
+<span class="k">elif</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;docente&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="n">docente</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;docente&#39;</span><span class="p">]</span>
+<span class="n">evaluacion</span><span class="o">.</span><span class="n">docentePeriodoAcademico</span> <span class="o">=</span> <span class="n">docente</span>
+</pre></div>
+</div>
+<p>Areas en las que dicta clases el docente:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">areas_docente</span> <span class="o">=</span> <span class="n">AsignaturaDocente</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">docente</span><span class="o">=</span><span class="n">docente</span><span class="p">)</span><span class="o">.</span><span class="n">values_list</span><span class="p">(</span><span class="s">&#39;asignatura__area&#39;</span><span class="p">,</span> <span class="n">flat</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
+<span class="n">areas_docente</span> <span class="o">=</span> <span class="s">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">areas_docente</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Carreras en las que dicta clases el docente:</p>
+<div class="highlight-python"><pre>    carreras_docente = AsignaturaDocente.objects.filter(docente=docente).values_list(
+        'asignatura__carrera', flat=True).distinct()
+    carreras_docente = ','.join(carreras_docente)
+    request.session['areas_docente'] = areas_docente
+    request.session['carreras_docente'] = carreras_docente
+    title = u'{0}&gt;&gt;{1}&gt;&gt;{2}'.format(areas_docente, carreras_docente, docente)
+
+evaluacion.fechaInicio = datetime.now().date()
+evaluacion.horaInicio = datetime.now().time()
+evaluacion.cuestionario = cuestionario
+request.session['evaluacion'] = evaluacion
+fecha = datetime.now()
+datos.update(dict(cuestionario=cuestionario, title=title, fecha=fecha))</pre>
+</div>
+<p>Parametro adicional por cuestion del formulario:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">datos</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">csrf</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Renderización al template :ref:<a href="#id7"><span class="problematic" id="id8">`</span></a>template-user-encuesta_responder.html`con envio de datos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&quot;app/encuesta_responder.html&quot;</span><span class="p">,</span> <span class="n">datos</span><span class="p">,</span> <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="grabacion-de-la-encuesta">
+<span id="views-controllers-poll-save"></span><h2>Grabación de la Encuesta<a class="headerlink" href="#grabacion-de-la-encuesta" title="Permalink to this headline">¶</a></h2>
+<p>El presente código tiene la finalidad de grabar la encuesta una vez que ha sido desarrollada por los estudiantes o docentes adecuados:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">encuesta_grabar</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">datos</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">num_carrera</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;num_carrera&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">))</span>
+    <span class="n">evaluacion</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;evaluacion&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>En caso de intentar dar nuevamente la encuesta terminada se redirecciona a <a class="reference internal" href="../Templates/templates.html#template-user-encuesta-finalizada-html"><em>Encuesta Finalizada</em></a></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="ow">not</span> <span class="n">evaluacion</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&#39;app/encuesta_finalizada.html&#39;</span><span class="p">,</span> <span class="n">datos</span><span class="p">,</span> <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Finalización de la encuesta dirigida a ESTUDIANTES:</p>
+<div class="highlight-python"><pre>if evaluacion.cuestionario.informante.tipo.startswith('Estudiante'):</pre>
+</div>
+<p>::
+Si se regresa a grabar otra vez la misma encuesta:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">Evaluacion</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">estudianteAsignaturaDocente</span> <span class="o">=</span> <span class="n">estudianteAsignaturaDocente</span>
+                             <span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">cuestionario</span> <span class="o">=</span> <span class="n">evaluacion</span><span class="o">.</span><span class="n">cuestionario</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;evaluacion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;estudianteAsignaturaDocente&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&#39;app/encuesta_finalizada.html&#39;</span><span class="p">,</span>
+                          <span class="n">datos</span><span class="p">,</span> <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Finalización de la Encuesta dirigida a DIRECTORES DE CARRERA:</p>
+<div class="highlight-python"><pre>elif evaluacion.cuestionario.informante.tipo.startswith('Directivo'):
+    docente_evaluar = request.session['docente_evaluar']
+    director_carrera = request.session['director_carrera']</pre>
+</div>
+<p>Si ya ha contestado este cuestionario y se intenta grabar otra vez:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">docente_evaluar</span><span class="o">.</span><span class="n">evaluaciones</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">cuestionario</span><span class="o">=</span><span class="n">evaluacion</span><span class="o">.</span><span class="n">cuestionario</span><span class="p">,</span>
+                                       <span class="n">directorCarrera</span><span class="o">=</span><span class="n">director_carrera</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;evaluacion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&#39;app/encuesta_finalizada.html&#39;</span><span class="p">,</span> <span class="n">datos</span><span class="p">,</span>
+                              <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Finalización de la encuesta dirigida a PARES ACADEMICOS:</p>
+<div class="highlight-python"><pre>elif evaluacion.cuestionario.informante.tipo.startswith('ParAcademico'):
+    docente_evaluar = request.session['docente_evaluar']
+    par_academico = request.session['docente']</pre>
+</div>
+<p>Si ya ha contestado este cuestionario y se intenta grabar otra vez:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">docente_evaluar</span><span class="o">.</span><span class="n">evaluaciones</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">cuestionario</span><span class="o">=</span><span class="n">evaluacion</span><span class="o">.</span><span class="n">cuestionario</span><span class="p">,</span>
+                                       <span class="n">parAcademico</span><span class="o">=</span><span class="n">par_academico</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;evaluacion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&#39;app/encuesta_finalizada.html&#39;</span><span class="p">,</span> <span class="n">datos</span><span class="p">,</span>
+                              <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Finalización de la Encuesta dirigida a DOCENTES:</p>
+<div class="highlight-python"><pre>elif evaluacion.cuestionario.informante.tipo.startswith('Docente'):
+    docente = request.session.get('docente', None)</pre>
+</div>
+<p>Si ya ha contestado este cuestionario y se intenta grabar otra vez:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">docente</span><span class="o">.</span><span class="n">evaluaciones</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">cuestionario</span><span class="o">=</span><span class="n">evaluacion</span><span class="o">.</span><span class="n">cuestionario</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;evaluacion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&#39;app/encuesta_finalizada.html&#39;</span><span class="p">,</span> <span class="n">datos</span><span class="p">,</span>
+                              <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Grabacion luego de las validaciones:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">evaluacion</span><span class="o">.</span><span class="n">fechaFin</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+<span class="n">evaluacion</span><span class="o">.</span><span class="n">horaFin</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">evaluacion</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;csrf&#39;</span><span class="p">):</span>
+        <span class="k">continue</span>
+    <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;pregunta&#39;</span><span class="p">):</span>
+        <span class="n">id_pregunta</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;-&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">observaciones</span> <span class="o">=</span> <span class="bp">None</span>
+</pre></div>
+</div>
+<p>Solo se graban las observaciones de las preguntas respondidas:</p>
+<div class="highlight-python"><pre>        if Pregunta.objects.get(id=id_pregunta).observaciones:
+            observaciones = request.POST['observaciones-pregunta-' + str(id_pregunta)]
+        contestacion = Contestacion(pregunta=id_pregunta, respuesta=v, observaciones=observaciones)
+        contestacion.evaluacion = evaluacion
+        contestacion.save()
+logg.info("Nueva Evaluacion realizada: {0}".format(evaluacion))</pre>
+</div>
+<p>Una vez terminada la encuesta se redirecciona a <a class="reference internal" href="../Templates/templates.html#template-user-encuesta-finalizada-html"><em>Encuesta Finalizada</em></a></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&#39;app/encuesta_finalizada.html&#39;</span><span class="p">,</span> <span class="n">datos</span><span class="p">,</span> <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ofertas-sga">
+<span id="views-controllers-load-deals-sga"></span><h2>Ofertas SGA<a class="headerlink" href="#ofertas-sga" title="Permalink to this headline">¶</a></h2>
+<p>El método descrito a continuación se invoca a traves de AJAX conla finalidad de recargar todas las ofertas presentes en en SGA:</p>
+<div class="highlight-python"><pre>def cargar_ofertas_sga(request, periodoAcademicoId):</pre>
+</div>
+<p>En caso de no existir un periodo académico:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="ow">not</span> <span class="n">periodoAcademicoId</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s">&quot;Falta Periodo Academico&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Excepción:</p>
+<div class="highlight-python"><pre>try:
+    proxy = SGA(SGAWS_USER, SGAWS_PASS)
+    periodoAcademico = PeriodoAcademico.objects.get(id=periodoAcademicoId)
+    ofertas_dict = proxy.ofertas_academicas(periodoAcademico.inicio, periodoAcademico.fin)
+    ofertas = [OfertaAcademicaSGA(idSGA=oa['id'], descripcion=oa['descripcion'])  for oa in ofertas_dict]
+    for oa in ofertas:
+        try:
+            OfertaAcademicaSGA.objects.get(idSGA=oa.idSGA)
+        except OfertaAcademicaSGA.DoesNotExist:
+            oa.save()
+    return HttpResponse("OK")</pre>
+</div>
+<p>En caso de algún error se presenta un mensaje:</p>
+<div class="highlight-python"><pre>except Exception, e:
+    log.error("Error recargando ofertas SGA: " + str(e))
+    return HttpResponse("error: "+str(e))</pre>
+</div>
+</div>
+<div class="section" id="resumen-de-evaluaciones-en-modo-administrador">
+<span id="views-controllers-summary-evaluation-admin"></span><h2>Resumen de Evaluaciones en modo Administrador<a class="headerlink" href="#resumen-de-evaluaciones-en-modo-administrador" title="Permalink to this headline">¶</a></h2>
+<p>Los métodos descritos a continuación tienen la lógica necesaria para permitirle, al Administrador del Sistema, la obtención de los resúmenes detallados de las distintas evaluaciones.</p>
+<div class="section" id="resumen-de-evaluaciones">
+<span id="views-controllers-summary-evaluation-admin-summary-evaluations"></span><h3>Resumen de Evaluaciones<a class="headerlink" href="#resumen-de-evaluaciones" title="Permalink to this headline">¶</a></h3>
+<p>Método invocado a través de AJAX cueado hay un cambio en el menú del Resumen</p>
+<div class="highlight-python"><pre>def resumen_evaluaciones(request):</pre>
+</div>
+<p>Se dectecta si es petición mediante AJAX:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">is_ajax</span><span class="p">():</span>
+    <span class="n">respuesta</span> <span class="o">=</span> <span class="n">menu_academico_ajax</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">respuesta</span><span class="p">,</span> <span class="n">mimetype</span><span class="o">=</span><span class="s">&#39;application/json&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Creación del formulario con los campos necesarios:</p>
+<div class="highlight-python"><pre>else:
+    form = forms.Form()
+    form.fields['periodo_academico'] = forms.ModelChoiceField(queryset=PeriodoAcademico.objects.all())
+    form.fields['periodo_academico'].label = 'Periodos Academicos'
+    form.fields['periodo_evaluacion'] = forms.ModelChoiceField(PeriodoEvaluacion.objects.none())
+    form.fields['periodo_evaluacion'].label = 'Periodos de Evaluacion'
+    form.fields['area'] = forms.ModelChoiceField(AreaSGA.objects.none())
+    form.fields['carrera'] = forms.ModelChoiceField(Asignatura.objects.none())
+    form.fields['semestre'] = forms.ModelChoiceField(Asignatura.objects.none())
+    form.fields['paralelo'] = forms.ModelChoiceField(Asignatura.objects.none())
+    periodoEvaluacion = Configuracion.getPeriodoEvaluacionActual()
+    datos = dict(form=form, evaluadores=periodoEvaluacion.contabilizar_evaluadores(), periodoEvaluacion=periodoEvaluacion)</pre>
+</div>
+<p>Renderización del template <a class="reference internal" href="../Templates/templates.html#template-admin-resumen-evaluaciones-html"><em>Resumen de Evaluaciones</em></a> ubicado en la carpeta <tt class="docutils literal"><span class="pre">admin/app</span></tt> que a su vez contine los templates usados en la parte de administración:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&quot;admin/app/resumen_evaluaciones.html&quot;</span><span class="p">,</span> <span class="n">datos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="calculos-de-resumen">
+<span id="views-controllers-summary-evaluation-admin-summary-calculate"></span><h3>Calculos de Resumen<a class="headerlink" href="#calculos-de-resumen" title="Permalink to this headline">¶</a></h3>
+<p>Se incluye dentro de una Excepción por si se presenta algún error durante el llamado:</p>
+<div class="highlight-python"><pre>def calcular_resumen(request):
+        try:
+                if request.is_ajax():
+                    id_periodo_evaluacion = int(request.GET['id_periodo_evaluacion'])
+                    area = request.GET['area']
+                    carrera = request.GET['carrera']
+                    semestre = request.GET['semestre']
+                    paralelo = request.GET['paralelo']
+                    periodoEvaluacion = PeriodoEvaluacion.objects.get(id=id_periodo_evaluacion)
+                    resumen = periodoEvaluacion.contabilizar_evaluaciones_estudiantes(area, carrera, semestre, paralelo)</pre>
+</div>
+<p>Contiene: estudiantes, completados, faltantes:</p>
+<div class="highlight-python"><pre>        return HttpResponse(simplejson.dumps(resumen), mimetype='application/json')
+except Exception, ex:
+    logg.error("Error calculando resumen de evaluaciones {0}".format(ex))</pre>
+</div>
+</div>
+<div class="section" id="menu-academico">
+<span id="views-controllers-summary-evaluation-admin-menu-academy-ajax"></span><h3>Menú Académico<a class="headerlink" href="#menu-academico" title="Permalink to this headline">¶</a></h3>
+<p>Método usado para la creación del menú que contiene las funcionalidades para los resúmenes de las evaluaciones. Se caracteriza por su funcionalidad reutilizada cuando se necesita informacion académica jerárquica estructurada en (PeriodoAcademico, PeriodoEvaluacion, AreaSGA, carrera, semestre, paralelo). Utilizado generalmente en menus de reportes:</p>
+<div class="highlight-python"><pre>def menu_academico_ajax(request):
+    try:
+        id_campo = request.GET['id']
+        valor_campo = request.GET['valor']
+        campo_siguiente = request.GET['siguiente']
+        if valor_campo == '':
+            return HttpResponse('{"id": "", "valores": []}', mimetype="JSON")
+        id = ""
+        valores = []</pre>
+</div>
+<p>Según el tipo de valor que contenga <tt class="docutils literal"><span class="pre">id_campor</span></tt>, se realizará una operación distinta:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">id_campo</span> <span class="o">==</span> <span class="s">&#39;id_periodo_academico&#39;</span><span class="p">:</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;periodoAcademico&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">PeriodoAcademico</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">valor_campo</span><span class="p">))</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="s">&#39;id_periodo_evaluacion&#39;</span>
+    <span class="n">objetos</span> <span class="o">=</span> <span class="n">PeriodoEvaluacion</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">periodoAcademico__id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">valor_campo</span><span class="p">))</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">valores</span> <span class="o">=</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">o</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">valor</span><span class="o">=</span><span class="n">o</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">objetos</span><span class="p">]</span>
+<span class="k">elif</span> <span class="n">id_campo</span> <span class="o">==</span> <span class="s">&#39;id_periodo_evaluacion&#39;</span><span class="p">:</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;periodoEvaluacion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">PeriodoEvaluacion</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">valor_campo</span><span class="p">))</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="s">&#39;id_area&#39;</span>
+    <span class="n">objetos</span> <span class="o">=</span> <span class="n">PeriodoEvaluacion</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">valor_campo</span><span class="p">))</span><span class="o">.</span><span class="n">areasSGA</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">valores</span> <span class="o">=</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">o</span><span class="o">.</span><span class="n">siglas</span><span class="p">,</span> <span class="n">valor</span><span class="o">=</span><span class="n">o</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">objetos</span><span class="p">]</span>
+<span class="k">elif</span> <span class="n">id_campo</span> <span class="o">==</span> <span class="s">&#39;id_area&#39;</span><span class="p">:</span>
+    <span class="c"># request.session[&#39;area&#39;] = AreaSGA.objects.get(siglas=valor_campo)</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">valor_campo</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="s">&#39;id_carrera&#39;</span>
+    <span class="n">objetos</span> <span class="o">=</span> <span class="n">EstudianteAsignaturaDocente</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+        <span class="n">estudiante__periodoAcademico</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;periodoAcademico&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+        <span class="n">asignaturaDocente__asignatura__area</span><span class="o">=</span><span class="n">valor_campo</span><span class="p">)</span><span class="o">.</span><span class="n">values_list</span><span class="p">(</span>
+        <span class="s">&#39;asignaturaDocente__asignatura__carrera&#39;</span><span class="p">,</span> <span class="n">flat</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">objetos</span><span class="p">:</span>
+        <span class="n">carrera</span> <span class="o">=</span> <span class="n">o</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="nb">unicode</span><span class="p">)</span> <span class="k">else</span> <span class="n">o</span>
+        <span class="n">valores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">carrera</span><span class="p">,</span> <span class="n">valor</span><span class="o">=</span><span class="n">carrera</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Se presentan dos bifuraciones dependiendo del menú:</p>
+<div class="highlight-python"><pre>elif id_campo == 'id_carrera':
+    request.session['carrera'] = valor_campo
+    id = campo_siguiente
+    if campo_siguiente == 'id_semestre':
+        objetos = EstudianteAsignaturaDocente.objects.filter(
+            estudiante__periodoAcademico=request.session['periodoAcademico']).filter(
+            asignaturaDocente__asignatura__area=request.session['area']).filter(
+            asignaturaDocente__asignatura__carrera=valor_campo).values_list(
+            'asignaturaDocente__asignatura__semestre', flat=True).distinct()
+        for o in objetos:
+            semestre = o.encode('utf-8') if isinstance(o, unicode) else o
+            valores.append(dict(id=semestre, valor=semestre))
+    elif campo_siguiente == 'id_docente':
+        objetos = AsignaturaDocente.objects.filter(
+            docente__periodoAcademico=request.session['periodoAcademico']).filter(
+            asignatura__area=request.session['area']).filter(
+            asignatura__carrera=valor_campo)
+        docentes = set([o.docente for o in objetos])
+        valores = [dict(id=d.id, valor=d.__unicode__()) for d in docentes]
+elif id_campo == 'id_semestre':
+    request.session['semestre'] = valor_campo
+    id = 'id_paralelo'
+    objetos = EstudianteAsignaturaDocente.objects.filter(
+        estudiante__periodoAcademico=request.session['periodoAcademico']).filter(
+        asignaturaDocente__asignatura__area=request.session['area']).filter(
+        asignaturaDocente__asignatura__carrera=request.session['carrera']).filter(
+        asignaturaDocente__asignatura__semestre=valor_campo).values_list(
+        'asignaturaDocente__asignatura__paralelo', flat=True).distinct()
+    for o in objetos:
+        paralelo = o.encode('utf-8') if isinstance(o, unicode) else o
+        valores.append(dict(id=paralelo, valor=paralelo))
+
+resultado = {'id':id, 'valores':valores}
+return simplejson.dumps(resultado)</pre>
+</div>
+<p>Se genera un logg de error en caso de presentarse una excepción:</p>
+<div class="highlight-python"><pre>except Exception, ex:
+    logg.error("Error en menu_academico_ajax: " + str(ex))
+    return ""</pre>
+</div>
+</div>
+</div>
+<div class="section" id="calculo-y-presentacion-de-resultados">
+<span id="views-controllers-calculation-presentation-results"></span><h2>Cálculo y Presentación de resultados<a class="headerlink" href="#calculo-y-presentacion-de-resultados" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="resultados-por-carrera">
+<span id="views-controllers-calculation-presentation-results-results-career"></span><h3>Resultados por Carrera<a class="headerlink" href="#resultados-por-carrera" title="Permalink to this headline">¶</a></h3>
+<p>El presente método se encarga de obtener los resultados de las evaluaciones tomando según la carrera. para su funcionamiento uno de sus parámetros en el número de la carrera(<tt class="docutils literal"><span class="pre">num_carrera</span></tt>) que lo identifica.
+Se trabaja con las carreras cuya direccion esta a cargo del docente almacenadas en la vista previa <tt class="docutils literal"><span class="pre">index</span></tt>:</p>
+<div class="highlight-python"><pre>def resultados_carrera(request, num_carrera):
+    datos = dict()
+
+    try:
+        carreras_director = request.session['carreras_director']
+        for cd in carreras_director:
+            if cd['num_carrera'] == int(num_carrera):
+                carrera = cd['nombre']
+                area_siglas = cd['area']
+                break
+        else:
+            logg.error('No hay carreras para este docente director')
+        request.session['carrera'] = carrera
+        request.session['area'] = area_siglas</pre>
+</div>
+<p>Se hace uso del objeto AreaSGA:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">area</span> <span class="o">=</span> <span class="n">AreaSGA</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">siglas</span><span class="o">=</span><span class="n">area_siglas</span><span class="p">)</span>
+<span class="n">periodoAcademico</span> <span class="o">=</span> <span class="n">Configuracion</span><span class="o">.</span><span class="n">getPeriodoAcademicoActual</span><span class="p">()</span>
+<span class="c"># Periodos de Evaluacion del Periodo Academico Actual</span>
+<span class="n">periodosEvaluacion</span> <span class="o">=</span> <span class="n">area</span><span class="o">.</span><span class="n">periodosEvaluacion</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">periodoAcademico</span><span class="o">=</span><span class="n">periodoAcademico</span><span class="p">)</span>
+<span class="n">form</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Se selecciona solo los peridos de evaluación en los que se encuentra el area del docente director:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">form</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="s">&#39;periodo_evaluacion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">ModelChoiceField</span><span class="p">(</span>
+    <span class="n">queryset</span><span class="o">=</span><span class="n">area</span><span class="o">.</span><span class="n">periodosEvaluacion</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">periodoAcademico</span><span class="o">=</span><span class="n">periodoAcademico</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="n">form</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="s">&#39;periodo_evaluacion&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="s">&#39;Periodo de Evaluación&#39;</span>
+<span class="n">datos</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s">&#39;&gt;&gt; Coordinador Carrera &#39;</span> <span class="o">+</span> <span class="n">carrera</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Excepción en caso de error:</p>
+<div class="highlight-python"><pre>except Exception, ex:
+    logg.error("Error :" + str(ex))</pre>
+</div>
+<p>Se renderiza el template <a class="reference internal" href="../Templates/templates.html#template-user-menu-resultados-carrera-html"><em>Menú Resultados Carreras</em></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&quot;app/menu_resultados_carrera.html&quot;</span><span class="p">,</span> <span class="n">datos</span><span class="p">,</span> <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="menu-de-resultados-por-carrera">
+<span id="views-controllers-calculation-presentation-results-menu-results-carreer"></span><h3>Menú de resultados por Carrera<a class="headerlink" href="#menu-de-resultados-por-carrera" title="Permalink to this headline">¶</a></h3>
+<p>Su funcionamiento consiste en generar el menu de opciones para reportes de acuerdo al periodo de evaluación y su tipo de tabulacion especificamente. Llamado con AJAX:</p>
+<div class="highlight-python"><pre>def menu_resultados_carrera(request, id_periodo_evaluacion):
+    try:
+        periodoEvaluacion=PeriodoEvaluacion.objects.get(id=id_periodo_evaluacion)
+        tabulacion = Tabulacion.objects.get(periodoEvaluacion=periodoEvaluacion)</pre>
+</div>
+<p>Para los Docentes Coordinadores de Carrera:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">has_key</span><span class="p">(</span><span class="s">&#39;carreras_director&#39;</span><span class="p">):</span>
+    <span class="n">carrera</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carrera&#39;</span><span class="p">]</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Para la Comision de Evaluacion (Administracion):</p>
+<div class="highlight-python"><pre>else:
+    area = request.GET['area']
+    carrera = request.GET['carrera']</pre>
+</div>
+<p>Especifico para el Tipo de Tabulacion - Periodo de Evaluacion. Según el tipo de evaluación se formatean los formularios de administración:  <a class="reference internal" href="../Templates/templates.html#template-admin-formulario-ese2012-html"><em>Formularios ese2012</em></a>, <a class="reference internal" href="../Templates/templates.html#template-admin-formulario-eaad2012-html"><em>Formularios eaad2012</em></a> y <a class="reference internal" href="../Templates/templates.html#template-admin-formulario-edd2013-html"><em>Formularios edd2013</em></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">tabulacion</span><span class="o">.</span><span class="n">tipo</span> <span class="o">==</span> <span class="s">&#39;ESE2012&#39;</span><span class="p">:</span>
+    <span class="n">tabulacion</span> <span class="o">=</span> <span class="n">TabulacionSatisfaccion2012</span><span class="p">(</span><span class="n">periodoEvaluacion</span><span class="p">)</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">ResultadosESE2012Form</span><span class="p">(</span><span class="n">tabulacion</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="n">carrera</span><span class="p">)</span>
+    <span class="n">formulario_formateado</span> <span class="o">=</span> <span class="n">render_to_string</span><span class="p">(</span><span class="s">&quot;admin/app/formulario_ese2012.html&quot;</span><span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">))</span>
+<span class="k">elif</span> <span class="n">tabulacion</span><span class="o">.</span><span class="n">tipo</span> <span class="o">==</span> <span class="s">&#39;EAAD2012&#39;</span><span class="p">:</span>
+    <span class="n">tabulacion</span> <span class="o">=</span> <span class="n">TabulacionAdicionales2012</span><span class="p">(</span><span class="n">periodoEvaluacion</span><span class="p">)</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">ResultadosEAAD2012Form</span><span class="p">(</span><span class="n">tabulacion</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="n">carrera</span><span class="p">)</span>
+    <span class="n">formulario_formateado</span> <span class="o">=</span> <span class="n">render_to_string</span><span class="p">(</span><span class="s">&quot;admin/app/formulario_eaad2012.html&quot;</span><span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">))</span>
+<span class="k">elif</span> <span class="n">tabulacion</span><span class="o">.</span><span class="n">tipo</span> <span class="o">==</span> <span class="s">&#39;EDD2013&#39;</span><span class="p">:</span>
+    <span class="n">tabulacion</span> <span class="o">=</span> <span class="n">TabulacionEvaluacion2013</span><span class="p">(</span><span class="n">periodoEvaluacion</span><span class="p">)</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">ResultadosEDD2013Form</span><span class="p">(</span><span class="n">tabulacion</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="n">carrera</span><span class="p">)</span>
+    <span class="n">formulario_formateado</span> <span class="o">=</span> <span class="n">render_to_string</span><span class="p">(</span><span class="s">&quot;admin/app/formulario_edd2013.html&quot;</span><span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">))</span>
+<span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">formulario_formateado</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Excepciones:</p>
+<div class="highlight-python"><pre>except PeriodoEvaluacion.DoesNotExist:
+    logg.error(u"No Existe el Periodo de Evaluación: {0}".format(id_periodo_evaluacion))
+except Exception, ex:
+    logg.error('Error en vista menu_resultados_carrera: ' + str(ex))</pre>
+</div>
+</div>
+<div class="section" id="presentacion-de-resultados">
+<span id="views-controllers-calculation-presentation-results-results-presentation"></span><h3>Presentación de Resultados<a class="headerlink" href="#presentacion-de-resultados" title="Permalink to this headline">¶</a></h3>
+<p>Método orientado a realizar la presentación de los resultados obtenidos:</p>
+<div class="highlight-python"><pre>def mostrar_resultados(request):</pre>
+</div>
+<p>Se hace uso de unas cuantas etiquetas HTML para mejor presentación:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">has_key</span><span class="p">(</span><span class="s">&#39;periodo_evaluacion&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">has_key</span><span class="p">(</span><span class="s">&#39;opciones&#39;</span><span class="p">)):</span>
+    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s">&quot;&lt;h2&gt; Tiene que elegir las Opciones de Resultados &lt;/h2&gt;&quot;</span><span class="p">)</span>
+<span class="n">id_periodo</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s">&#39;periodo_evaluacion&#39;</span><span class="p">]</span>
+<span class="k">if</span> <span class="n">id_periodo</span> <span class="o">==</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s">&quot;&lt;h2&gt; Tiene que elegir el Periodo de Evaluación &lt;/h2&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Se obtiene la opcion generica para cualquier tipo de evaluacion:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">opcion</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s">&#39;opciones&#39;</span><span class="p">]</span>
+<span class="n">periodoEvaluacion</span><span class="o">=</span><span class="n">PeriodoEvaluacion</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">id_periodo</span><span class="p">))</span>
+<span class="n">tabulacion</span> <span class="o">=</span> <span class="n">periodoEvaluacion</span><span class="o">.</span><span class="n">tabulacion</span>
+</pre></div>
+</div>
+<p><strong>Encuesta de Satisfaccion Estudiantil 2012</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">tabulacion</span><span class="o">.</span><span class="n">tipo</span> <span class="o">==</span> <span class="s">&#39;ESE2012&#39;</span><span class="p">:</span>
+    <span class="n">tabulacion</span> <span class="o">=</span> <span class="n">TabulacionSatisfaccion2012</span><span class="p">(</span><span class="n">periodoEvaluacion</span><span class="p">)</span>
+    <span class="n">metodo</span> <span class="o">=</span>  <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">tabulacion</span><span class="o">.</span><span class="n">calculos</span> <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">opcion</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">titulo</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;&lt;br/&gt; &lt;b&gt;&#39;</span> <span class="o">+</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carrera&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;&lt;/b&gt;&lt;br/&gt;&#39;</span>
+    <span class="n">titulo</span> <span class="o">+=</span> <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">tabulacion</span><span class="o">.</span><span class="n">calculos</span> <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">opcion</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">resultados</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<p>Por docente:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">opcion</span> <span class="o">==</span> <span class="s">&#39;a&#39;</span><span class="p">:</span>
+    <span class="n">id_docente</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s">&#39;docentes&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">id_docente</span> <span class="o">!=</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">titulo</span> <span class="o">+=</span> <span class="s">u&#39;: &lt;b&gt;{0}&lt;/b&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">DocentePeriodoAcademico</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">id_docente</span><span class="p">)))</span>
+        <span class="n">resultados</span> <span class="o">=</span> <span class="n">metodo</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">],</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carrera&#39;</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">id_docente</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Por campos:</p>
+<div class="highlight-python"><pre>elif opcion == 'c':
+    id_seccion = request.POST['campos']
+    if id_seccion != '':
+        seccion = Seccion.objects.get(id=int(id_seccion))
+        titulo += u': &lt;b&gt;{0}&lt;/b&gt;'.format(seccion.titulo)
+        resultados = metodo(request.session['area'], request.session['carrera'], int(id_seccion))
+        if seccion.orden == 4:
+            datos = dict(resultados=resultados, titulo=titulo)
+            return render_to_response('app/imprimir_otros_ese2012.html', datos,
+                                      context_instance=RequestContext(request));</pre>
+</div>
+<p>Por indicadores:</p>
+<div class="highlight-python"><pre>elif opcion == 'd':
+    id_pregunta = request.POST['indicadores']
+    if id_pregunta != '':
+        titulo += u': &lt;b&gt;{0}&lt;/b&gt;'.format(Pregunta.objects.get(id=int(id_pregunta)).texto)
+        resultados = metodo(request.session['area'], request.session['carrera'], int(id_pregunta))</pre>
+</div>
+<p>Para el resto de casos:</p>
+<div class="highlight-python"><pre>else:
+    resultados = metodo(request.session['area'], request.session['carrera'])
+if resultados:
+    resultados['titulo'] = titulo
+plantilla = 'app/imprimir_resultados_ese2012.html'</pre>
+</div>
+<p><strong>Evaluacion de Actividades Adiconales a la Docencia 2011 - 2012</strong>:</p>
+<div class="highlight-python"><pre>if tabulacion.tipo == 'EAAD2012':</pre>
+</div>
+<p>Nombre completo del Area para su presentacion en el reporte:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">area</span> <span class="o">=</span> <span class="n">AreaSGA</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">siglas</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">nombre</span>
+<span class="n">carrera</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carrera&#39;</span><span class="p">]</span>
+<span class="n">tabulacion</span> <span class="o">=</span> <span class="n">TabulacionAdicionales2012</span><span class="p">(</span><span class="n">periodoEvaluacion</span><span class="p">)</span>
+<span class="n">metodo</span> <span class="o">=</span>  <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">tabulacion</span><span class="o">.</span><span class="n">calculos</span> <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">opcion</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Por docente:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">resultados</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">if</span> <span class="n">opcion</span> <span class="o">==</span> <span class="s">&#39;a&#39;</span><span class="p">:</span>
+    <span class="n">id_docente</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s">&#39;docentes&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">id_docente</span> <span class="o">!=</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">docente</span> <span class="o">=</span> <span class="n">DocentePeriodoAcademico</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">id_docente</span><span class="p">))</span>
+        <span class="c"># Referencia a lo que devuelve el metodo especifico invocado sobre la instancia de Tabulacion</span>
+        <span class="n">resultados</span> <span class="o">=</span> <span class="n">metodo</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">],</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carrera&#39;</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">id_docente</span><span class="p">))</span>
+<span class="k">elif</span> <span class="n">opcion</span> <span class="o">==</span> <span class="s">&#39;z&#39;</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Para el resto de casos:</p>
+<div class="highlight-python"><pre>else:
+    resultados = metodo(request.session['area'], request.session['carrera'])
+if resultados:
+    resultados['docente'] = docente
+    resultados['carrera'] = carrera
+    resultados['area'] = area
+plantilla = 'app/imprimir_resultados_eaad2012.html'</pre>
+</div>
+<p><strong>Evaluacion del Desempenio Docente 2012 - 2013</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">tabulacion</span><span class="o">.</span><span class="n">tipo</span> <span class="o">==</span> <span class="s">&#39;EDD2013&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">opcion</span>  <span class="o">==</span> <span class="s">&#39;c&#39;</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_staff</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s">&quot;&lt;h2&gt; Ud no tiene permisos para revisar este reporte &lt;/h2&gt;&quot;</span><span class="p">)</span>
+    <span class="n">codigos_filtro</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;a&#39;</span> <span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span> <span class="p">:</span> <span class="s">&#39;CPF&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span> <span class="p">:</span> <span class="s">&#39;CPG&#39;</span><span class="p">,</span> <span class="s">&#39;d&#39;</span> <span class="p">:</span> <span class="s">&#39;PV&#39;</span><span class="p">,</span> <span class="s">&#39;e&#39;</span> <span class="p">:</span> <span class="s">&#39;sugerencias&#39;</span><span class="p">}</span>
+    <span class="n">objeto_area</span> <span class="o">=</span> <span class="n">AreaSGA</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">siglas</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Nombre completo del Area para su presentacion en el reporte:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">area</span> <span class="o">=</span> <span class="n">objeto_area</span><span class="o">.</span><span class="n">nombre</span>
+<span class="n">area_siglas</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span>
+<span class="n">carrera</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carrera&#39;</span><span class="p">]</span>
+<span class="n">tabulacion</span> <span class="o">=</span> <span class="n">TabulacionEvaluacion2013</span><span class="p">(</span><span class="n">periodoEvaluacion</span><span class="p">)</span>
+<span class="n">metodo</span> <span class="o">=</span>  <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">tabulacion</span><span class="o">.</span><span class="n">calculos</span> <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">opcion</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">filtro</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s">&#39;filtros&#39;</span><span class="p">]</span>
+<span class="n">filtro</span> <span class="o">=</span> <span class="n">codigos_filtro</span><span class="p">[</span><span class="n">filtro</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Por docente:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">resultados</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">if</span> <span class="n">opcion</span> <span class="o">==</span> <span class="s">&#39;a&#39;</span><span class="p">:</span>
+    <span class="n">id_docente</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s">&#39;docentes&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">id_docente</span> <span class="o">!=</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">docente</span> <span class="o">=</span> <span class="n">DocentePeriodoAcademico</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">id_docente</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Referencia a lo que devuelve el metodo especifico invocado sobre la instancia de Tabulacion:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">resultados</span> <span class="o">=</span> <span class="n">metodo</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">],</span> <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s">&#39;carrera&#39;</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">id_docente</span><span class="p">),</span> <span class="n">filtro</span><span class="p">)</span>
+<span class="n">resultados</span><span class="p">[</span><span class="s">&#39;docente&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">docente</span>
+<span class="n">resultados</span><span class="p">[</span><span class="s">&#39;carrera&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">carrera</span>
+<span class="n">resultados</span><span class="p">[</span><span class="s">&#39;area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">area</span>
+</pre></div>
+</div>
+<p>Por Carrera:</p>
+<div class="highlight-python"><pre>elif opcion == 'b':
+    resultados = metodo(request.session['area'], request.session['carrera'], filtro)
+    resultados['carrera'] = carrera
+    resultados['area'] = area</pre>
+</div>
+<p>Por Area:</p>
+<div class="highlight-python"><pre>elif opcion == 'c':
+    resultados = metodo(request.session['area'], filtro)
+    resultados['area'] = area</pre>
+</div>
+<p>Para el resto de casos:</p>
+<div class="highlight-python"><pre>else:
+    resultados = metodo(request.session['area'], request.session['carrera'], filtro)</pre>
+</div>
+<p>Posicion para ubicar el promedio por componente en la plantilla.</p>
+<p>Si se trata del Instituto de Idiomas:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">resultados</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;promedios_componentes&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span> <span class="ow">and</span> <span class="n">objeto_area</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+
+    <span class="n">resultados</span><span class="p">[</span><span class="s">&#39;promedios_componentes&#39;</span><span class="p">][</span><span class="s">&#39;CPF&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">&#39;fila&#39;</span> <span class="p">:</span> <span class="mi">8</span><span class="p">})</span>
+    <span class="n">resultados</span><span class="p">[</span><span class="s">&#39;promedios_componentes&#39;</span><span class="p">][</span><span class="s">&#39;CPG&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">&#39;fila&#39;</span> <span class="p">:</span> <span class="mi">23</span><span class="p">})</span>
+    <span class="n">resultados</span><span class="p">[</span><span class="s">&#39;promedios_componentes&#39;</span><span class="p">][</span><span class="s">&#39;PV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">&#39;fila&#39;</span> <span class="p">:</span> <span class="mi">29</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Para el resto de Areas:</p>
+<div class="highlight-python"><pre>elif resultados.get('promedios_componentes', None):
+
+    resultados['promedios_componentes']['CPF'].update({'fila' : 10})
+    resultados['promedios_componentes']['CPG'].update({'fila' : 27})
+    resultados['promedios_componentes']['PV'].update({'fila' : 33})</pre>
+</div>
+<p>Se trata de reporte de sugerencias se escoge entre las plantillas <a class="reference internal" href="../Templates/templates.html#template-user-imprimir-sugerencias-edd2013-html"><em>Sugerencias Evaluación Desempeño Docente 2013</em></a>, <a class="reference internal" href="../Templates/templates.html#template-user-imprimir-resultados-edd2013-html"><em>Resultados Desempeño Docente 2013</em></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">filtro</span> <span class="o">==</span> <span class="s">&#39;sugerencias&#39;</span><span class="p">:</span>
+    <span class="n">plantilla</span> <span class="o">=</span> <span class="s">&#39;app/imprimir_sugerencias_edd2013.html&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">plantilla</span> <span class="o">=</span> <span class="s">&#39;app/imprimir_resultados_edd2013.html&#39;</span>
+</pre></div>
+</div>
+<p>Se formatea la vista:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="n">plantilla</span><span class="p">,</span> <span class="n">resultados</span><span class="p">,</span> <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="resultados-para-los-administradores">
+<span id="views-controllers-calculation-presentation-results-results-admin"></span><h3>Resultados para los Administradores<a class="headerlink" href="#resultados-para-los-administradores" title="Permalink to this headline">¶</a></h3>
+<p>Manejo de resultados para los administradores:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">resultados</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">datos</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">form</span><span class="o">=</span><span class="n">ResultadosForm</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Se formatea la vista de administración <a class="reference internal" href="../Templates/templates.html#template-admin-menu-resultados-html"><em>Menú resultados</em></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&#39;admin/app/menu_resultados.html&#39;</span><span class="p">,</span> <span class="n">datos</span><span class="p">,</span> <span class="n">context_instance</span><span class="o">=</span><span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Regresar a la cabecera</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, Jhymer Martínez.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

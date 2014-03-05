@@ -1,0 +1,2650 @@
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Las plantillas &mdash; SEDD - Manual De Usuario  documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="SEDD - Manual De Usuario  documentation" href="../../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+<link rel="stylesheet" href="../../_static/style.css">
+<div id="cabecera">
+  <a href="http://www.unl.edu.ec/"><img src="../../_static/unl.gif" id="logo" border="0" alt="unl" width="90" hight="110"/></a>
+</div>
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">SEDD - Manual De Usuario</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="../../index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Indice General<b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="simple">
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">En esta Página<b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Las plantillas</a><ul>
+<li><a class="reference internal" href="#introduccion">Introducción</a></li>
+<li><a class="reference internal" href="#plantilla-base">Plantilla Base</a></li>
+<li><a class="reference internal" href="#plantillas-para-administracion">Plantillas para Administración</a><ul>
+<li><a class="reference internal" href="#asignaturas-y-docentes">Asignaturas y docentes</a></li>
+<li><a class="reference internal" href="#evaluaciones">Evaluaciones</a></li>
+<li><a class="reference internal" href="#periodo-academico">Periodo académico</a></li>
+<li><a class="reference internal" href="#preguntas-en-general">Preguntas en general</a></li>
+<li><a class="reference internal" href="#formularios-eaad2012">Formularios eaad2012</a></li>
+<li><a class="reference internal" href="#formularios-edd2013">Formularios edd2013</a></li>
+<li><a class="reference internal" href="#formularios-ese2012">Formularios ese2012</a></li>
+<li><a class="reference internal" href="#menu-resultados">Menú resultados</a></li>
+<li><a class="reference internal" href="#resumen-de-evaluaciones">Resumen de Evaluaciones</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plantillas-para-usuarios-y-tareas">Plantillas para usuarios y tareas</a><ul>
+<li><a class="reference internal" href="#portada">Portada</a></li>
+<li><a class="reference internal" href="#pagina-de-inicio">Pagina de Inicio</a></li>
+<li><a class="reference internal" href="#login">Login</a></li>
+<li><a class="reference internal" href="#carreras">Carreras</a></li>
+<li><a class="reference internal" href="#template-user-asignaturas-docentes-html">Asignaturas y Docentes</a></li>
+<li><a class="reference internal" href="#directores-y-docentes">Directores y Docentes</a></li>
+<li><a class="reference internal" href="#pares-academicos-y-docentes">Pares Académicos y Docentes</a></li>
+<li><a class="reference internal" href="#en-contruccion">en contruccion</a></li>
+<li><a class="reference internal" href="#encuestas">Encuestas</a></li>
+<li><a class="reference internal" href="#encuesta-para-responder">Encuesta para Responder</a></li>
+<li><a class="reference internal" href="#encuesta-finalizada">Encuesta Finalizada</a></li>
+<li><a class="reference internal" href="#resultados-eaad-2012">Resultados eaad 2012</a></li>
+<li><a class="reference internal" href="#resultados-satisfaccion-estudiantil-2012">Resultados Satisfacción Estudiantil 2012</a></li>
+<li><a class="reference internal" href="#otros-resultados-satisfaccion-estudiantil-2012">Otros resultados Satisfacción Estudiantil 2012</a></li>
+<li><a class="reference internal" href="#resultados-desempeno-docente-2013">Resultados Desempeño Docente 2013</a></li>
+<li><a class="reference internal" href="#sugerencias-evaluacion-desempeno-docente-2013">Sugerencias Evaluación Desempeño Docente 2013</a></li>
+<li><a class="reference internal" href="#menu-resultados-carreras">Menú Resultados Carreras</a></li>
+<li><a class="reference internal" href="#error-404">Error 404</a></li>
+<li><a class="reference internal" href="#error-500">Error 500</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li>
+  <a href="../../_sources/library/Templates/templates.txt"
+     rel="nofollow">Ver código</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Buscar" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="las-plantillas">
+<span id="templates-title"></span><h1>Las plantillas<a class="headerlink" href="#las-plantillas" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduccion">
+<span id="templates-intro"></span><h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">¶</a></h2>
+<p>Una plantilla de Django es una cadena de texto pensada para separar la presentación de un documento de sus datos. Una plantilla define variables y varios trozos de lógica básica (tags) que regulan la manera en que debería mostrarse el documento. Normalmente, las plantillas se usan para producir HTML, pero las plantillas de Django son igualmente capaces de generar cualquier formato basado en texto.</p>
+<p>Para el presente sistema se uso las plantillas que por defecto nos facilita Django, usadas en la parte de administración de cada proyecto. Por lo general, una vez intalado Python y Django, dichas plantillas se encuentran ubicadas en <tt class="docutils literal"><span class="pre">C:\Python27\Lib\site-packages\django-1.5.2-py2.7.egg\django\contrib\admin\templates\admin</span></tt>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Para mas información visitar: <a class="reference external" href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/">curso de Django en español</a>.</p>
+</div>
+</div>
+<div class="section" id="plantilla-base">
+<span id="template-base"></span><h2>Plantilla Base<a class="headerlink" href="#plantilla-base" title="Permalink to this headline">¶</a></h2>
+<p>Contiene el diseño básico de las pantallas que se presentarán al usuario:</p>
+<div class="highlight-html"><pre>{% load admin_static %}&lt;!DOCTYPE html&gt;
+&lt;html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}&gt;</pre>
+</div>
+<p>Cabecera:</p>
+<div class="highlight-html"><pre>&lt;head&gt;
+&lt;title&gt;{% block title %}{% endblock %}&lt;/title&gt;
+&lt;link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}" /&gt;
+{% block extrastyle %}{% endblock %}
+&lt;!--[if lte IE 7]&gt;&lt;link rel="stylesheet" type="text/css" href="{% block stylesheet_ie %}{% static "admin/css/ie.css" %}{% endblock %}" /&gt;&lt;![endif]--&gt;
+{% if LANGUAGE_BIDI %}&lt;link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}" /&gt;{% endif %}
+&lt;script type="text/javascript"&gt;window.__admin_media_prefix__ = "{% filter escapejs %}{% static "admin/" %}{% endfilter %}";&lt;/script&gt;
+{% block extrahead %}{% endblock %}
+{% block blockbots %}&lt;meta name="robots" content="NONE,NOARCHIVE" /&gt;{% endblock %}
+&lt;/head&gt;</pre>
+</div>
+<p>Carga de <cite>internationalization</cite>:</p>
+<div class="highlight-python"><pre>{% load i18n %}</pre>
+</div>
+<p>Inicio del body:</p>
+<div class="highlight-html"><pre>    &lt;body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"&gt;
+    &lt;!-- Container --&gt;
+    &lt;div id="container"&gt;
+        {% if not is_popup %}
+        &lt;!-- Header --&gt;
+        &lt;div id="header"&gt;
+            &lt;div id="branding"&gt;
+            {% block branding %}{% endblock %}
+            &lt;/div&gt;
+            {% if user.is_active and user.is_staff %}
+            &lt;div id="user-tools"&gt;
+                {% trans 'Welcome,' %}
+                &lt;strong&gt;{% filter force_escape %}{% firstof user.get_short_name user.get_username %}{% endfilter %}&lt;/strong&gt;.
+                {% block userlinks %}
+                    {% url 'django-admindocs-docroot' as docsroot %}
+                    {% if docsroot %}
+                        &lt;a href="{{ docsroot }}"&gt;{% trans 'Documentation' %}&lt;/a&gt; /
+                    {% endif %}
+                    {% if user.has_usable_password %}
+                    &lt;a href="{% url 'admin:password_change' %}"&gt;{% trans 'Change password' %}&lt;/a&gt; /
+                    {% endif %}
+                    &lt;a href="{% url 'admin:logout' %}"&gt;{% trans 'Log out' %}&lt;/a&gt;
+                {% endblock %}
+            &lt;/div&gt;
+            {% endif %}
+            {% block nav-global %}{% endblock %}
+        &lt;/div&gt;
+        &lt;!-- END Header --&gt;
+        {% block breadcrumbs %}
+        &lt;div class="breadcrumbs"&gt;
+        &lt;a href="{% url 'admin:index' %}"&gt;{% trans 'Home' %}&lt;/a&gt;
+        {% if title %} &amp;rsaquo; {{ title }}{% endif %}
+        &lt;/div&gt;
+        {% endblock %}
+        {% endif %}
+        {% block messages %}
+            {% if messages %}
+            &lt;ul class="messagelist"&gt;{% for message in messages %}
+              &lt;li{% if message.tags %} class="{{ message.tags }}"{% endif %}&gt;{{ message }}&lt;/li&gt;
+            {% endfor %}&lt;/ul&gt;
+            {% endif %}
+        {% endblock messages %}
+        &lt;!-- Content --&gt;
+        &lt;div id="content" class="{% block coltype %}colM{% endblock %}"&gt;
+            {% block pretitle %}{% endblock %}
+            {% block content_title %}{% if title %}&lt;h1&gt;{{ title }}&lt;/h1&gt;{% endif %}{% endblock %}
+            {% block content %}
+            {% block object-tools %}{% endblock %}
+            {{ content }}
+            {% endblock %}
+            {% block sidebar %}{% endblock %}
+            &lt;br class="clear" /&gt;
+        &lt;/div&gt;
+        &lt;!-- END Content --&gt;
+        {% block footer %}&lt;div id="footer"&gt;&lt;/div&gt;{% endblock %}
+    &lt;/div&gt;
+    &lt;!-- END Container --&gt;
+    &lt;/body&gt;</pre>
+</div>
+<p>Fin del html:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plantillas-para-administracion">
+<span id="template-admin"></span><h2>Plantillas para Administración<a class="headerlink" href="#plantillas-para-administracion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="asignaturas-y-docentes">
+<span id="template-admin-signatures"></span><h3>Asignaturas y docentes<a class="headerlink" href="#asignaturas-y-docentes" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/admin/app/asignaturadocente/change_list.html</span></tt>:</p>
+<div class="highlight-python"><pre>{% extends "admin/change_list.html" %}
+{% load i18n %}
+
+{% block extrahead %}
+{{ block.super }}
+&lt;script type="text/javascript"&gt;
+  (function($){
+      $(document).ready(function(){
+          ///$("#paralelo").hide();
+          $('#changelist-form .actions').bind('click', function(){
+              //var seleccion=$('#action option:selected').val();
+              alert(seleccion);
+          });
+      });
+  })(django.jQuery);
+&lt;/script&gt;
+{% endblock %}
+
+{% block result_list %}
+&lt;!-- Para clonar una Asginatura Docente en otro Paralelo --&gt;
+&lt;span id="paralelo"&gt; &lt;b&gt; Paralelo: &lt;/b&gt; &lt;input type="text" name="paralelo"/&gt;  &lt;/span&gt;
+
+{{ block.super }}
+
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="evaluaciones">
+<span id="template-admin-evaluation"></span><h3>Evaluaciones<a class="headerlink" href="#evaluaciones" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/admin/app/evaluacion/change_form.html</span></tt>:</p>
+<div class="highlight-python"><pre>{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+{% block extrahead %}
+{{ block.super }}
+&lt;style type="text/css"&gt;
+
+&lt;/style&gt;
+{% endblock %}
+
+{% block content_title %}
+&lt;!-- Se anula el tituto por defecto de la pagina --&gt;
+{% endblock %}
+
+{% block field_sets %}
+{{ original.cuestionario.informante }}: &lt;b&gt;{{ original.evaluador }}
+&lt;/b&gt; Docente evaluado: &lt;b&gt;{{ original.evaluado }}&lt;/b&gt;
+&lt;p/&gt;
+{{ block.super }}
+{{ formsets }}
+
+&lt;table&gt;
+  {% for contestacion in original.contestaciones.all %}
+  &lt;tr&gt;
+        &lt;td rowspan="2" &gt; {{ contestacion.get_pregunta.get_codigo }} &lt;/td&gt;
+        &lt;td&gt; {{ contestacion.get_pregunta }} &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+        &lt;td style="border-bottom: 1px dashed;"&gt; Respuesta: &lt;b&gt; {{ contestacion.respuesta }} &lt;/b&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  {% endfor %}
+&lt;/table&gt;
+
+{% endblock %}
+
+{% block submit_buttons_bottom %}
+&lt;!-- Se elimina los botones de grabacion (submit) --&gt;
+{% endblock %}</pre>
+</div>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/admin/app/evaluacion/change_list.html</span></tt>:</p>
+<div class="highlight-python"><pre>{% extends "admin/change_list.html" %}
+{% load i18n %}
+
+{% block extrahead %}
+{{ block.super }}
+&lt;script language="javascript"&gt;
+  function resumen(){
+      var win = window.open("/admin/resumen/evaluaciones", "resumen",
+  'height=500,width=800,resizable=yes,scrollbars=yes');
+      win.focus();
+  }
+&lt;/script&gt;
+{% endblock%}
+
+{% block object-tools %}
+{{ block.super }}
+  &lt;ul class="object-tools"&gt;
+    &lt;li&gt;
+      &lt;a href="javascript:void(0)" onclick="resumen();"&gt;
+        Resumen de Evaluaciones
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="periodo-academico">
+<span id="template-admin-period"></span><h3>Periodo académico<a class="headerlink" href="#periodo-academico" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/admin/app/periodoacademico/change_form.html</span></tt>:</p>
+<div class="highlight-python"><pre>{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+{% block extrahead %}
+{{ block.super }}
+&lt;script type="text/javascript"&gt;
+    (function($) {
+        $(document).ready(function($) {
+            var logjs = "";
+            /*
+              Funcionalidad muy 'pesada', se resolvió hacerla por scripts
+            $("#link_load_sga").click(function() {
+                var r=confirm("Se va a cargar la información Académica del SGA");
+                if (r == true){
+                    $.ajax({
+                        url: "/sga/cargar_info_sga/{{ object_id }}",
+                        method: "GET",
+                        //data: "periodo_academico_id={{ object_id }}",
+                        success: function (data){
+                            alert(data);
+                        },
+                        error: function(xhr,status,error){
+                            alert("error: " + status + "-" + error);
+                        }
+                    });
+                }
+            });*/
+
+            $("#link_load_ofertas").click(function() {
+                var r=confirm("Va a recargar ofertas académicas del SGA");
+                if (r == true){
+                    $.ajax({
+                        url: "/sga/cargar_ofertas_sga/{{ object_id }}",
+                        method: "GET",
+                        //data: "periodo_academico_id={{ object_id }}",
+                        success: function (data){
+                            // Regresamos a la lista de Periodos Académicos
+                            $(window.location).attr('href',"{% url 'admin:app_periodoacademico_changelist' %}")
+                        },
+                        error: function(xhr,status,error){
+                            alert("error: " + status + "-" + error);
+                        }
+                    });
+                }
+            });
+         });
+    })(django.jQuery);
+&lt;/script&gt;
+{% endblock %}
+
+{% block after_field_sets %}
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;ul class="object-tools"&gt;
+  &lt;li&gt; &lt;a id="link_load_ofertas"  class="xxhistorylink"&gt; Recargar Ofertas &lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+{% endblock %}
+
+{% block before_related_objects %}
+
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="preguntas-en-general">
+<span id="template-admin-question"></span><h3>Preguntas en general<a class="headerlink" href="#preguntas-en-general" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/admin/app/periodoacademico/change_form.html</span></tt>:</p>
+<div class="highlight-python"><pre>{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+{% block extrahead %}
+
+{{ block.super }}
+
+&lt;script type="text/javascript"&gt;
+  (function($){
+      $(document).ready(function($){
+          $('#id_tipo').change(function(){
+              var seleccion=$('#id_tipo option:selected').val();
+              // Tipo de pregunta: SeleccionUnica
+              if (seleccion == '2'){
+                  $('#id_tipo').parent().append(
+                      '&lt;span id="activador"&gt;&lt;input type="checkbox" id="tipo_predefinido"' +
+                          'name="tipo_predefinido" value="Valor"&gt;' +
+                          'Predeterminado &lt;/input&gt;&lt;/span&gt;'
+                  );
+                  $('#tipo_predefinido').change(function(){
+                      if ($('#tipo_predefinido').is(':checked')) {
+                          $('#items-group').hide();
+                          var contenido = '&lt;span id="opciones_grupo"&gt;';
+                          contenido += '&lt;b&gt; Tamaño: &lt;/b&gt; &lt;select name="longitud"&gt;' +
+                              '&lt;option value="" selected &gt; ----- &lt;/option&gt; ';
+                          for (var i=2; i&lt;10; i++){
+                              var selected = '';
+                              if ( i==4 ){
+                                  selected = 'selected';
+                              }
+                              contenido += '&lt;option value="' + i + '" ' + selected + '&gt;' + i + '&lt;/option&gt;';
+                          }
+                          contenido += '&lt;/select&gt; &lt;b&gt; Numeración:&lt;/b&gt;' +
+                              '&lt;input type="radio" name="numeracion" value="a"&gt; Letras &lt;/input&gt;' +
+                              '&lt;input type="radio" name="numeracion" value="1" checked&gt; Números &lt;/input&gt;';
+                          contenido += "&lt;/span&gt;";
+                          $('#id_tipo').parent().append(contenido);
+                      } else {
+                          $('#opciones_grupo').remove();
+                          $('#items-group').show();
+                      }
+                  });
+              }else{
+                  // Ocultar activador de SeleccionUnica por predeterminada
+                  $('#activador').remove();
+                  // Tipo de pregunta: Ensayo, no tiene items
+                  if (seleccion == 1){
+                      $('#items-group').hide();
+                  } else{
+                      // Cualquier otro tipo de pregunta
+                      $('#items-group').show();
+                  }
+              }
+          });
+      });
+  })(django.jQuery);
+&lt;/script&gt;
+
+{% endblock%}</pre>
+</div>
+</div>
+<div class="section" id="formularios-eaad2012">
+<span id="template-admin-formulario-eaad2012-html"></span><h3>Formularios eaad2012<a class="headerlink" href="#formularios-eaad2012" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/admin/app/formulario_eaad2012.html</span></tt>:</p>
+<div class="highlight-python"><pre>&lt;style type="text/css"&gt;
+input[type=radio] {
+    margin-top: 7px;
+
+}
+fieldset{
+    margin: 15px 0px 15px 0px;
+    width: 75%;
+    padding: 10px 20px 10px 20px;
+}
+#id_campos, #id_indicadores{
+    width: 75%;
+}
+
+&lt;/style&gt;
+&lt;fieldset&gt;
+  &lt;legend&gt; Opciones de Resultados &lt;/legend&gt;
+  &lt;ol type="a"&gt;
+    &lt;li&gt;
+      &lt;label for="id_opciones_0"&gt;
+        &lt;input type="radio" id="id_opciones_0" value="a" name="opciones" /&gt;
+        Resultados Evaluación Actividades Adicionales por Docente
+      &lt;/label&gt;
+    &lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt; {{ form.docentes }} &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;!--li&gt;
+      &lt;label for="id_opciones_1"&gt;
+        &lt;input type="radio" id="id_opciones_1" value="b" name="opciones" /&gt;
+        Resultados Evaluación Actividades Adicionales por Carrera
+      &lt;/label&gt;
+    &lt;/li--&gt;
+  &lt;/ol&gt;
+&lt;/fieldset&gt;</pre>
+</div>
+</div>
+<div class="section" id="formularios-edd2013">
+<span id="template-admin-formulario-edd2013-html"></span><h3>Formularios edd2013<a class="headerlink" href="#formularios-edd2013" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/admin/app/formulario_edd2013.html</span></tt>:</p>
+<div class="highlight-python"><pre>&lt;style type="text/css"&gt;
+input[type=radio] {
+    margin-top: 7px;
+
+}
+fieldset{
+    margin: 15px 0px 15px 0px;
+    width: 75%;
+    padding: 10px 20px 10px 20px;
+}
+#id_campos, #id_indicadores{
+    width: 75%;
+}
+
+&lt;/style&gt;
+&lt;fieldset&gt;
+  &lt;legend&gt; Opciones de Resultados &lt;/legend&gt;
+
+  &lt;table&gt;
+        &lt;tr&gt;
+          &lt;!-- Columna 1 --&gt;
+          &lt;td style="border-right: 1px solid;"&gt;
+                &lt;b&gt;Seleccione el tipo de Reporte:&lt;/b&gt;
+                &lt;ol type="a"&gt;
+                  &lt;li&gt;
+                        &lt;label for="id_opciones_0"&gt;
+                          &lt;input type="radio" id="id_opciones_0" value="a" name="opciones" checked="checked"/&gt;
+                          Resultados POR DOCENTE
+                        &lt;/label&gt;
+                  &lt;/li&gt;
+                  &lt;ul&gt;
+                        &lt;li&gt; {{ form.docentes }} &lt;/li&gt;
+                  &lt;/ul&gt;
+
+                  &lt;li&gt;
+                        &lt;label for="id_opciones_1"&gt;
+                          &lt;input type="radio" id="id_opciones_1" value="b" name="opciones" /&gt;
+                          Resultados POR CARRERA
+                        &lt;/label&gt;
+                  &lt;/li&gt;
+
+                  &lt;li&gt;
+                        &lt;label for="id_opciones_2"&gt;
+                          &lt;input type="radio" id="id_opciones_2" value="c" name="opciones" /&gt;
+                          Resultados POR AREA
+                        &lt;/label&gt;
+                  &lt;/li&gt;
+
+                &lt;/ol&gt;
+          &lt;/td&gt;
+
+          &lt;!-- Columna 2 --&gt;
+          &lt;td&gt;
+                &lt;b&gt; Seleccione el Campo Específico: &lt;/b&gt;
+                &lt;ol type="a"&gt;
+                  &lt;li&gt;
+                        &lt;label for="id_filtros_0"&gt;
+                          &lt;input type="radio" id="id_filtros_0" value="a" name="filtros" checked="checked"/&gt;
+                          Todos los COMPONENTES
+                        &lt;/label&gt;
+                  &lt;/li&gt;
+
+                  &lt;li&gt;
+                        &lt;label for="id_filtros_1"&gt;
+                          &lt;input type="radio" id="id_filtros_1" value="b" name="filtros" /&gt;
+                          Componente CAPACIDAD PROFESIONAL (CPF)
+                        &lt;/label&gt;
+                  &lt;/li&gt;
+
+                  &lt;li&gt;
+                        &lt;label for="id_filtros_2"&gt;
+                          &lt;input type="radio" id="id_filtros_2" value="c" name="filtros" /&gt;
+                          Componente CAPACIDAD PEDAGÓGICA (CPG)
+                        &lt;/label&gt;
+                  &lt;/li&gt;
+
+                  &lt;li&gt;
+                        &lt;label for="id_filtros_3"&gt;
+                          &lt;input type="radio" id="id_filtros_3" value="d" name="filtros" /&gt;
+                          Componente PRÁCTICA DE VALORES (PV)
+                        &lt;/label&gt;
+                  &lt;/li&gt;
+
+                  &lt;li&gt;
+                        &lt;label for="id_filtros_4"&gt;
+                          &lt;input type="radio" id="id_filtros_3" value="e" name="filtros" /&gt;
+                          Reporte de SUGERENCIAS
+                        &lt;/label&gt;
+                  &lt;/li&gt;
+
+                &lt;/ol&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/fieldset&gt;</pre>
+</div>
+</div>
+<div class="section" id="formularios-ese2012">
+<span id="template-admin-formulario-ese2012-html"></span><h3>Formularios ese2012<a class="headerlink" href="#formularios-ese2012" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/admin/app/formulario_ese2012.html</span></tt>:</p>
+<div class="highlight-python"><pre>&lt;style type="text/css"&gt;
+input[type=radio] {
+    margin-top: 7px;
+
+}
+fieldset{
+    margin: 15px 0px 15px 0px;
+    width: 75%;
+    padding: 10px 20px 10px 20px;
+}
+#id_campos, #id_indicadores{
+    width: 75%;
+}
+
+&lt;/style&gt;
+&lt;fieldset&gt;
+&lt;legend&gt; Opciones de Resultados &lt;/legend&gt;
+&lt;ol type="a"&gt;
+&lt;li&gt;&lt;label for="id_opciones_0"&gt;&lt;input type="radio" id="id_opciones_0" value="a" name="opciones" /&gt;
+La valoración global de la Satisfacción Estudiantil por DOCENTE&lt;/label&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt; {{ form.docentes }}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;label for="id_opciones_1"&gt;&lt;input type="radio" id="id_opciones_1" value="b" name="opciones" /&gt;
+La valoracion global de la Satisfacción Estudiantil por CARRERA&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label for="id_opciones_2"&gt;&lt;input type="radio" id="id_opciones_2" value="c" name="opciones" /&gt;
+La valoracion  de la Satisfacción Estudiantil en cada uno de los CAMPOS, por carrera&lt;/label&gt;
+&lt;ul&gt;
+&lt;li&gt; {{ form.campos }}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+
+&lt;li&gt;&lt;label for="id_opciones_3"&gt;&lt;input type="radio" id="id_opciones_3" value="d" name="opciones" /&gt; La va
+loración estudiantil en cada uno de los INDICADORES por carrera&lt;/label&gt;
+&lt;ul&gt;
+&lt;li&gt;{{ form.indicadores }} &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;label for="id_opciones_4"&gt;&lt;input type="radio" id="id_opciones_4" value="e" name="opciones" /&gt; Los 1
+0 indicadores de mayor SATISFACCIÓN en la Carrera&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label for="id_opciones_5"&gt;&lt;input type="radio" id="id_opciones_5" value="f" name="opciones" /&gt; Los 1
+0 indicadores de mayor INSATISFACCIÓN en la Carrera&lt;/label&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/fieldset&gt;</pre>
+</div>
+</div>
+<div class="section" id="menu-resultados">
+<span id="template-admin-menu-resultados-html"></span><h3>Menú resultados<a class="headerlink" href="#menu-resultados" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/admin/app/menu_resultados.html</span></tt>:</p>
+<div class="highlight-python"><pre>{% extends "admin/base_site.html" %}
+{% block extrahead %}
+&lt;script type="text/javascript" src="/static/js/jquery-1.6.2.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/static/js/sedd.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+    $(document).ready(function(){
+        $('.boton').hide();
+        menu_academico_ajax();
+        // Para actualización de los dos campos Docente
+        $('#id_carrera').change(function(){
+            var id_periodoe = $("#id_periodo_evaluacion option:selected").val();
+            /* Si se trata de la Encuesta de Satisfacción Estudiantil */
+            if (id_periodoe == 1){
+                // Se oculta el primer campo Docente del menú general
+                $("label[for=id_docente]").hide();
+                $("#id_docente").hide();
+            }
+
+            $("#ver-opciones").click();
+        });
+        $('#ver-opciones').click(function(){
+            /* NOTA: JavaScript no soporta nombres de variables largos! */
+            var id_periodoe = $("#id_periodo_evaluacion option:selected").val();
+            var area = $("#id_area option:selected").val();
+            var carrera = $("#id_carrera option:selected").val();
+            if (id_periodoe !='' &amp;&amp; area !='' &amp;&amp; carrera !='' ){
+                $.ajax({
+                    url: "/resultados/periodo/" + id_periodoe + "/",
+                    method: "GET",
+                    data: {area:area, carrera:carrera},
+                    // El servicio devuelve un formulario HTML formateado
+                    dataType: 'html',
+                    success: function (data){
+                        $("#menu-opciones").html(data);
+                        $('.boton').show();
+                    },
+                    error: function(xhr,status,error){
+                        alert("error: " + status + "-" + error);
+                    }
+                });
+            }else{
+                $("#menu-opciones").html("");
+                $('.boton').hide();
+            }
+        });
+    });
+&lt;/script&gt;
+&lt;style type="text/css"&gt;
+body{
+    font-size: 12px;
+}
+.boton {
+    align: right;
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+}
+/*select nth:eq(1) {
+    width: 600px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #666666;
+}*/
+td {
+    vertical-align: center;
+}
+&lt;/style&gt;
+{% endblock %}
+
+
+{% block content_title %}
+  &lt;ul class="object-tools"&gt;
+    &lt;li&gt;
+      &lt;a href="javascript:void(0)" id="ver-opciones"&gt;
+        Ver Opciones de Resultados
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h1 style="margin-bottom: 20px;"&gt; Seleccione Datos Académicos &lt;/h1&gt;
+{% endblock %}
+
+
+{% block breadcrumbs %}
+  &lt;div class="breadcrumbs"&gt;
+      &lt;a href="../../"&gt;
+        Inicio
+      &lt;/a&gt;
+       &amp;rsaquo;
+       &lt;a href="../"&gt;
+         App
+      &lt;/a&gt;
+      &amp;rsaquo;
+      Evaluaciones
+    &lt;/div&gt;
+{% endblock %}
+
+{% block content %}
+{{ block.super }}
+&lt;form action="/resultados/mostrar/" method="POST" target="_blank"&gt;
+
+  {% csrf_token %}
+
+  &lt;table style="margin-bottom: 20px;"&gt;
+    {{ form.as_table }}
+  &lt;/table&gt;
+  &lt;div id="menu-opciones"&gt;
+  &lt;/div&gt;
+  &lt;div id="acciones"&gt;
+    &lt;input class="boton" id="borrar" type="reset" value="Borrar"/&gt;
+    &lt;input class="boton" id="procesar" type="submit" value="Aceptar"/&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="resumen-de-evaluaciones">
+<span id="template-admin-resumen-evaluaciones-html"></span><h3>Resumen de Evaluaciones<a class="headerlink" href="#resumen-de-evaluaciones" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/admin/app/resumen_evaluaciones.html</span></tt>:</p>
+<div class="highlight-python"><pre>{% extends "admin/base_site.html" %}
+
+
+{% load i18n %}
+
+{% block extrahead %}
+
+{{ block.super }}
+&lt;style&gt;
+input {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 20px;
+}
+img {
+    vertical-align: middle;
+}
+&lt;/style&gt;
+
+&lt;script type="text/javascript" src="/static/js/jquery-1.6.2.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/static/js/sedd.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+    $(document).ready(function(){
+        menu_academico_ajax();
+        /* Calculos de los datos de Resumen */
+        $('#calcular').click(function(event){
+            var pa = $('#id_periodo_academico option:selected').val();
+            var c = $('#id_carrera option:selected').val();
+            if ( pa != '' &amp;&amp;  c != '') {
+                $('#cargando').show();
+                $.ajax({
+                    method: 'GET',
+                    url: '/admin/resumen/calcular',
+                    data: {'id_periodo_evaluacion': $('#id_periodo_evaluacion option:selected').val(),
+                           'area': $('#id_area option:selected').val(),
+                           'carrera': $('#id_carrera option:selected').val(),
+                           'semestre': $('#id_semestre option:selected').val(),
+                           'paralelo': $('#id_paralelo option:selected').val()
+                          },
+                    dataType: 'JSON',
+                    success: function(response){
+                        $('#estudiantes').val(response['estudiantes']);
+                        $('#completados').val(response['completados']);
+                        $('#faltantes').val(response['faltantes']);
+                        $('#cargando').hide();
+                    },
+                    error: function(xhr,status,error){
+                        alert("error: " + status + "-" + error);
+                    }
+                });
+                event.preventDefault();
+            } // end if != ''
+        });
+    });
+&lt;/script&gt;
+{% endblock %}
+
+{% block content %}
+&lt;h2&gt; Total de Evaluadores del Periodo {{ periodoEvaluacion }} &lt;/h2&gt;
+&lt;table width="100%" style="margin-bottom: 40px;"&gt;
+  &lt;tr&gt;
+          &lt;td&gt; &lt;h3&gt; Estudiantes: {{ evaluadores.estudiantes }} &lt;/h3&gt;&lt;/td&gt;
+          &lt;td&gt; &lt;h3&gt; Docentes: {{ evaluadores.docentes }} &lt;/h3&gt; &lt;/td&gt;
+          &lt;td&gt; &lt;h3&gt; Pares Academico: {{ evaluadores.pares }} &lt;/h3&gt;&lt;/td&gt;
+          &lt;td&gt; &lt;h3&gt; Coordinadores: {{ evaluadores.directores }} &lt;/h3&gt;&lt;/td&gt;
+        &lt;/h3&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;h2&gt; Detalle de Evaluaciones de Estudiantes &lt;/h2&gt;
+&lt;table&gt;
+{{ form.as_table }}
+&lt;/table&gt;
+&lt;hr/&gt;
+&lt;div style="padding-top: 10px;" &gt;
+    &lt;button id="calcular" style="margin-right: 40px;"&gt; Calcular &lt;/button&gt;
+  Total: &lt;input type='text' id='estudiantes' size='10' readonly='readonly'/&gt;
+  Han Evaluado: &lt;input type='text' id='completados' size='10' readonly='readonly'/&gt;
+  NO Evaluan: &lt;input type='text' id='faltantes' size='10' readonly='readonly'/&gt;
+  &lt;br/&gt;
+  &lt;img id="cargando" src="/static/images/loading-grey.gif"/&gt;
+&lt;/div&gt;
+
+{% endblock %}</pre>
+</div>
+</div>
+</div>
+<div class="section" id="plantillas-para-usuarios-y-tareas">
+<span id="template-user"></span><h2>Plantillas para usuarios y tareas<a class="headerlink" href="#plantillas-para-usuarios-y-tareas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="portada">
+<span id="template-user-portada-html"></span><h3>Portada<a class="headerlink" href="#portada" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/portada.html</span></tt>:</p>
+<div class="highlight-python"><pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
+
+&lt;!-- Title --&gt;
+&lt;title&gt;SEED-UNL&lt;/title&gt;
+
+&lt;!-- Link to the stylesheet --&gt;
+&lt;link href="/static/style.css" type="text/css" rel="stylesheet" /&gt;
+&lt;!-- Scripts in js --&gt;
+&lt;!--script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"&gt;&lt;/script--&gt;
+&lt;script type="text/javascript" src="/static/js/jquery-1.6.2.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/static/js/efectos.js"&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;!-- Main Block --&gt;
+&lt;div id="wrapper"&gt;
+
+        &lt;!-- Header --&gt;
+        &lt;div id="header"&gt;
+                &lt;div id="logo"&gt;
+                        &lt;a href="#"&gt;&lt;img src="/static/images/logo.jpg" /&gt;&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div id="slogan"&gt;
+                        &lt;img src="/static/images/slogan.jpg" /&gt;
+                &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- End header --&gt;
+
+        &lt;!-- Content --&gt;
+        &lt;div id="content"&gt;
+
+                &lt;!-- Menu --&gt;
+                &lt;div id="menu"&gt;
+                        &lt;ul&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="/admin/"&gt;Acceso al sistema&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="http://www.unl.edu.ec"&gt;Acerca de...&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;!-- End menu --&gt;
+
+                &lt;!-- Left column --&gt;
+                &lt;div id="left"&gt;
+                        &lt;h1 style="color: #8EAD45;"&gt; Bienvenidos al sistema de evaluación de docentes de la UNL&lt;/h1&gt;
+                        &lt;p&gt;
+                          {% if periodoEvaluacionActual %}
+                          &lt;a href="{% url 'login' %}"&gt;
+                            &gt;&gt;&gt; &lt;u&gt; &lt;b style="color: black; font-weight: 250%; font-size: 14px;"&gt;
+                                {{ periodoEvaluacionActual.titulo|upper }} &lt;/b&gt;  &lt;/u&gt;
+                          &lt;/a&gt;
+                          {% else %}
+                          &gt;&gt;&gt; &lt;b&gt; No existen Procesos de Evaluacion actualmente &lt;/b&gt;
+                          {% endif %}
+
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                          {{ periodoEvaluacionActual.descripcion }} &lt;br/&gt;
+                          &lt;b&gt;
+                            (Finaliza el {{ periodoEvaluacionActual.fin|date:"l"|title }}
+                            {{ periodoEvaluacionActual.fin }})
+                          &lt;/b&gt;
+                        &lt;/p&gt;
+
+                &lt;/div&gt;
+                &lt;!-- End left column --&gt;
+
+                &lt;!-- Right column --&gt;
+                &lt;div id="right"&gt;
+                        &lt;img src="/static/images/coffe.jpg" /&gt;
+                        &lt;div id="caption"&gt;
+                                        &lt;p&gt;&amp;quot;En los tesoros de la sabiduría está la glorificación de la vida&amp;quot;.&lt;/p&gt;
+                        &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- End right column --&gt;
+                &lt;div class="clear"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- End content --&gt;
+
+        &lt;!-- Footer --&gt;
+        &lt;div id="footer"&gt;
+                &lt;p&gt;2012 &amp;copy; Design by Iceman.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- End footer --&gt;
+
+&lt;/div&gt;
+&lt;!-- End Main Block --&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+</div>
+<div class="section" id="pagina-de-inicio">
+<span id="template-user-index-html"></span><h3>Pagina de Inicio<a class="headerlink" href="#pagina-de-inicio" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/index.html</span></tt>:</p>
+<div class="highlight-python"><pre>{%  extends "admin/base_site.html" %}
+
+{% block content_title %}
+
+{% endblock %}
+
+{% block content %}
+
+&lt;p/&gt;
+
+&lt;!-- Estudiante --&gt;
+{% if request.session.estudiante %}
+{% if request.session.carreras_estudiante|length &gt; 0 %}
+&lt;h1&gt; Carreras del Estudiante &lt;/h1&gt;
+&lt;ul style="margin-top: 20px;"&gt;
+  {% for carrera in request.session.carreras_estudiante %}
+  &lt;h1&gt;
+    &lt;li&gt;
+      &lt;a href="{% url 'estudiante_asignaturas_docentes' carrera.num_carrera %}"&gt;
+        {{ carrera.nombre|upper }}
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;h1&gt;
+  {% endfor %}
+&lt;/ul&gt;
+&lt;hr/&gt;
+{% endif %}
+{% endif %}
+
+&lt;!-- End Estudiante --&gt;
+
+
+&lt;!-- Docente --&gt;
+
+{% if request.session.docente %}
+&lt;h1&gt; Encuestas para Autoevaluación del Docente &lt;/h1&gt;
+&lt;!--ul style="margin-top: 20px;"--&gt;
+  &lt;!--h3--&gt;
+      {#% for cuestionario in request.session.cuestionarios_docente %#}
+      &lt;!-- Se recorren los cuestionarios para autoevaluacion con su estado --&gt;
+      {% for da in request.session.docente_autoevaluaciones %}
+      &lt;ul class="{% if da.evaluado %} messagelist {% endif %}"
+          {% if forloop.first %} style="margin-top: 20px;" {% endif %}&gt;
+        &lt;h3&gt;
+        &lt;li&gt;
+          {% if da.evaluado %}
+          {{ da.cuestionario.titulo|upper }}
+          {% else %}
+          &lt;a href="{% url 'encuestas' id_docente=request.session.docente.id id_asignatura=0 id_tinformante=5 id_cuestionario=da.cuestionario.id %}"&gt;
+          {{ da.cuestionario.titulo|upper }}
+          &lt;/a&gt;
+          {% endif %}
+        &lt;/li&gt;
+        &lt;/h3&gt;
+      &lt;/ul&gt;
+      {% empty %}
+      &lt;ul&gt;
+        &lt;h3&gt; No existen encuestas para el Docente el presente Periodo.&lt;/h3&gt;
+      &lt;/ul&gt;
+      {% endfor %}
+  &lt;!--/h3--&gt;
+&lt;!--/ul--&gt;
+&lt;hr/&gt;
+{% endif %}
+
+&lt;!-- Fin Docente --&gt;
+
+
+&lt;!-- Par Academico --&gt;
+
+{% if request.session.docente.parAcademico %}
+
+&lt;h1 style="margin-top: 20px;"&gt; Encuestas para Pares Académicos de la Carrera &lt;/h1&gt;
+&lt;ul style="margin-top: 20px;"&gt;
+  {% if not request.session.cuestionarios_pares_academicos %}
+  &lt;h3&gt; No existen encuestas para Pares Académicos en el presente Periodo.&lt;/h3&gt;
+  {% else %}
+  {% for carrera in request.session.carreras_pares_academicos %}
+  &lt;h3&gt;
+    &lt;li&gt;
+      &lt;a href="{% url 'pares_academicos_docentes' carrera.num_carrera %} "&gt;
+        SELECCIONAR DOCENTES DE LA CARRERA {{ carrera.nombre|upper }} [{{ carrera.area|upper }}]
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/h3&gt;
+  {% endfor %}
+  {% endif %}
+&lt;/ul&gt;
+&lt;hr/&gt;
+{% endif %}
+&lt;!-- Fin Par Academico --&gt;
+
+
+&lt;!-- Evaluciones Director de Carrera  --&gt;
+
+{% if request.session.docente.direcciones.count &gt; 0 %}
+
+&lt;h1 style="margin-top: 20px;"&gt; Encuestas para Coordinadores Carrera &lt;/h1&gt;
+&lt;ul style="margin-top: 20px;"&gt;
+  {% if not request.session.cuestionarios_directivos %}
+  &lt;h3&gt; No existen encuestas para los Coordinadores en el presente Periodo.&lt;/h3&gt;
+  {% else %}
+  {% for carrera in request.session.carreras_director %}
+  &lt;h3&gt;
+    &lt;li&gt;
+      &lt;a href="{% url 'director_docentes' carrera.num_carrera %} "&gt;
+        SELECCIONAR DOCENTES DE LA CARRERA {{ carrera.nombre|upper }} [{{ carrera.area|upper }}]
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/h3&gt;
+  {% endfor %}
+  {% endif %}
+&lt;/ul&gt;
+&lt;hr/&gt;
+
+&lt;!-- Fin Evaluaciones Director de Carrera --&gt;
+
+&lt;!-- Resultados --&gt;
+
+&lt;h1 style="margin-top: 20px;"&gt; Resultados de Evaluaciones de la Carrera &lt;/h1&gt;
+&lt;ul style="margin-top: 20px;"&gt;
+  {% for carrera in request.session.carreras_director %}
+  &lt;h3&gt;
+    &lt;li&gt;
+      &lt;a href="/resultados/carrera/{{ carrera.num_carrera }}/"&gt;
+        RESULTADOS DE EVALUACIONES CARRERA {{ carrera.nombre|upper }} [{{ carrera.area|upper }}]&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/h3&gt;
+  {% endfor %}
+&lt;/ul&gt;
+&lt;hr/&gt;
+
+{% endif %}
+
+&lt;!-- Fin Resultados --&gt;
+
+
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="login">
+<span id="template-user-login-html"></span><h3>Login<a class="headerlink" href="#login" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/login.html</span></tt>:</p>
+<div class="highlight-python"><pre>{% extends "admin/login.html" %}
+
+{% block title %} Evaluación Docente  {% endblock %}
+
+{% csrf_token %}
+{% if next %}
+    &lt;input type="hidden" name="next" value="{{ next }}" /&gt;
+{% endif %}
+
+
+{% block branding %}
+   &lt;h1 id="site-name"&gt;  Sistema de Evaluación de Docentes UNL  &lt;/h1&gt;
+
+{% endblock %}
+
+{% block content %}
+   {{ form.non_field_errors }}
+   {{ block.super }}
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="carreras">
+<span id="template-user-carreras-html"></span><h3>Carreras<a class="headerlink" href="#carreras" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/carreras.html</span></tt>:</p>
+<div class="highlight-python"><pre>{%  extends "admin/base_site.html" %}
+{#  extends "base.html" #}
+
+&lt;!--link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" /--&gt;
+
+{% block content_title %}
+ &lt;h3&gt;  Carreras &lt;/h3&gt;
+{% endblock %}
+
+{% block content %}
+
+&lt;p/&gt;
+&lt;ul&gt;
+{% for carrera in request.session.carreras %}
+
+&lt;h1&gt; &lt;li&gt; &lt;a href="/carrera/asignaturas/{{carrera.num_carrera}}"&gt; {{ carrera.nombre }} &lt;/a&gt; &lt;/li&gt; &lt;h1&gt;
+
+{% endfor %}
+&lt;/ul&gt;
+
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="template-user-asignaturas-docentes-html">
+<span id="id1"></span><h3>Asignaturas y Docentes<a class="headerlink" href="#template-user-asignaturas-docentes-html" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/asignaturas_docentes.html</span></tt>:</p>
+<div class="highlight-python"><pre>{%  extends "admin/base_site.html" %}
+{#% extends "base.html" %#}
+
+{% block content_title %}
+&lt;h1&gt;Seleccione el Docente a Evaluar &lt;/h1&gt;
+{% endblock %}
+
+{% block content %}
+&lt;table style="margin-top: 20px;"&gt;
+  &lt;thead&gt; &lt;th&gt; ASIGNATURA &lt;/th&gt; &lt;th&gt; DOCENTES &lt;th/&gt; &lt;/thead&gt;
+  &lt;tbody&gt;
+  {% for ad in asignaturas_docentes %}
+  &lt;tr style="border-bottom: 1px solid dotted;"&gt;
+    &lt;td&gt;
+      &lt;b&gt;
+        {{ ad.asignatura.nombre }}
+      &lt;/b&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      {% for d in ad.docentes %}
+      &lt;ul class="{% if d.evaluado %} messagelist {% endif %}"&gt;
+        &lt;li&gt;
+          {% if d.evaluado %}
+             {{ d.docente }} &lt;br/&gt;
+          {% else %}
+          &lt;b&gt;
+            {# Se envia ids de asignatura y de docente #}
+            {# Modificado en encuestas de actividades adicionales 2012, revisar???#}
+            &lt;a href="{% url 'encuestas' id_docente=d.docente.id id_asignatura=ad.asignatura.id id_tinformante=1 id_cuestionario=0 %}"&gt;
+              {{ d.docente }}
+            &lt;/a&gt;
+            &lt;br/&gt;
+          &lt;/b&gt;
+          {% endif %}
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      {% endfor %}
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  {% endfor %}
+  &lt;tr&gt;
+    &lt;td&gt;
+    &lt;/td&gt;
+    &lt;td align="right"&gt;
+      &lt;a href="{% url 'proyecto.app.controllers.index' %}"&gt; &lt;u&gt;&lt;&lt;&lt; Carreras &gt;&gt;&gt; &lt;/u&gt;&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="directores-y-docentes">
+<span id="template-user-director-docentes-html"></span><h3>Directores y Docentes<a class="headerlink" href="#directores-y-docentes" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/director_docentes.html</span></tt>:</p>
+<div class="highlight-python"><pre>{% extends "admin/base_site.html" %}
+{#% extends "base.html" %#}
+
+{% block content_title %}
+&lt;h1&gt;Seleccione el Docente a Evaluar &lt;/h1&gt;
+{% endblock %}
+
+{% block content %}
+&lt;table style="margin-top: 20px; width: 100%;"&gt;
+  &lt;tbody&gt;
+    &lt;tr style="border-bottom: 1px dotted #B4CBE5;"&gt;
+      &lt;td&gt;
+        {% for de in docentes_evaluaciones %}
+        &lt;b&gt;
+          &lt;ul class="{% if de.evaluado %} messagelist {% endif %}"&gt;
+            &lt;li&gt;
+              {% if de.evaluado %}
+              {{ de.docente }}
+              {% else %}
+              &lt;a href="{% url 'encuestas' id_docente=de.docente.id id_asignatura=0 id_tinformante=6 id_cuestionario=0%}"&gt;
+                {{ de.docente }}
+              &lt;/a&gt;
+              {% endif %}
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/b&gt;
+        &lt;!-- Paginador de docentes --&gt;
+        {% if forloop.counter|divisibleby:"10" %}
+        &lt;/td&gt;
+        &lt;td&gt;
+        {% endif %}
+        {% endfor %}
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+    &lt;/td&gt;
+    &lt;td align="right"&gt;
+      &lt;a href="{% url 'proyecto.app.controllers.index' %}"&gt; &lt;u&gt;&lt;&lt;&lt; Carreras &gt;&gt;&gt; &lt;/u&gt;&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="pares-academicos-y-docentes">
+<span id="template-user-pares-academicos-docentes-html"></span><h3>Pares Académicos y Docentes<a class="headerlink" href="#pares-academicos-y-docentes" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/pares_academicos_docentes.html</span></tt>:</p>
+<div class="highlight-python"><pre>{% extends "admin/base_site.html" %}
+
+{% block content_title %}
+&lt;h1&gt;Seleccione el Docente a Evaluar &lt;/h1&gt;
+{% endblock %}
+
+{% block content %}
+&lt;table style="margin-top: 20px; width: 100%;"&gt;
+  &lt;tbody&gt;
+    &lt;tr style="border-bottom: 1px dotted #B4CBE5;"&gt;
+      &lt;td&gt;
+        {% for de in docentes_evaluaciones %}
+        &lt;b&gt;
+          &lt;ul class="{% if de.evaluado %} messagelist {% endif %}"&gt;
+            &lt;li&gt;
+              {% if de.evaluado %}
+              {{ de.docente }}
+              {% else %}
+              &lt;a href="{% url 'encuestas' id_docente=de.docente.id id_asignatura=0 id_tinformante=10 id_cuestionario=0%}"&gt;
+                {{ de.docente }}
+              &lt;/a&gt;
+              {% endif %}
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/b&gt;
+        &lt;!-- Paginador de docentes --&gt;
+        {% if forloop.counter|divisibleby:"10" %}
+        &lt;/td&gt;
+        &lt;td&gt;
+        {% endif %}
+        {% endfor %}
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+    &lt;/td&gt;
+    &lt;td align="right"&gt;
+      &lt;a href="{% url 'proyecto.app.controllers.index' %}"&gt; &lt;u&gt;&lt;&lt;&lt; Carreras &gt;&gt;&gt; &lt;/u&gt;&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="en-contruccion">
+<span id="template-user-en-construccion-html"></span><h3>en contruccion<a class="headerlink" href="#en-contruccion" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/en_construccion.html</span></tt>:</p>
+<div class="highlight-python"><pre>&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+    &lt;title&gt; En construcción &lt;/title&gt;
+    &lt;style type="text/css"&gt;
+
+    body {
+        font-family: Helvetica, Arial, Sans;
+    }
+
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;center&gt;
+      &lt;center&gt;&lt;h2&gt; En Construcción ...  &lt;/h2&gt; &lt;/center&gt;
+      &lt;div id="pie" style="font-size: 9px; color: #666666"&gt;
+                &lt;hr style="margin-bottom: 6px;"/&gt;
+                Unidad de Telecomunicaciones e Infomacion - Departamento de Desarrollo de Software &lt;br&gt;
+                Correo Sistema de Evaluacion:
+                &lt;a href="mailto:evaluacion.docente@unl.edu.ec"&gt; &lt;u&gt;evaluacion.docente@unl.edu.ec&lt;/u&gt; &lt;/a&gt; &lt;br/&gt;
+                Loja - Ecuador
+      &lt;/div&gt;
+
+    &lt;/center&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+</div>
+<div class="section" id="encuestas">
+<span id="template-user-encuestas-html"></span><h3>Encuestas<a class="headerlink" href="#encuestas" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/encuestas.html</span></tt>:</p>
+<div class="highlight-python"><pre>{% extends "admin/base_site.html" %}
+
+{% block content_title %}
+&lt;h1&gt; Encuestas Disponibles &lt;/h1&gt;
+{% endblock %}
+
+{% block content %}
+
+{% if periodo_no_iniciado %}
+
+&lt;ul class="messagelist" style="margin-top: 20px;"&gt;
+  &lt;b&gt;&lt;li class="warning"&gt; El Periodo de Evaluacion aun no inicia &lt;/li&gt;&lt;/b&gt;
+&lt;/ul&gt;
+
+{% else %}
+{% if periodo_finalizado %}
+
+&lt;ul class="messagelist" style="margin-top: 20px;"&gt;
+  &lt;b&gt;&lt;li class="error"&gt; Lo sentimos, el Periodo de Evaluacion ha Finalizado &lt;/li&gt;&lt;/b&gt;
+&lt;/ul&gt;
+
+{% else %}
+
+&lt;ul&gt;
+  {% for cuestionario in cuestionarios %}
+  &lt;h3&gt;
+    &lt;li&gt;
+      &lt;a href="/encuesta/responder/{{ cuestionario.id }} " &gt; {{ cuestionario.titulo }} &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/h3&gt;
+  {% empty %}
+  &lt;h3&gt; No existen Encuestas Disponibles &lt;/h3&gt;
+  {% endfor %}
+&lt;/ul&gt;
+
+{% endif %}
+{% endif %}
+
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="encuesta-para-responder">
+<span id="template-user-encuesta-responder-html"></span><h3>Encuesta para Responder<a class="headerlink" href="#encuesta-para-responder" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/encuesta_responder.html</span></tt>:</p>
+<div class="highlight-python"><pre>{%  extends "admin/base_site.html" %}
+
+{% load i18n %}
+
+
+{% block extrahead %}
+
+   {{ block.super }}
+
+    &lt;style type="text/css"&gt;
+    #encabezado {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        align: center;
+    }
+
+    .seccion{
+        /*background-color: #EDF3FE;*/
+        background-color: #B4CBE5;
+    }
+
+    .td-item-seleccion{
+        border: 2px white solid;
+        background-color: #B4CBE5;
+        text-align: center;
+        display: table-cell;
+        /* Para cortar las palabras al ancho de la celda */
+        word-break: break-all;
+
+    }
+
+    .td-tabla-contenedor {
+        border-bottom: 1px dotted  #B4CBE5;
+        border-left: 1px dashed  #B4CBE5;
+    }
+
+    #tabla-items{
+        width: 100%;
+    }
+    &lt;/style&gt;
+
+    &lt;script type="text/javascript" src="/static/js/jquery-1.6.2.min.js"&gt; &lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+function validarSeleccionUnica(){
+    var preguntas = new Array();
+    // Se validan como obligatorias todas las preguntas de Selección Unica
+    $.each($('#formulario input[name^="pregunta"]:radio'), function(){
+        var nombre = $(this).attr("name");
+        preguntas[nombre] = nombre;
+    });
+    for (var pregunta in preguntas){
+        if (! $('#formulario input[name=' + pregunta +']:radio').is(':checked') ){
+            alert('ERROR: Faltan preguntas por contestar');
+            return false;
+        }
+
+    }
+    return true;
+};
+
+function validarEnsayos(){
+    var preguntas = new Array();
+    // Se validan como obligatorias todas las preguntas de Ensayo
+    $.each($('#formulario textarea[name^="pregunta"]'), function(){
+        var nombre = $(this).attr("name");
+        preguntas[nombre] = nombre;
+    });
+    for (var pregunta in preguntas){
+        if ( $('#formulario textarea[name=' + pregunta +']').val().length &lt; 4 ){
+            alert('ERROR: Faltan preguntas por completar');
+            return false;
+        }
+    }
+    return true;
+};
+
+function validarObservaciones(){
+    /* Validación en Evaluacion de Actividades Adicionales a la Docencia 2011-2012 */
+    var flag = true;
+    $.each($('#formulario input[name^="pregunta"]:radio:checked'), function(){
+        var p = $(this).attr("name");
+        var r = $(this).attr("value");
+        var np = p.split('-')[1]; //Numero de la pregunta
+        var o = 'observaciones-pregunta-' + np;
+        var observaciones = $('textarea[name='+o+']').val();
+        if (r != '1' &amp;&amp; observaciones == ''){
+            alert('Faltan ingresar fuentes de verificación')
+            flag=false;
+            return flag;
+        }
+    });
+    return flag;
+}
+
+function grabarEncuesta(){
+    /* Se trata de la Evaluacion de Actividades Adicionales a la Docencia 2011-2012 */
+    {% ifequal cuestionario.periodoEvaluacion.id 2 %}
+    if (validarObservaciones()){
+        $('#formulario').submit();
+    } else {
+        return false;
+    }
+    {% endifequal %}
+    /* Para el resto de casos de Periodos de Evaluacion */
+    $('#formulario').submit();
+
+
+    /*$.ajax({
+        url: "/encuesta/grabar/",
+        method: "POST",
+        //data: "periodo_academico_id={{ object_id }}",
+        success: function (data){
+            alert(data);
+        },
+        error: function(xhr,status,error){
+            alert("error: " + status + "-" + error);
+        }
+    });*/
+}
+
+$(document).ready(function(){
+    $('#grabar').click(function(){
+        {% if cuestionario.preguntas_obligatorias %}
+        if (validarSeleccionUnica() == true &amp;&amp; validarEnsayos() == true){
+            grabarEncuesta();
+        }
+        {% else %}
+            grabarEncuesta();
+        {% endif %}
+    });
+});
+    &lt;/script&gt;
+
+{% endblock %}
+
+
+{% block content_title %}
+
+&lt;h3&gt; {{ cuestionario.titulo }} &lt;/h3&gt;
+
+{% endblock %}
+
+
+{% block content %}
+
+
+&lt;form action="/encuesta/grabar/" method="post" id="formulario" name="formulario" &gt;
+
+  {% csrf_token %}
+
+  &lt;table id="tabla-contenedor"&gt;
+
+        &lt;td colspan="2"&gt;
+          &lt;div id="encabezado-cuestionario" width="25%"&gt;
+            {{ cuestionario.encabezado|safe }}
+          &lt;/div&gt;
+
+          &lt;!-- Encuesta dirigida a los ESTUDIANTES --&gt;
+          {#% if cuestionario.informante.tipo.startswith('Estudiante') %#}
+          {% if asignaturaDocente %}
+          &lt;div id="datos_academicos" style="line-height: 18px;"&gt;
+            Area: &lt;b&gt; {{ asignaturaDocente.asignatura.area }} &lt;/b&gt; &lt;br/&gt;
+            Carrera: &lt;b&gt; {{ asignaturaDocente.asignatura.carrera }} &lt;/b&gt; &lt;br/&gt;
+            Modulo ( {% ifequal asignaturaDocente.asignatura.tipo "modulo" %} &lt;b&gt;X&lt;/b&gt; {% endifequal %}  );
+            Unidad ( {% ifequal asignaturaDocente.asignatura.tipo "unidad" %} &lt;b&gt;X&lt;/b&gt; {% endifequal %}  )
+            Curso ( {% ifequal asignaturaDocente.asignatura.tipo "curso" %} &lt;b&gt;X&lt;/b&gt; {% endifequal %}  )
+            Taller ( {% ifequal asignaturaDocente.asignatura.tipo "taller" %} &lt;b&gt;X&lt;/b&gt; {% endifequal %}  )
+            Otro ( {% ifequal asignaturaDocente.asignatura.tipo "otro" %} &lt;b&gt;X&lt;/b&gt; {% endifequal %}  )
+            &lt;br/&gt;
+            Nombre de el/la Docente Evaluado(a): &lt;b&gt; {{ asignaturaDocente.docente }} &lt;/b&gt; &lt;br/&gt;
+            Fecha de Evaluacion: &lt;b&gt; {{ fecha }} &lt;/b&gt; &lt;br/&gt;
+          &lt;/div&gt;
+          {% endif %}
+
+          &lt;!-- Encuesta dirigida a los DIRECTORES DE CARRERA --&gt;
+          {% if 'Directivo' in cuestionario.informante.tipo %}
+          &lt;div id="datos_academicos" style="line-height: 18px;"&gt;
+            AREA: &lt;b&gt; {{ request.session.area }} &lt;/b&gt; &lt;br/&gt;
+            CARRERA: &lt;b&gt; {{ request.session.carrera }} &lt;/b&gt; &lt;br/&gt;
+            MÓDULO: (&lt;b&gt;X&lt;/b&gt;) &lt;br/&gt;
+            NOMBRE DEL PROFESOR (A) EVALUADO (A): &lt;b&gt; {{ request.session.docente_evaluar }} &lt;/b&gt;
+          &lt;/div&gt;
+          {% endif %}
+
+          &lt;!-- Encuesta dirigida a los PARES ACADEMICOS --&gt;
+          {% if 'ParAcademico' in cuestionario.informante.tipo %}
+          &lt;div id="datos_academicos" style="line-height: 18px;"&gt;
+            AREA: &lt;b&gt; {{ request.session.area }} &lt;/b&gt; &lt;br/&gt;
+            CARRERA: &lt;b&gt; {{ request.session.carrera }} &lt;/b&gt; &lt;br/&gt;
+            MÓDULO: (&lt;b&gt;X&lt;/b&gt;) &lt;br/&gt;
+            NOMBRE DEL PROFESOR (A) EVALUADO (A): &lt;b&gt; {{ request.session.docente_evaluar }} &lt;/b&gt;
+          &lt;/div&gt;
+          {% endif %}
+
+          &lt;!-- Encuesta de autoevaluacion para los DOCENTES --&gt;
+          {% if cuestionario.informante.tipo == 'Docente' %}
+          &lt;div id="datos_academicos" style="line-height: 18px;"&gt;
+            AREA: &lt;b&gt; {{ request.session.areas_docente }} &lt;/b&gt; &lt;br/&gt;
+            CARRERA: &lt;b&gt; {{ request.session.carreras_docente }} &lt;/b&gt; &lt;br/&gt;
+            MÓDULO: (&lt;b&gt;X&lt;/b&gt;) &lt;br/&gt;
+            NOMBRE DEL PROFESOR (A) EVALUADO (A): &lt;b&gt; {{ request.session.docente }} &lt;/b&gt;
+          &lt;/div&gt;
+          {% endif %}
+
+        &lt;/td&gt;
+        &lt;!-- end datos academicos --&gt;
+
+        &lt;tbody&gt;
+
+          {% for seccion in cuestionario.secciones.all %}  &lt;!-- secciones de cuestionario --&gt;
+          &lt;tr&gt;
+                &lt;td class="seccion" colspan="3" &gt;
+                  &lt;b&gt; {{ seccion.orden }}. {{ seccion.titulo|upper }} &lt;/b&gt;
+                  {{ seccion.descripcion }}
+                &lt;/td&gt;
+          &lt;/tr&gt;
+
+          &lt;!-- =============== Tratamiento de preguntas de SUBSECCIONES =============== --&gt;
+
+          {% for subseccion in seccion.subsecciones.all %}
+          &lt;tr&gt;
+                &lt;!-- columna subseccion --&gt;
+                &lt;td class="td-tabla-contenedor" width="10%" rowspan="{{ subseccion.preguntas.count }}"&gt;
+                   {% if subseccion.codigo %} {{ subseccion.codigo }} {% else %} {{ subseccion.orden }} {% endif %}
+                &lt;/td&gt;
+                &lt;!--/columna subseccion --&gt;
+
+                &lt;!-- preguntas de subsecciones --&gt;
+                {% for pregunta in subseccion.preguntas.all %}
+                &lt;!-- columna  pregunta --&gt;
+                &lt;td class="td-tabla-contenedor" width="60%" colspan="{% ifequal pregunta.tipo.tipo 'Ensayo' %} 3 {% endifequal %} "&gt;
+                  &lt;b&gt;
+                        {% if pregunta.codigo %} {{ pregunta.codigo }}. {% else %} {{ pregunta.orden }}. {% endif %}
+                  &lt;/b&gt;
+                  {{ pregunta.texto|safe }}
+                  &lt;br/&gt;
+                  {{ pregunta.descripcion|safe }} &lt;!-- Puede contener HTML --&gt;
+                  {% ifequal pregunta.tipo.tipo 'Ensayo' %}
+                  &lt;br/&gt;
+                  &lt;textarea colspan="2" name="pregunta-{{ pregunta.id }}" cols="100" rows="10" style="width: 100%;" &gt;&lt;/textarea&gt;
+                  {% endifequal %}
+                &lt;/td&gt;
+                &lt;!--/ preguntas de subsecciones --&gt;
+
+                &lt;!-- items de pregunta si es de seleccion --&gt;
+                {% ifequal pregunta.tipo.tipo 'SeleccionUnica' %}
+                &lt;td class="td-tabla-contenedor" width="30%"&gt;
+                  &lt;table id="tabla-items"&gt;
+                        &lt;tbody&gt;
+                          &lt;tr&gt;
+                                {% for item in pregunta.items.all %}
+                                &lt;!--Dividir para el numero exacto de items de la pregunta Ej. width: 25%--&gt;
+                                &lt;td class="td-item-seleccion" {% if not item.descripcion %} style="vertical-align: middle;" {% endif %}
+                                {% if not pregunta.observaciones %} style="width:25%;" {%else%} style="width:20%;" {% endif %} &gt;
+                                  &lt;input type="radio" name="pregunta-{{ pregunta.id }}"  value="{{ item.texto }}"&gt; &lt;/input&gt;
+                                  &lt;b&gt; {{ item.texto }} &lt;/b&gt;
+                                  &lt;br/&gt;
+                                  {% if item.descripcion %} {{ item.descripcion }} {% endif %}
+                                &lt;/td&gt;
+                                {% endfor%}
+
+                                {% if pregunta.observaciones %}
+                                &lt;td id="observaciones"&gt;
+                                  {{pregunta.observaciones|safe}}:
+                                  &lt;textarea name="observaciones-pregunta-{{ pregunta.id }}" rows="6" style="width: 100%;"&gt;&lt;/textarea&gt;
+                                &lt;/td&gt;
+                                {% endif %}
+                          &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                  &lt;/table&gt;
+                &lt;/td&gt;
+                {% endifequal %}
+                &lt;!--/ items pregunta si es de seleccion --&gt;
+          &lt;/tr&gt;
+          {% if not forloop.last %}
+          &lt;tr&gt; &lt;!-- por el rowspan de la primera columna --&gt;
+          {% endif %}
+          {% endfor %} &lt;!--/ preguntas de subseccion --&gt;
+          {% endfor %} &lt;!--/ subsecciones --&gt;
+
+          &lt;!-- ================= Tratamiento de Peguntas de SECCIONES ================ --&gt;
+
+          {% for pregunta in seccion.preguntas.all %} &lt;!-- preguntas de secciones  --&gt;
+          &lt;tr&gt;
+                &lt;td class="td-tabla-contenedor" width="60%" colspan="{% ifequal pregunta.tipo.tipo 'Ensayo' %} 3 {% endifequal %} "&gt;
+                  {% if cuestionario.secciones.all|length &gt; 1 %}
+                  &lt;b&gt;
+                        {% if pregunta.codigo %} {{ pregunta.codigo }}. {% else %}      {{ seccion.orden }}.{{ pregunta.orden }}. {% endif %}
+                  &lt;/b&gt;
+                  {{ pregunta.texto|safe }}
+                  {% else %}
+                  &lt;b&gt;
+                        {% if pregunta.codigo %} {{ pregunta.codigo }}. {% else %} {{ pregunta.orden }}. {% endif %}
+                  &lt;/b&gt;
+                  {{ pregunta.texto|safe }}
+                  {% endif %}
+                  &lt;br/&gt;
+                  {% if pregunta.descripcion %}
+                  {{ pregunta.descripcion|safe }} &lt;!-- Puede contener HTML --&gt;
+                  {% endif %}
+                  {% ifequal pregunta.tipo.tipo 'Ensayo' %}
+                  &lt;br/&gt;
+                  &lt;textarea name="pregunta-{{ pregunta.id }}" cols="100" rows="10" style="width: 100%;" &gt;&lt;/textarea&gt;
+                  {% endifequal %}
+                &lt;/td&gt;
+
+                &lt;!-- items pregunta de seccion si es de seleccion --&gt;
+                {% ifequal pregunta.tipo.tipo 'SeleccionUnica' %}
+                &lt;td class="td-tabla-contenedor" width="40%"&gt;
+                  &lt;table id="tabla-items"&gt;
+                        &lt;tbody&gt;
+                          &lt;tr&gt;
+                                {% for item in pregunta.items.all %}
+                                &lt;!--TODO: Dividir para el numero exacto de items de la pregunta Ej. width: 25%--&gt;
+                                &lt;td class="td-item-seleccion" {% if not item.descripcion %} style="vertical-align: middle;" {% endif %}
+                                {% if not pregunta.observaciones %} style="width:25%;" {%else%} style="width:20%;" {% endif %} &gt;
+                                  &lt;input type="radio" name="pregunta-{{ pregunta.id }}"  value="{{ item.texto }}"&gt; &lt;/input&gt;
+                                  &lt;b&gt; {{ item.texto }} &lt;/b&gt;
+                                  &lt;br/&gt;
+                                  {% if item.descripcion %} {{ item.descripcion }} {% endif %}
+                                &lt;/td&gt;
+                                {% endfor%}
+
+                                {% if pregunta.observaciones %}
+                                &lt;td id="observaciones"&gt;
+                                  {{pregunta.observaciones|safe}}:
+                                  &lt;textarea name="observaciones-pregunta-{{ pregunta.id }}" rows="6" style="width: 100%;"&gt;&lt;/textarea&gt;
+                                &lt;/td&gt;
+                                {% endif %}
+                          &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                  &lt;/table&gt;
+                &lt;/td&gt;
+                {% endifequal %}
+                &lt;!--/ items pregunta de seccion si es de seleccion --&gt;
+          &lt;/tr&gt;
+          {% endfor %} &lt;!--/ preguntas de seccion --&gt;
+
+          {% endfor %} &lt;!--/ secciones de cuestionario --&gt;
+
+        &lt;/tbody&gt;
+
+        &lt;tfoot&gt;
+          &lt;div id="comandos"&gt;
+                &lt;tr&gt;
+                  &lt;td colspan="2"&gt;
+                        &lt;input type="button" id="grabar" name="grabar" value="GRABAR"/&gt;
+                        &lt;input type="reset" value="BORRAR"/&gt;
+                        &lt;input type="button" id="cancelar" name="cancelar" value="CANCELAR"/&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+          &lt;/div&gt;
+        &lt;/tfoot&gt;
+
+  &lt;/table&gt;
+
+&lt;/form&gt;
+
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="encuesta-finalizada">
+<span id="template-user-encuesta-finalizada-html"></span><h3>Encuesta Finalizada<a class="headerlink" href="#encuesta-finalizada" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/encuesta_finalizada.html</span></tt>:</p>
+<div class="highlight-python"><pre>{% extends "admin/base_site.html"%}
+
+{% block title %}  Encuesta Grabada  {% endblock %}
+
+{% block content %}
+
+&lt;h1&gt; Información grabada satisfactoriamente. &lt;/h1&gt;
+
+&lt;p&gt; Gracias por participar de la Encuesta. &lt;/p&gt;
+
+{% if request.session.estudianteAsignaturaDocente %}
+&lt;p&gt;
+  &lt;a href="{% url 'proyecto.app.controllers.estudiante_asignaturas_docentes' num_carrera %}"&gt;
+    &lt;&lt;&lt; Continuar &gt;&gt;&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+{% else %}
+{% if request.session.director_carrera and num_carrera %}
+&lt;p&gt;
+  &lt;a href="{% url 'proyecto.app.controllers.director_docentes' num_carrera %}"&gt;
+  &lt;!--a href="{#% url encuestas id_docente=request.session.docente_evaluar.id id_asignatura=0 id_tinformante=6 %#}"--&gt;
+    &lt;&lt;&lt; Continuar &gt;&gt;&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+{% else %}
+{% if request.session.docente %}
+&lt;p&gt;
+  &lt;a href="{% url 'proyecto.app.controllers.index' %}"&gt;
+    &lt;&lt;&lt; Continuar &gt;&gt;&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+{% endif %}
+{% endif %}
+{% endif %}
+
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="resultados-eaad-2012">
+<span id="template-user-imprimir-resultados-eaad2012-html"></span><h3>Resultados eaad 2012<a class="headerlink" href="#resultados-eaad-2012" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/imprimir_resultados_eaad2012.html</span></tt>:</p>
+<div class="highlight-python"><pre>&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+    &lt;title&gt; Resultados Evaluación de Actividades Adicionales a la Docencia 2011 - 2012 &lt;/title&gt;
+    &lt;style type="text/css"&gt;
+    body {
+        font-family: Helvetica, Arial, Sans;
+    }
+    table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 75%;
+        borderspacing: 0;
+    }
+    th {
+        text-align: center;
+        border: 1px solid gray;
+        font-size: 13px;
+    }
+    td {
+        text-align: left;
+        border: 1px solid gray;
+        font-size: 13px;
+    }
+    textarea {
+        font-size: 10px;
+        overflow: hidden;
+    }
+
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;center&gt;
+      &lt;img width="75px" height="75px" src="/static/images/unl_logo.png"/&gt;
+      &lt;h4&gt;
+      {{ "Unversidad Nacional de Loja"|upper }}  &lt;br/&gt;
+      Comisión de Evaluación Interna &lt;br/&gt;
+      EVALUACIÓN DEL DESEMPEÑO ACADÉMICO &lt;p/&gt;
+      {{ "Resultados de la Evaluación de Actividades Adicionales a la Docencia 2011-2012"|upper }}
+
+      &lt;!-- Tabla de encabezado --&gt;
+
+      &lt;table id="tabla-docente" width="100%" border="0"&gt;
+        &lt;tr&gt;
+          &lt;td width="10%"&gt;&lt;b&gt;AREA&lt;/b&gt;&lt;/td&gt; &lt;td width="90%"&gt;{{ area }}&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td width="10%"&gt;&lt;b&gt;CARRERA&lt;/b&gt;&lt;/td&gt; &lt;td width="90%"&gt;{{ carrera }}&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td width="10%"&gt;&lt;b&gt;DOCENTE&lt;/b&gt;&lt;/td&gt; &lt;td width="90%"&gt;{{ docente }}&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+
+      &lt;!-- Tabla Central --&gt;
+
+      &lt;table id="tabla-resultados" width="100%" cellspacing="0" &gt;
+        &lt;th rowspan="3" colspan="2" style="width: 80%;"&gt; ACIVIDADES &lt;/th&gt;
+        &lt;th colspan="4"&gt; INFORMANTES &lt;/th&gt;
+        &lt;th rowspan="3"&gt; Fuente de Verificación &lt;/th&gt;
+        &lt;tr&gt;
+          &lt;th colspan="2"&gt; COMISION &lt;/th&gt;
+          &lt;th colspan="2"&gt; DOCENTE &lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th width="4%"&gt; Esc. &lt;/th&gt;
+          &lt;th width="4%"&gt; % &lt;/th&gt;
+          &lt;th width="4%"&gt; Esc. &lt;/th&gt;
+          &lt;th width="4%"&gt; % &lt;/th&gt;
+        &lt;/tr&gt;
+        {% for seccion in contestaciones.secciones %}
+        &lt;tr&gt;
+          &lt;td colspan="7"&gt; &lt;b&gt; {{ seccion.titulo|upper }} &lt;/b&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+        {% for r in seccion.resultados %}
+        &lt;tr&gt;
+          &lt;td width="4%"&gt; {{ r.codigo }} &lt;/td&gt;
+          &lt;td width="70%" style=""&gt; {{ r.texto }}  &lt;/td&gt;
+          &lt;td style="text-align: center;"&gt; {{ r.valor_comision }} &lt;/td&gt;
+          &lt;td style="text-align: center;"&gt; {%if r.porcentaje_comision%} {{ r.porcentaje_comision }}% {%endif%}&lt;/td&gt;
+          &lt;td style="text-align: center;"&gt; {{ r.valor_docente }} &lt;/td&gt;
+          &lt;td style="text-align: center;"&gt; {%if r.porcentaje_docente%} {{ r.porcentaje_docente }}% {%endif%}&lt;/td&gt;
+          &lt;td&gt;
+            &lt;textarea readonly="readonly" rows="4"&gt;COMISION: {{ r.observaciones_comision }} DOCENTE: {{ r.observaciones_docente }}  &lt;/textarea&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        {% endfor %}
+        {% endfor %}
+      &lt;/table&gt;
+
+      &lt;!-- Tabla de Resultados --&gt;
+
+      &lt;table width="100%"&gt;
+        &lt;tr&gt;
+          &lt;td width="70%"&gt; &lt;h3&gt; Número de Actividades:  &lt;/h3&gt;&lt;/td&gt;
+          &lt;td colspan="2" style="text-align: center;"&gt; &lt;h3&gt; {{ contestaciones.num_actividades }} &lt;/h3&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td rowspan="2"&gt; &lt;h3&gt; Valoración Global Actividades Adicionales: &lt;/h3&gt;&lt;/td&gt;
+          &lt;td style="text-align: center;"&gt; &lt;h3&gt; Comision: {{ porcentaje1|floatformat:"2" }}% &lt;/h3&gt; &lt;/td&gt;
+          &lt;td style="text-align: center;"&gt; &lt;h3&gt; Docente: {{ porcentaje2|floatformat:"2" }}% &lt;/h3&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td colspan="2" style="text-align: center; vertical-align: center;"&gt; &lt;h1&gt; {{ total|floatformat:"2" }}% &lt;/h1&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+
+      &lt;div id="pie" style="font-size: 9px; color: #666666"&gt;
+        &lt;hr style="margin-bottom: 6px;"/&gt;
+        Unidad de Telecomunicaciones e Infomacion - Departamento de Desarrollo de Software &lt;br&gt;
+        Correo Sistema de Evaluacion:
+        &lt;a href="mailto:evaluacion.docente@unl.edu.ec"&gt; &lt;u&gt;evaluacion.docente@unl.edu.ec&lt;/u&gt; &lt;/a&gt; &lt;br/&gt;
+        Loja - Ecuador
+      &lt;/div&gt;
+
+    &lt;/center&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+</div>
+<div class="section" id="resultados-satisfaccion-estudiantil-2012">
+<span id="template-user-imprimir-resultados-ese2012-html"></span><h3>Resultados Satisfacción Estudiantil 2012<a class="headerlink" href="#resultados-satisfaccion-estudiantil-2012" title="Permalink to this headline">¶</a></h3>
+<p>Plantilla para imprimir los resultados en la encuesta de Satisfacción Estudiantil 2012.
+Ubicación: <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/imprimir_resultados_ese2012.html</span></tt>:</p>
+<div class="highlight-python"><pre>&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+    &lt;title&gt; Resultados Encuesta de Satisfacción Estudiantil 2012 &lt;/title&gt;</pre>
+</div>
+<p>Estilos:</p>
+<div class="highlight-python"><pre>  &lt;style type="text/css"&gt;
+  body {
+      font-family: Helvetica, Arial, Sans;
+  }
+  table {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 75%;
+      borderspacing: 0;
+  }
+  td, th {
+      text-align: center;
+      border: 1px solid gray;
+      font-size: 13px;
+      width: 20%;
+  }
+  &lt;/style&gt;
+&lt;/head&gt;</pre>
+</div>
+<p>Inicio del body:</p>
+<div class="highlight-python"><pre>&lt;body&gt;
+  &lt;center&gt;
+    &lt;img width="75px" height="75px" src="/static/images/unl_logo.png"/&gt;
+    &lt;h4&gt; {{ "Unversidad Nacional de Loja"|upper }} &lt;/h4&gt;
+    &lt;h3 style="margin-bottom: 3px;"&gt; Encuesta de Satisfacción Estudiantil 2012 &lt;/h3&gt;
+    {{ titulo|safe }}
+    &lt;table  width="100%" cellspacing="0"&gt;
+      &lt;th rowspan="2"&gt; Indicadores &lt;/th&gt;
+      &lt;th colspan="4"&gt; Niveles de Satisfacción  &lt;/th&gt;
+      &lt;tr&gt;
+        &lt;th&gt; Muy Satisfecho MS (4) &lt;/th&gt;
+        &lt;th&gt; Satisfecho S (3) &lt;/th&gt;
+        &lt;th&gt; Poco Satisfecho PS (2) &lt;/th&gt;
+        &lt;th&gt; Insatisfecho INS (1) &lt;/th&gt;
+      &lt;/tr&gt;
+      {% for c in conteos %}
+      &lt;tr&gt;
+        &lt;td title="{{ c.pregunta.texto }}" width="20%"&gt;
+          &lt;b&gt;{{ c.pregunta.seccion.orden }}.{{c.pregunta.orden}} &lt;/b&gt;
+        &lt;/td&gt;
+        &lt;td&gt; {{ c.MS }} &lt;/td&gt;
+        &lt;td&gt; {{ c.S }} &lt;/td&gt;
+        &lt;td&gt; {{ c.PS }} &lt;/td&gt;
+        &lt;td&gt; {{ c.INS }} &lt;/td&gt;
+      &lt;/tr&gt;
+      {% endfor %}
+    &lt;/table&gt;
+
+    {% if totales and porcentajes %}
+    &lt;h3&gt; Resultados &lt;/h3&gt;
+    &lt;table cellspacing="0"&gt;
+      &lt;tr&gt;
+        &lt;td&gt; Suman ( {{ totales.total }} ) &lt;/td&gt;
+        &lt;td&gt; {{ totales.MS }} &lt;/td&gt;
+        &lt;td&gt; {{ totales.S }} &lt;/td&gt;
+        &lt;td&gt; {{ totales.PS }} &lt;/td&gt;
+        &lt;td&gt; {{ totales.INS }} &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt; % de Estudiantes que declaran su Satisfacción &lt;/td&gt;
+        &lt;td&gt; {{ porcentajes.MS|floatformat:"-2" }}% &lt;/td&gt;
+        &lt;td&gt; {{ porcentajes.S|floatformat:"-2" }}% &lt;/td&gt;
+        &lt;td&gt; {{ porcentajes.PS|floatformat:"-2" }}% &lt;/td&gt;
+        &lt;td&gt; {{ porcentajes.INS|floatformat:"-2" }}% &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt; % de Estudiantes que se declaran Satisfechos &lt;/td&gt;
+        &lt;td colspan="2"&gt; {{ porcentajes.MSS|floatformat:"-2" }} % &lt;/td&gt;
+        &lt;!--td colspan="2"&gt; {{ porcentajes.MS|add:porcentajes.S }}% &lt;/td--&gt;
+        &lt;td colspan="2"&gt; &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+    {%endif%}</pre>
+</div>
+<p>Sección final:</p>
+<div class="highlight-python"><pre>      &lt;div id="pie" style="font-size: 9px; ; color: #666666"&gt;
+        &lt;hr style="margin-bottom: 6px;"/&gt;
+        Unidad de Telecomunicaciones e Infomacion - Departamento de Desarrollo de Software &lt;br&gt;
+        Correo Sistema de Evaluacion:
+        &lt;a href="mailto:evaluacion.docente@unl.edu.ec"&gt; &lt;u&gt;evaluacion.docente@unl.edu.ec&lt;/u&gt; &lt;/a&gt; &lt;br/&gt;
+        Loja - Ecuador
+      &lt;/div&gt;
+
+    &lt;/center&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+</div>
+<div class="section" id="otros-resultados-satisfaccion-estudiantil-2012">
+<span id="template-user-imprimir-otros-ese2012-html"></span><h3>Otros resultados Satisfacción Estudiantil 2012<a class="headerlink" href="#otros-resultados-satisfaccion-estudiantil-2012" title="Permalink to this headline">¶</a></h3>
+<p>Plantilla para imprimir otros resultados en la encuesta de Satisfacción Estudiantil 2012.
+Ubicación: <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/imprimir_otros_ese2012.html</span></tt>:</p>
+<div class="highlight-python"><pre>&lt;html&gt;
+  &lt;head&gt;</pre>
+</div>
+<p>Encabezados y estilos:</p>
+<div class="highlight-python"><pre>  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+  &lt;title&gt; Resultados Encuesta de Satisfacción Estudiantil 2012 &lt;/title&gt;
+  &lt;style type="text/css"&gt;
+  body {
+      font-family: Helvetica, Arial, Sans;
+  }
+  table {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 75%;
+      borderspacing: 0;
+  }
+  td, th {
+      border: 1px solid gray;
+      font-size: 13px;
+  }
+  &lt;/style&gt;
+&lt;/head&gt;</pre>
+</div>
+<p>Inicio del body:</p>
+<div class="highlight-python"><pre>&lt;body&gt;
+  &lt;center&gt;
+    &lt;img width="75px" height="75px" src="/static/images/unl_logo.png"/&gt;
+    &lt;h4&gt; {{ "Unversidad Nacional de Loja"|upper }} &lt;/h4&gt;
+    &lt;h3 style="margin-bottom: 3px;"&gt; Encuesta de Satisfacción Estudiantil 2012 &lt;/h3&gt;
+    {{ titulo|safe }}
+    &lt;table id="tabla-resultados" width="100%" cellspacing="0"&gt;
+      &lt;th width="25%"&gt; Otros Aspectos &lt;/th&gt;
+      &lt;th width="70%"&gt; Respuesta  &lt;/th&gt;
+      &lt;th width="5%"&gt; Frecuencia &lt;/th&gt;
+      {% for r in resultados %}
+      &lt;tr&gt;
+        &lt;td width="25%"&gt;  {{ r.pregunta.texto }} &lt;/td&gt;
+        &lt;td width="70%"&gt; {{ r.respuesta }} &lt;/td&gt;
+        &lt;td width="5%" align="center"&gt; {{ r.frecuencia }} &lt;/td&gt;
+      &lt;/tr&gt;
+      {% endfor %}
+    &lt;/table&gt;</pre>
+</div>
+<p>Pie de página:</p>
+<div class="highlight-python"><pre>      &lt;div id="pie" style="font-size: 9px; ; color: #666666"&gt;
+        &lt;hr style="margin-bottom: 6px;"/&gt;
+        Unidad de Telecomunicaciones e Infomacion - Departamento de Desarrollo de Software &lt;br&gt;
+        Correo Sistema de Evaluacion:
+        &lt;a href="mailto:evaluacion.docente@unl.edu.ec"&gt; &lt;u&gt;evaluacion.docente@unl.edu.ec&lt;/u&gt; &lt;/a&gt; &lt;br/&gt;
+        Loja - Ecuador
+      &lt;/div&gt;
+    &lt;/center&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+</div>
+<div class="section" id="resultados-desempeno-docente-2013">
+<span id="template-user-imprimir-resultados-edd2013-html"></span><h3>Resultados Desempeño Docente 2013<a class="headerlink" href="#resultados-desempeno-docente-2013" title="Permalink to this headline">¶</a></h3>
+<p>Ubicación: dentro de <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/imprimir_resultados_edd2013.html</span></tt>:</p>
+<div class="highlight-python"><pre>&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+    &lt;title&gt; Resultados Evaluación del Desempeño Académico 2012 - 2013 &lt;/title&gt;</pre>
+</div>
+<p>Sección de estilos:</p>
+<div class="highlight-python"><pre>  &lt;style type="text/css"&gt;
+  body {
+      font-family: Helvetica, Arial, Sans;
+  }
+  table {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 85%;
+      borderspacing: 0;
+  }
+  th {
+      text-align: center;
+      border: 1px solid gray;
+      font-size: 13px;
+  }
+  td {
+      text-align: center;
+      border: 1px solid gray;
+      font-size: 13px;
+  }
+  textarea {
+      font-size: 10px;
+      overflow: hidden;
+  }
+      .promedio_componente td {
+      text-decoration: overline;
+      /*font-size: 0%; */
+      }
+  &lt;/style&gt;
+&lt;/head&gt;</pre>
+</div>
+<p>Inicio del body:</p>
+<div class="highlight-python"><pre>&lt;body&gt;
+  &lt;center&gt;
+    &lt;img width="75px" height="75px" src="/static/images/unl_logo.png"/&gt;
+    &lt;h4&gt;
+    {{ "Unversidad Nacional de Loja"|upper }}  &lt;br/&gt;
+    Comisión de Evaluación Interna &lt;br/&gt;
+    EVALUACIÓN DEL DESEMPEÑO ACADÉMICO &lt;p/&gt;
+    {{ "Resultados de la Evaluación del Desempeño Docente 2012"|upper }}</pre>
+</div>
+<p>Tabla de encabezado:</p>
+<div class="highlight-python"><pre>&lt;table id="tabla-docente"  border="0"&gt;
+          {% if area %}
+          &lt;tr&gt;
+            &lt;td width="10%"&gt;&lt;b&gt;AREA&lt;/b&gt;&lt;/td&gt; &lt;td style="text-align: left;" width="90%"&gt;{{ area }}&lt;/td&gt;
+          &lt;/tr&gt;
+          {% endif %}
+          {% if carrera %}
+          &lt;tr&gt;
+            &lt;td width="10%"&gt;&lt;b&gt;CARRERA&lt;/b&gt;&lt;/td&gt; &lt;td style="text-align: left;" width="90%"&gt;{{ carrera }}&lt;/td&gt;
+          &lt;/tr&gt;
+          {% endif %}
+          {% if docente %}
+          &lt;tr&gt;
+            &lt;td width="10%"&gt;&lt;b&gt;DOCENTE&lt;/b&gt;&lt;/td&gt; &lt;td style="text-align: left;" width="90%"&gt;{{ docente }}&lt;/td&gt;
+          &lt;/tr&gt;
+          {% endif %}
+    &lt;/table&gt;</pre>
+</div>
+<p>Si se filtra por Componente:</p>
+<div class="highlight-python"><pre>    {% if seccion_componente  %}
+    &lt;table&gt;
+          &lt;tr&gt;
+            &lt;td style="text-align: left;" width="40%"&gt;
+                  &lt;h2&gt; {{ seccion_componente.titulo }}:&lt;/h2&gt;
+            &lt;/td&gt;
+            &lt;td style="text-align: left;"&gt;
+                  &lt;h3&gt; {{ seccion_componente.descripcion }} &lt;/h3&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+&lt;/table&gt;
+    {% endif %}</pre>
+</div>
+<p>Tabla Central:</p>
+<div class="highlight-python"><pre>&lt;table id="tabla-resultados" width="100%" cellspacing="0" &gt;
+          &lt;tr&gt;
+            &lt;th rowspan="3" colspan="2"&gt;  DESCRIPCIÓN DE LOS INDICADORES DE CALIDAD &lt;/th&gt;
+            &lt;th colspan="4"&gt;  INFORMANTES &lt;/th&gt;
+            &lt;th colspan="3"&gt;  EVALUACIÓN &lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th rowspan="2"&gt; ESTUDIANTES &lt;/th&gt;
+            &lt;th rowspan="2"&gt; DOCENTES &lt;/th&gt;
+            &lt;th colspan="2"&gt; COMISIÓN ACADÉMICA &lt;/th&gt;
+            &lt;th rowspan="2"&gt; PRIMARIA &lt;/th&gt;
+            &lt;th rowspan="2"&gt;  PONDERAD. &lt;/th&gt;
+            &lt;th rowspan="2"&gt; CUALITAT. &lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th&gt; PAR ACAD. &lt;/th&gt;
+            &lt;th&gt; DIRECTIVO &lt;/th&gt;
+          &lt;/tr&gt;</pre>
+</div>
+<p>Indicador, resultado:</p>
+<div class="highlight-python"><pre>{% for i, r in resultados_indicadores.items %}</pre>
+</div>
+<p>Titulos de los componentes:</p>
+<div class="highlight-python"><pre>{# Titulos de los diferentes componentes o secciones #}
+{% ifchanged r.objeto_seccion.superseccion.codigo %}
+{# Para acortar el nombre del objeto #}
+{% with superseccion=r.objeto_seccion.superseccion %}
+&lt;tr&gt;
+  &lt;td colspan="9" style="text-align: left;"&gt;
+        &lt;b&gt;
+          COMPONENTE {{ superseccion.orden }}: {{ superseccion.titulo|upper }} ({{ superseccion.descripcion }})
+        &lt;/b&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+{% endwith %}
+{% endifchanged %}</pre>
+</div>
+<p>Cada uno de los indicadores:</p>
+<div class="highlight-python"><pre>&lt;tr&gt;
+  &lt;td style="text-align: left; font-size: 9px;"&gt;
+        {{ r.objeto_seccion.descripcion }}
+  &lt;/td&gt;
+  &lt;td&gt;
+        {{ i }}
+  &lt;/td&gt;
+  &lt;td width="10%"&gt;
+  {% if r.informantes.estudiante &gt;= 0 %} {{ r.informantes.estudiante }} % {% else %} - {% endif %}
+  &lt;/td&gt;
+  &lt;td width="10%"&gt;
+  {% if r.informantes.docente &gt;= 0 %} {{ r.informantes.docente  }} % {% else %} - {% endif %}
+  &lt;/td&gt;
+  &lt;td width="10%"&gt;
+        {% if r.informantes.paracademico &gt;= 0 %} {{ r.informantes.paracademico }} % {% else %} - {% endif %}
+  &lt;/td&gt;
+  &lt;td width="10%"&gt;
+  {% if r.informantes.directivo &gt;= 0%} {{ r.informantes.directivo }} % {% else %} - {% endif %}
+  &lt;/td&gt;
+  &lt;td width="10%"&gt;
+  {% if r.primaria &gt;= 0 %} {{ r.primaria|floatformat:"0" }} % {% else %} - {% endif %}
+  &lt;/td&gt;
+  &lt;td width="10%"&gt; {{ r.ponderada|floatformat:"2" }} &lt;b&gt;/&lt;/b&gt; {{ r.ponderacion_seccion }} &lt;/td&gt;
+  &lt;td width="10%"&gt; {{ r.cualitativa }} &lt;/td&gt;
+&lt;/tr&gt;</pre>
+</div>
+<p>Totales por Componente:</p>
+<div class="highlight-python"><pre>      {% if promedios_componentes %} &lt;!-- if promedios_componentes --&gt;
+      {# Total CPF #}
+      {% ifequal forloop.counter promedios_componentes.CPF.fila %}
+      &lt;tr class="promedio_componente"&gt;
+        &lt;td colspan="2" style="text-align: left;"&gt;
+              TOTAL {{ r.objeto_seccion.superseccion.titulo }}
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.CPF.estudiante }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.CPF.docente }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.CPF.paracademico }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.CPF.directivo }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.CPF.primaria|floatformat:"0" }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.CPF.ponderada|floatformat:"2" }} / {{ r.objeto_seccion.superseccion.ponderacion }}
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.CPF.cualitativa }}
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      {% endifequal %}
+
+      {# Total CPG #}
+      {% ifequal forloop.counter promedios_componentes.CPG.fila %}
+      &lt;tr class="promedio_componente"&gt;
+        &lt;td colspan="2" style="text-align: left;"&gt;
+              TOTAL {{ r.objeto_seccion.superseccion.titulo }}
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.CPG.estudiante }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.CPG.docente }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.CPG.paracademico }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.CPG.directivo }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.CPG.primaria|floatformat:"0" }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.CPG.ponderada|floatformat:"2" }} / {{ r.objeto_seccion.superseccion.ponderacion }}
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.CPG.cualitativa }}
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      {% endifequal %}
+
+      {# Total PV #}
+      {% ifequal forloop.counter promedios_componentes.PV.fila %}
+      &lt;tr class="promedio_componente"&gt;
+        &lt;td colspan="2" style="text-align: left;"&gt;
+              TOTAL {{ r.objeto_seccion.superseccion.titulo }}
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.PV.estudiante }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.PV.docente }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.PV.paracademico }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.PV.directivo }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.PV.primaria|floatformat:"0" }} %
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.PV.ponderada|floatformat:"2" }} / {{ r.objeto_seccion.superseccion.ponderacion }}
+        &lt;/td&gt;
+        &lt;td&gt;
+              {{ promedios_componentes.PV.cualitativa }}
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      {% endifequal %}
+      {% endif %} &lt;!-- end if promedios_componentes --&gt;
+
+      {% endfor %}
+&lt;/table&gt;</pre>
+</div>
+<p>Tabla de Resultados:</p>
+<div class="highlight-python"><pre>&lt;table&gt;
+          &lt;tr&gt;
+           &lt;td colspan="2"&gt; &lt;b&gt; VALOR TOTAL OBTENIDO: &lt;/b&gt; &lt;/td&gt;
+           &lt;td width="10%"&gt; {{ promedios.estudiante|floatformat:"2" }} % &lt;/td&gt;
+           &lt;td width="10%"&gt; {{ promedios.docente|floatformat:"2" }} % &lt;/td&gt;
+           &lt;td width="10%"&gt; {{ promedios.paracademico|floatformat:"2" }} % &lt;/td&gt;
+           &lt;td width="10%"&gt; {{ promedios.directivo|floatformat:"2" }} % &lt;/td&gt;
+           &lt;td width="10%"&gt; &lt;b&gt; {{ promedios.primaria }} %  &lt;/b&gt; &lt;/td&gt;
+           &lt;td width="10%"&gt; &lt;b&gt; {{ promedios.ponderada|floatformat:"2" }} / 100 &lt;/b&gt; &lt;/td&gt;
+           &lt;td width="10%"&gt; &lt;b&gt; {{ promedios.cualitativa }} &lt;/b&gt; &lt;/td&gt;
+           &lt;/b&gt;
+          &lt;/tr&gt;
+    &lt;/table&gt;</pre>
+</div>
+<p>Tabla para escalas:</p>
+<div class="highlight-python"><pre>&lt;table id="tabla-escala"&gt;
+      &lt;tr&gt;
+        &lt;td style="text-align: left;"&gt;
+              &lt;b&gt; D &lt;/b&gt; = Destacado |
+              &lt;b&gt; S &lt;/b&gt; = Sastisfactorio |
+              &lt;b&gt; PS &lt;/b&gt; = Poco Satistactorio |
+              &lt;b&gt; IS &lt;/b&gt; = Insatisfactorio
+        &lt;/td&gt;
+      &lt;/tr&gt;
+&lt;/table&gt;</pre>
+</div>
+<p>Sección final:</p>
+<div class="highlight-python"><pre>          &lt;a href='javascript:window.print();'&gt;
+                &lt;img src="http://capacinet.gob.mx/Cursos/Aprendamos%20Juntos/finanzaspersonales/imagenes/icono_imprimir.jpg"/&gt;
+          &lt;/a&gt;
+      &lt;div id="pie" style="font-size: 9px; color: #666666"&gt;
+                &lt;hr style="margin-bottom: 6px;"/&gt;
+                Unidad de Telecomunicaciones e Infomacion - Departamento de Desarrollo de Software &lt;br&gt;
+                Correo Sistema de Evaluacion:
+                &lt;a href="mailto:evaluacion.docente@unl.edu.ec"&gt; &lt;u&gt;evaluacion.docente@unl.edu.ec&lt;/u&gt; &lt;/a&gt; &lt;br/&gt;
+                Loja - Ecuador
+      &lt;/div&gt;
+    &lt;/center&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+</div>
+<div class="section" id="sugerencias-evaluacion-desempeno-docente-2013">
+<span id="template-user-imprimir-sugerencias-edd2013-html"></span><h3>Sugerencias Evaluación Desempeño Docente 2013<a class="headerlink" href="#sugerencias-evaluacion-desempeno-docente-2013" title="Permalink to this headline">¶</a></h3>
+<p>Plantilla para impresión de sugerencias en la Evaluación Desempeño Docente 2013.
+Ubicación: <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/imprimir_sugerencias_edd2013.html</span></tt>:</p>
+<div class="highlight-python"><pre>&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+    &lt;title&gt; Resultados Evaluación del Desempeño Académico 2012 - 2013 &lt;/title&gt;</pre>
+</div>
+<p>Sección de estilos:</p>
+<div class="highlight-python"><pre>  &lt;style type="text/css"&gt;
+  body {
+      font-family: Helvetica, Arial, Sans;
+  }
+  table {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 75%;
+      borderspacing: 0;
+  }
+  th {
+      text-align: center;
+      border: 1px solid gray;
+      font-size: 13px;
+  }
+  td {
+      text-align: left;
+      border: 1px solid gray;
+      font-size: 13px;
+  }
+  textarea {
+      font-size: 10px;
+      overflow: hidden;
+  }
+
+  &lt;/style&gt;
+&lt;/head&gt;</pre>
+</div>
+<p>Inicio del body:</p>
+<div class="highlight-python"><pre>&lt;body&gt;
+  &lt;center&gt;
+    &lt;img width="75px" height="75px" src="/static/images/unl_logo.png"/&gt;
+    &lt;h4&gt;
+    {{ "Unversidad Nacional de Loja"|upper }}  &lt;br/&gt;
+    Comisión de Evaluación Interna &lt;br/&gt;
+    EVALUACIÓN DEL DESEMPEÑO ACADÉMICO &lt;p/&gt;
+    {{ "Resultados de la Evaluación del Desempeño Académico 2012-2013"|upper }}</pre>
+</div>
+<p>Tabla de encabezado:</p>
+<div class="highlight-python"><pre>&lt;table id="tabla-docente" width="100%" border="0"&gt;
+          {% if area %}
+          &lt;tr&gt;
+            &lt;td width="10%"&gt;&lt;b&gt;AREA&lt;/b&gt;&lt;/td&gt; &lt;td style="text-align: left;" width="90%"&gt;{{ area }}&lt;/td&gt;
+          &lt;/tr&gt;
+          {% endif %}
+          {% if carrera %}
+          &lt;tr&gt;
+            &lt;td width="10%"&gt;&lt;b&gt;CARRERA&lt;/b&gt;&lt;/td&gt; &lt;td style="text-align: left;" width="90%"&gt;{{ carrera }}&lt;/td&gt;
+          &lt;/tr&gt;
+          {% endif %}
+    &lt;/table&gt;</pre>
+</div>
+<p>Tabla Central:</p>
+<div class="highlight-python"><pre>&lt;table id="tabla-resultados" width="100%" cellspacing="0" &gt;
+          {% for docente, informantes in sugerencias.items %}
+          &lt;tr&gt;
+            &lt;td colspan="3"&gt; &lt;h2&gt; {{ docente }} &lt;/h2&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          {% for informante, resultados in informantes.items %}
+          &lt;tr&gt;
+            &lt;td colspan="3"&gt; &lt;h3&gt; &lt;center&gt; INFORMANTE {{ informante|upper }}  &lt;/center&gt; &lt;h3&gt; &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;h3&gt;
+                  &lt;td width="33%"&gt; &lt;b&gt; CAPACIDAD PROFESIONAL &lt;/b&gt; &lt;/td&gt;
+                  &lt;td width="33%"&gt; &lt;b&gt; CAPACIDAD PEDAGÓGICA &lt;/b&gt; &lt;/td&gt;
+                  &lt;td width="33%"&gt; &lt;b&gt; PRÁCTICA DE VALORES &lt;/b&gt; &lt;/td&gt;
+            &lt;/h3&gt;
+          &lt;/tr&gt;
+          {% for r in resultados %}
+          &lt;tr&gt;
+            &lt;td width="33%"&gt; {{ r.CPF }} &lt;/td&gt;
+            &lt;td width="33%"&gt; {{ r.CPG }} &lt;/td&gt;
+            &lt;td width="33%"&gt; {{ r.PV }} &lt;/td&gt;
+          &lt;/tr&gt;
+          {% endfor %}
+          {% endfor %}
+          {% endfor %}
+    &lt;/table&gt;</pre>
+</div>
+<p>Sección final:</p>
+<div class="highlight-python"><pre>          &lt;a href='javascript:window.print();'&gt;
+                &lt;img src="http://capacinet.gob.mx/Cursos/Aprendamos%20Juntos/finanzaspersonales/imagenes/icono_imprimir.jpg"/&gt;
+          &lt;/a&gt;
+          &lt;div id="pie" style="font-size: 9px; color: #666666"&gt;
+                &lt;hr style="margin-bottom: 6px;"/&gt;
+                Unidad de Telecomunicaciones e Infomacion - Departamento de Desarrollo de Software &lt;br&gt;
+                Correo Sistema de Evaluacion:
+                &lt;a href="mailto:evaluacion.docente@unl.edu.ec"&gt; &lt;u&gt;evaluacion.docente@unl.edu.ec&lt;/u&gt; &lt;/a&gt; &lt;br/&gt;
+                Loja - Ecuador
+      &lt;/div&gt;
+    &lt;/center&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+</div>
+<div class="section" id="menu-resultados-carreras">
+<span id="template-user-menu-resultados-carrera-html"></span><h3>Menú Resultados Carreras<a class="headerlink" href="#menu-resultados-carreras" title="Permalink to this headline">¶</a></h3>
+<p>Permite realizar la presentación de el munú con opciones para presentar y administrar los resultados de las evaluaciones.
+Ubicación: <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/app/menu_resultados_carrera.html</span></tt>:</p>
+<div class="highlight-python"><pre>{% extends "admin/base_site.html" %}
+
+{% block extrahead %}</pre>
+</div>
+<p>Estilos básicos:</p>
+<div class="highlight-python"><pre>&lt;style&gt;
+  #id_periodos {
+      width: 100%;
+      font-size: 15px;
+      font-weight: bold;
+      color: #666666;
+  }
+&lt;/style&gt;
+
+&lt;script type="text/javascript" src="/static/js/jquery-1.6.2.min.js"&gt;&lt;/script&gt;</pre>
+</div>
+<p>Método AJAX para la obtención de datos:</p>
+<div class="highlight-python"><pre>&lt;script type="text/javascript"&gt;
+    $(document).ready(function(){
+                $("#procesar").hide();
+                $("#id_periodo_evaluacion").change(function(){
+                    var id_periodo = $("#id_periodo_evaluacion option:selected").val();</pre>
+</div>
+<p>Si existe un periodo académico entonces se genera el menú con las distintas opciones disponibles:</p>
+<div class="highlight-python"><pre>if (id_periodo != ""){
+    $.ajax({
+        url: "/resultados/periodo/" + id_periodo + "/",
+        method: "GET",
+        //data: "periodo_academico_id={{ object_id }}",
+        success: function (data){
+                    $("#menu-resultados").html(data);
+                    $("#procesar").show();
+                    $("#borrar").show();
+        },
+        error: function(xhr,status,error){
+                    alert("error: " + status + "-" + error);
+        }
+    });</pre>
+</div>
+<p>Caso contrario no presentar nada:</p>
+<div class="highlight-python"><pre>}else{
+            $("#menu-resultados").html("");
+            $("#procesar").hide();
+            $("#borrar").hide();
+}</pre>
+</div>
+<p>Fín del script:</p>
+<div class="highlight-python"><pre>                });
+    });
+&lt;/script&gt;</pre>
+</div>
+<p>Bloques heredados de la plantilla Base:</p>
+<div class="highlight-python"><pre>{{ block.super }}
+
+//Cierre del bloque 'extrahead'
+
+{% endblock %}
+
+{% block content_title %}
+
+&lt;!--h1&gt; Resultados de la Carrera &lt;/h1--&gt;
+
+{% endblock %}</pre>
+</div>
+<p>Despliegue del formulario con una estructura ordenada por tablas:</p>
+<div class="highlight-python"><pre>{% block content %}
+
+&lt;form action="/resultados/mostrar/" method="POST" target="_blank"&gt;
+
+  {% csrf_token %}
+
+  &lt;table&gt;
+
+    {{ form.as_table }}
+
+  &lt;/table&gt;
+
+  &lt;!--legend&gt; Opciones &lt;/legend--&gt;
+
+  &lt;div id="menu-resultados"&gt; &lt;/div&gt;
+  &lt;p/&gt;
+  &lt;input id="procesar" type="submit" value="Aceptar"/&gt;
+  &lt;input id="borrar" type="reset" value="Borrar"/&gt;
+&lt;/form&gt;
+
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="error-404">
+<span id="template-user-error404"></span><h3>Error 404<a class="headerlink" href="#error-404" title="Permalink to this headline">¶</a></h3>
+<p>Esta plantilla permite realizar la presentación del error 404 (no encontrado ).
+Ubicación: <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/404.html</span></tt>:</p>
+<div class="highlight-python"><pre>{% extends "admin/base_site.html"%}
+
+{% load i18n %}</pre>
+</div>
+<p>Mensaje de página no encontrada:</p>
+<div class="highlight-python"><pre>{% block title %} {% trans "Page not found" %} {% endblock %}
+
+{% block content %}
+
+        &lt;h1&gt; {% trans "Page not found" %}. &lt;/h1&gt;
+        &lt;p&gt; Lo sentimos, pero la página solicitada no puede ser econtrada. &lt;/p&gt;
+
+{% endblock %}</pre>
+</div>
+</div>
+<div class="section" id="error-500">
+<span id="template-user-error500"></span><h3>Error 500<a class="headerlink" href="#error-500" title="Permalink to this headline">¶</a></h3>
+<p>Esta plantilla permite realizar la presentación del error 500 (Error interno del servidor).
+Ubicación: <tt class="docutils literal"><span class="pre">{{TEMPLATE_DIRS}}/500.html</span></tt>:</p>
+<div class="highlight-python"><pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML5.01//EN" "http://w3.org/TR/html4/strict.dtd"&gt;
+&lt;html lang="en"&gt;
+        &lt;head&gt;
+          &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+          &lt;title&gt; Página no disponible &lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;</pre>
+</div>
+<p>Mensajes de error personalizados:</p>
+<div class="highlight-python"><pre>          &lt;h1&gt; Página no disponible &lt;/h1&gt;
+          &lt;p&gt; Lo sentimos, pero la página solicitada no está disponible debido a un error del servidor.!&lt;/p&gt;
+          &lt;p&gt; Nuestros ingenieros serán notificados, y lo solucionarán luego.!&lt;/p&gt;
+        &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Regresar a la cabecera</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, Jhymer Martínez.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

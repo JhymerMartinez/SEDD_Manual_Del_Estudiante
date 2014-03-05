@@ -1,0 +1,359 @@
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Mapeo de URLs &mdash; SEDD - Manual De Usuario  documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="SEDD - Manual De Usuario  documentation" href="../../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+<link rel="stylesheet" href="../../_static/style.css">
+<div id="cabecera">
+  <a href="http://www.unl.edu.ec/"><img src="../../_static/unl.gif" id="logo" border="0" alt="unl" width="90" hight="110"/></a>
+</div>
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">SEDD - Manual De Usuario</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="../../index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Indice General<b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="simple">
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">En esta Página<b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Mapeo de URLs</a><ul>
+<li><a class="reference internal" href="#introduccion">Introducción</a></li>
+<li><a class="reference internal" href="#importaciones-necesarias">Importaciones Necesarias</a></li>
+<li><a class="reference internal" href="#enrutamiento-principal">Enrutamiento Principal</a></li>
+<li><a class="reference internal" href="#enrutamiento-handler">Enrutamiento Handler</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li>
+  <a href="../../_sources/library/Urls/urls.txt"
+     rel="nofollow">Ver código</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Buscar" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="mapeo-de-urls">
+<span id="url-title"></span><h1>Mapeo de URLs<a class="headerlink" href="#mapeo-de-urls" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduccion">
+<span id="url-intro"></span><h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">¶</a></h2>
+<p>Django provee un sistema avanzado para la manipulación de URLs que convina la sencillez con la potencia y versatilidad que da como resultado un sistema de enrutamiento elegante.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Para más información revisar <a class="reference external" href="http://www.cristalab.com/tutoriales/python-en-la-web-con-django-iii-mapear-urls-y-vistas-c103678l/">Mapear URLs y Vistas</a> o en la documentación oficial <a class="reference external" href="https://docs.djangoproject.com/en/1.5/topics/http/urls/">URL dispatcher</a>.</p>
+</div>
+</div>
+<div class="section" id="importaciones-necesarias">
+<span id="url-imports"></span><h2>Importaciones Necesarias<a class="headerlink" href="#importaciones-necesarias" title="Permalink to this headline">¶</a></h2>
+<p>El archivo que contiene el enrutemaiento principal se encuentra ubicado en: <tt class="docutils literal"><span class="pre">sedd/proyecto/urls.py</span></tt>.</p>
+<p>Se importa el módulo principal para la administración de las urls:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">django.conf.urls.defaults</span> <span class="kn">import</span> <span class="n">patterns</span><span class="p">,</span> <span class="n">include</span><span class="p">,</span> <span class="n">url</span>
+</pre></div>
+</div>
+<p>Y para la administración:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="enrutamiento-principal">
+<span id="url-main"></span><h2>Enrutamiento Principal<a class="headerlink" href="#enrutamiento-principal" title="Permalink to this headline">¶</a></h2>
+<p>En esta sección se redacta el enrutamiento necesario para un correcto funcionamiento del Sistema:</p>
+<div class="highlight-python"><pre>admin.autodiscover()
+
+urlpatterns = patterns('',</pre>
+</div>
+<p>Acontinuación una breve descripción de cada ruta:</p>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-front"><em>Portada</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">portada</span></tt>.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^$&#39;</span><span class="p">,</span> <span class="s">&#39;proyecto.app.controllers.portada&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;portada&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-login-logout"><em>Ingreso al Sistema</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">/login</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">login</span></tt>.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^login/$&#39;</span><span class="p">,</span> <span class="s">&#39;proyecto.app.controllers.login&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;login&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-index"><em>Página Inicial</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">index/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">index</span></tt>.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^index/$&#39;</span><span class="p">,</span> <span class="s">&#39;proyecto.app.controllers.index&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;index&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-login-logout"><em>Ingreso al Sistema</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">logout/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">logout</span></tt>.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^logout/$&#39;</span><span class="p">,</span> <span class="s">&#39;proyecto.app.controllers.logout&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;logout&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-login-logout"><em>Ingreso al Sistema</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">estudiante/asignaturas/docentes/(\d{1})/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">estudiante_asignaturas_docentes</span></tt>.</p>
+<p>En <tt class="docutils literal"><span class="pre">(\d{1})</span></tt> se recibe como parametro el número de carrera.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^estudiante/asignaturas/docentes/(\d{1})/$&#39;</span><span class="p">,</span>
+    <span class="s">&#39;proyecto.app.controllers.estudiante_asignaturas_docentes&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;estudiante_asignaturas_docentes&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Para entender de mejor manera el uso de expresiones regulares en Python revisar: <a class="reference external" href="http://www.maestrosdelweb.com/editorial/guia-python-expresiones-regulares/">GUÍA PYTHON: EXPRESIONES REGULARES</a>.</p>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-evaluation-directors-teachers"><em>Evaluaciones de Directores a Docentes</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">director/docentes/(\d{1})/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">director_docentes</span></tt>.</p>
+<p>En <tt class="docutils literal"><span class="pre">(\d{1})</span></tt> se recibe un número de carrera de la sesion.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^director/docentes/(\d{1})/$&#39;</span><span class="p">,</span>
+    <span class="s">&#39;proyecto.app.controllers.director_docentes&#39;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s">&#39;director_docentes&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-evaluation-academic-couple-teachers"><em>Evaluacion de Pares Académicos a Docentes</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">pares_academicos/docentes/(\d{1})/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">pares_academicos_docentes</span></tt>.</p>
+<p>En <tt class="docutils literal"><span class="pre">(\d{1})</span></tt> se recibe un número de carrera de la sesión.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^pares_academicos/docentes/(\d{1})/$&#39;</span><span class="p">,</span> <span class="s">&#39;proyecto.app.controllers.pares_academicos_docentes&#39;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s">&#39;pares_academicos_docentes&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-poll"><em>Listado de Encuestas</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">encuestas/(?P&lt;id_docente&gt;\d{1,5})/(?P&lt;id_asignatura&gt;\d{1,5})/(?P&lt;id_tinformante&gt;\d{1,2})/(?P&lt;id_cuestionario&gt;\d{1,2})/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">encuestas</span></tt>.</p>
+<p>En <tt class="docutils literal"><span class="pre">(?P&lt;id_docente&gt;\d{1,5})</span></tt> se recibe el id del docente.Mínimo 1 y máximo 5 dígitos.</p>
+<p>En <tt class="docutils literal"><span class="pre">(?P&lt;id_asignatura&gt;\d{1,5})</span></tt> se recibe el id de la asignatura. Mínimo 1 y máximo 5 dígitos.</p>
+<p>En <tt class="docutils literal"><span class="pre">(?P&lt;id_tinformante&gt;\d{1,2})</span></tt> se recibe el id del tipo de informante. Mínimo 1 y máximo 2 dígitos.</p>
+<p>En <tt class="docutils literal"><span class="pre">(?P&lt;id_cuestionario&gt;\d{1,2})</span></tt> se recibe el id del cuestionario. Mínimo 1 y máximo 2 dígitos.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^encuestas/(?P&lt;id_docente&gt;\d{1,5})/(?P&lt;id_asignatura&gt;\d{1,5})/(?P&lt;id_tinformante&gt;\d{1,2})/(?P&lt;id_cuestionario&gt;\d{1,2})/&#39;</span><span class="p">,</span>
+    <span class="s">&#39;proyecto.app.controllers.encuestas&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;encuestas&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-poll-create"><em>Generación de la Encuesta</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">encuesta/responder/(\d{1,5})/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">encuestas</span></tt>.</p>
+<p>En <tt class="docutils literal"><span class="pre">(\d{1,5})</span></tt> se recibe el id de la encuesta. Mínimo 1 y máximo 5 digitos.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^encuesta/responder/(\d{1,5})/$&#39;</span><span class="p">,</span> <span class="s">&#39;proyecto.app.controllers.encuesta_responder&#39;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s">&#39;encuesta_responder&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-poll-save"><em>Grabación de la Encuesta</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">encuesta/grabar/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">encuesta_grabar</span></tt>.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^encuesta/grabar/$&#39;</span><span class="p">,</span> <span class="s">&#39;proyecto.app.controllers.encuesta_grabar&#39;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;encuesta_grabar&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-calculation-presentation-results-results-career"><em>Resultados por Carrera</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">resultados/carrera/(\d{1})/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">resultados_carrera</span></tt>.</p>
+<p>En <tt class="docutils literal"><span class="pre">(\d{1})</span></tt> se recibe número de carrera.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^resultados/carrera/(\d{1})/$&#39;</span><span class="p">,</span> <span class="s">&#39;proyecto.app.controllers.resultados_carrera&#39;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;resultados_carrera&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-calculation-presentation-results-menu-results-carreer"><em>Menú de resultados por Carrera</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">resultados/periodo/(\d{1,2})/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">menu_resultados_carrera</span></tt>.</p>
+<p>En <tt class="docutils literal"><span class="pre">(\d{1,2})</span></tt> se recibe el periodo académico. Mínimo1 y máximo 2 digitos.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^resultados/periodo/(\d{1,2})/$&#39;</span><span class="p">,</span> <span class="s">&#39;proyecto.app.controllers.menu_resultados_carrera&#39;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;menu_resultados_carrera&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-calculation-presentation-results-results-presentation"><em>Presentación de Resultados</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">resultados/mostrar/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">mostrar_resultados</span></tt>.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^resultados/mostrar/$&#39;</span><span class="p">,</span> <span class="s">&#39;proyecto.app.controllers.mostrar_resultados&#39;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;mostrar_resultados&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-load-deals-sga"><em>Ofertas SGA</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">sga/cargar_ofertas_sga/(\d{1,3})/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">cargar_ofertas_sga</span></tt>.</p>
+<p>En <tt class="docutils literal"><span class="pre">(\d{1,3})</span></tt> las ofertas disponibles en el SGA. Mínimo 1 y máximo 3 dígitos.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^sga/cargar_ofertas_sga/(\d{1,3})/$&#39;</span><span class="p">,</span> <span class="s">&#39;proyecto.app.controllers.cargar_ofertas_sga&#39;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;cargar_ofertas_sga&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-summary-evaluation-admin-summary-evaluations"><em>Resumen de Evaluaciones</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">admin/resumen/evaluaciones/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">resumen_evaluaciones</span></tt>.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^admin/resumen/evaluaciones/$&#39;</span><span class="p">,</span> <span class="s">&#39;proyecto.app.controllers.resumen_evaluaciones&#39;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;resumen_evaluaciones&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-summary-evaluation-admin-summary-calculate"><em>Calculos de Resumen</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">admin/resumen/calcular/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">calcular_resumen</span></tt>.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^admin/resumen/calcular/$&#39;</span><span class="p">,</span> <span class="s">&#39;proyecto.app.controllers.calcular_resumen&#39;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;calcular_resumen&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Método de origen: <a class="reference internal" href="../Views/views.html#views-controllers-calculation-presentation-results-results-admin"><em>Resultados para los Administradores</em></a>.</p>
+<p>URL: <tt class="docutils literal"><span class="pre">admin/app/resultados/</span></tt>.</p>
+<p>Nombre: <tt class="docutils literal"><span class="pre">resultados</span></tt>.</p>
+<p>Código:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">url</span><span class="p">(</span><span class="s">r&#39;^admin/app/resultados/$&#39;</span><span class="p">,</span> <span class="s">&#39;proyecto.app.controllers.resultados&#39;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;resultados&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="enrutamiento-handler">
+<span id="url-handler"></span><h2>Enrutamiento Handler<a class="headerlink" href="#enrutamiento-handler" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Regresar a la cabecera</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, Jhymer Martínez.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
