@@ -52,7 +52,7 @@ copyright = u'2013, Ing. Milton Labanda, Jhymer Martínez'
 # built documents.
 #
 # The short X.Y version.
-version = ''
+version = '1.0'
 # The full version, including alpha/beta/rc tags.
 release = ''
 
@@ -258,3 +258,7 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+pdf_documents = [('index', u'SEDD_Manual_Del_Estudiante',
+u'Sphinx', u'Ing. Milton Labanda, Jhymer Martínez'),]
+

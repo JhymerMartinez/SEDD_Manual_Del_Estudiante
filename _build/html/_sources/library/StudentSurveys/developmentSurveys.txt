@@ -12,7 +12,7 @@ Para empezar la encuesta ingresamos a la dirección `evaluaciondocente.unl.edu.e
 
 .. _developmentSurveys-img-developmentSurveys_index:
 
-.. figure:: ../../_static/studentSurveys/developmentSurveys_index.png 
+.. figure:: ../../_static/studentSurveys/developmentSurveys_index.jpg 
     :align: center
     :alt: Página de bienvenida
     :figclass: align-center
@@ -24,7 +24,7 @@ El siguiente paso es hacer **clic** en el enlace **EVALUACIÓN DESEMPEÑO DOCENT
 
 .. _developmentSurveys-img-developmentSurveys_index_link:
 
-.. figure:: ../../_static/studentSurveys/developmentSurveys_index_link.png 
+.. figure:: ../../_static/studentSurveys/developmentSurveys_index_link.jpg
     :align: center
     :alt: Enlace a la Encuesta
     :figclass: align-center
@@ -36,7 +36,7 @@ Al ingresar a la página de Evaluación de Desempeño de los Docentes, el usuari
 
 .. _developmentSurveys-img-developmentSurveys_login:
 
-.. figure:: ../../_static/studentSurveys/developmentSurveys_login.png 
+.. figure:: ../../_static/studentSurveys/developmentSurveys_login.jpg
     :align: center
     :alt: Ingreso al Sistema
     :figclass: align-center
@@ -58,7 +58,7 @@ Una vez que el usuario se haya registrado correctamente, se ingresará directame
 
 .. _developmentSurveys-img-developmentSurveys_main:
 
-.. figure:: ../../_static/studentSurveys/developmentSurveys_main.png 
+.. figure:: ../../_static/studentSurveys/developmentSurveys_main.jpg
     :align: center
     :alt: Carreras y cursos del usuario
     :figclass: align-center
@@ -83,7 +83,7 @@ Al seleccionar el docente, el sistema presenta la encuesta para evaluar a dicho 
 
 .. _developmentSurveys-img-developmentSurveys_warning:
 
-.. figure:: ../../_static/studentSurveys/developmentSurveys_warning.png 
+.. figure:: ../../_static/studentSurveys/developmentSurveys_warning.jpg 
     :align: center
     :alt: Mensaje inicial
     :figclass: align-center
@@ -96,7 +96,7 @@ A continuación se presenta la estructura inicial de la encuesta:
 
 .. _developmentSurveys-img-developmentSurveys_complete:
 
-.. figure:: ../../_static/studentSurveys/developmentSurveys_complete.png 
+.. figure:: ../../_static/studentSurveys/developmentSurveys_complete.jpg 
     :align: center
     :alt: Estructura de la Encuesta
     :figclass: align-center
@@ -108,7 +108,7 @@ Una vez terminada, tenemos la opción de guardar o cancelar la encuesta:
 
 .. _developmentSurveys-img-developmentSurveys_save_cancel_option:
 
-.. figure:: ../../_static/studentSurveys/developmentSurveys_save_cancel_option.png 
+.. figure:: ../../_static/studentSurveys/developmentSurveys_save_cancel_option.jpg 
     :align: center
     :alt: Guardar o Cancelar Encuesta
     :figclass: align-center
@@ -120,7 +120,7 @@ Una vez seleccionada la opción de guardar, se presenta un mensaje de confirmaci
 
 .. _developmentSurveys-img-developmentSurveys_message_complete:
 
-.. figure:: ../../_static/studentSurveys/developmentSurveys_message_complete.png 
+.. figure:: ../../_static/studentSurveys/developmentSurveys_message_complete.jpg 
     :align: center
     :alt: Mensaje de Confirmación
     :figclass: align-center
@@ -132,7 +132,7 @@ Si observamos con atención notamos que el docente evaluado aparece bloqueado lo
 
 .. _developmentSurveys-img-developmentSurveys_main_final:
 
-.. figure:: ../../_static/studentSurveys/developmentSurveys_main_final.png 
+.. figure:: ../../_static/studentSurveys/developmentSurveys_main_final.jpg
     :align: center
     :alt: Docente Evaluado
     :figclass: align-center
@@ -144,7 +144,7 @@ Para salir del Sistema basta con hacer clic en la opción **Salir** como se apre
 
 .. _developmentSurveys-img-developmentSurveys_exit:
 
-.. figure:: ../../_static/studentSurveys/developmentSurveys_exit.png 
+.. figure:: ../../_static/studentSurveys/developmentSurveys_exit.jpg 
     :align: center
     :alt: Salir del Sistema
     :figclass: align-center
