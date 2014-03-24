@@ -14,8 +14,6 @@ A continuación se presenta la lista de contenidos:
 
 .. _contents-list:
 
-**Contenidos:**
-
 .. toctree::
    :maxdepth: 2
    :numbered:

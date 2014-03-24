@@ -130,7 +130,7 @@ endobj
  /Dest [ 27 0 R
  /XYZ
  40.01575
- 657.8394
+ 675.8394
  0 ]
  /Rect [ 80.01575
  718.7894
@@ -147,7 +147,7 @@ endobj
  /Dest [ 27 0 R
  /XYZ
  40.01575
- 657.8394
+ 675.8394
  0 ]
  /Rect [ 549.6998
  718.7894
@@ -164,7 +164,7 @@ endobj
  /Dest [ 27 0 R
  /XYZ
  40.01575
- 355.0394
+ 373.0394
  0 ]
  /Rect [ 80.01575
  700.7894
@@ -181,7 +181,7 @@ endobj
  /Dest [ 27 0 R
  /XYZ
  40.01575
- 355.0394
+ 373.0394
  0 ]
  /Rect [ 549.6998
  700.7894
@@ -198,7 +198,7 @@ endobj
  /Dest [ 27 0 R
  /XYZ
  40.01575
- 322.2394
+ 340.2394
  0 ]
  /Rect [ 100.0157
  682.7894
@@ -215,7 +215,7 @@ endobj
  /Dest [ 27 0 R
  /XYZ
  40.01575
- 322.2394
+ 340.2394
  0 ]
  /Rect [ 549.6998
  682.7894
@@ -343,9 +343,9 @@ endobj
  791.0394
  0 ]
  /Rect [ 145.0908
- 623.7894
+ 641.7894
  350.7222
- 635.7894 ]
+ 653.7894 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -357,9 +357,9 @@ endobj
  0
  0 ]
  /Rect [ 502.4698
- 599.7894
+ 617.7894
  553.2331
- 611.7894 ]
+ 629.7894 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -371,9 +371,9 @@ endobj
  0
  0 ]
  /Rect [ 40.01575
- 587.7894
+ 605.7894
  114.4957
- 599.7894 ]
+ 617.7894 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -385,9 +385,9 @@ endobj
  0
  0 ]
  /Rect [ 284.5551
- 290.5894
+ 308.5894
  416.8551
- 302.5894 ]
+ 320.5894 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -765,7 +765,7 @@ endobj
 << /Dest [ 27 0 R
  /XYZ
  40.01575
- 657.8394
+ 675.8394
  0 ]
  /Next 54 0 R
  /Parent 52 0 R
@@ -776,7 +776,7 @@ endobj
  /Dest [ 27 0 R
  /XYZ
  40.01575
- 355.0394
+ 373.0394
  0 ]
  /First 55 0 R
  /Last 56 0 R
@@ -788,7 +788,7 @@ endobj
 << /Dest [ 27 0 R
  /XYZ
  40.01575
- 322.2394
+ 340.2394
  0 ]
  /Next 56 0 R
  /Parent 54 0 R
@@ -1015,7 +1015,7 @@ Q
 endstream
 endobj
 62 0 obj
-<< /Length 5664 >>
+<< /Length 5555 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
@@ -1056,13 +1056,7 @@ BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (A continuaci\363n se presenta la lista de con
 Q
 Q
 q
-1 0 0 1 40.01575 673.8394 cm
-q
-BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (Contenidos:) Tj T* ET
-Q
-Q
-q
-1 0 0 1 40.01575 641.0394 cm
+1 0 0 1 40.01575 659.0394 cm
 q
 .8 .8 .8 RG
 .3 w
@@ -1074,30 +1068,30 @@ BT 1 0 0 1 0 2.8 Tm 16.8 TL /F3 14 Tf .12549 .262745 .360784 rg (Introducci\363n
 Q
 Q
 q
-1 0 0 1 40.01575 587.0394 cm
+1 0 0 1 40.01575 605.0394 cm
 q
 BT 1 0 0 1 0 38 Tm .006273 Tw 12 TL /F1 10 Tf 0 0 0 rg (El presente Manual del ) Tj /F4 10 Tf 0 0 .501961 rg (SISTEMA DE EVALUACI\323N DE DOCENTES ) Tj /F1 10 Tf 0 0 0 rg (\(SEDD\) tiene como principal objetivo servir de) Tj T* 0 Tw .525479 Tw (gu\355a y de consulta para las personas involucradas en el proceso de evaluaci\363n. En \351l se contemplan todos y cada) Tj T* 0 Tw 2.026711 Tw (uno de los aspectos que giran en torno al Sistema de Evaluaci\363n del Desempe\361o Docente en la ) Tj 0 0 .501961 rg (Universidad) Tj T* 0 Tw (Nacional de Loja) Tj 0 0 0 rg (.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 40.01575 473.0394 cm
+1 0 0 1 40.01575 491.0394 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 98 Tm /F1 10 Tf 12 TL 1.929653 Tw (El SEDD, constituye una herramienta de gran utilidad y riqueza tanto para la propia Instituci\363n como para las) Tj T* 0 Tw .260829 Tw (personas que participan del mismo, evaluadores y evaluados. La evaluaci\363n de un docente a trav\351s de un sistema,) Tj T* 0 Tw 1.519606 Tw (es una operaci\363n sistem\341tica, integrada en la actividad educativa con el objetivo de conseguir su mejoramiento) Tj T* 0 Tw .1973 Tw (continuo, mediante el conocimiento lo m\341s exacto posible del alumno, directivos y hasta el mismo docente hacia un) Tj T* 0 Tw 1.998273 Tw (docente en todos los aspectos de su personalidad, aportando una informaci\363n pertinente para que el proceso) Tj T* 0 Tw .890273 Tw (educativo logre sus objetivos fundamentales y confrontar los fijados con los realmente alcanzados. El car\341cter de) Tj T* 0 Tw 1.075881 Tw (perfeccionamiento surge cuando el docente es capaz de autoevaluar su desempe\361o, no teme a sus errores sino) Tj T* 0 Tw 1.173005 Tw (que aprende de ellos y toma m\341s conscientemente su trabajo y es as\355 como surge la incontenible necesidad de) Tj T* 0 Tw (auto perfeccionamiento.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 40.01575 455.0394 cm
+1 0 0 1 40.01575 473.0394 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (El sistema de Evaluaci\363n para docentes tiene como objetivo:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 40.01575 449.0394 cm
+1 0 0 1 40.01575 467.0394 cm
 Q
 q
-1 0 0 1 40.01575 401.0394 cm
+1 0 0 1 40.01575 419.0394 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 BT 1 0 0 1 0 2 Tm  T* ET
@@ -1159,17 +1153,17 @@ q
 Q
 Q
 q
-1 0 0 1 40.01575 401.0394 cm
+1 0 0 1 40.01575 419.0394 cm
 Q
 q
-1 0 0 1 40.01575 371.0394 cm
+1 0 0 1 40.01575 389.0394 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .390205 Tw (Por tal raz\363n, el objetivo principal de este manual, es guiar de manera clara, sencilla y precisa al usuario, para que) Tj T* 0 Tw (cumpla con su compromiso como es el de evaluar a los docentes.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 40.01575 338.2394 cm
+1 0 0 1 40.01575 356.2394 cm
 q
 .8 .8 .8 RG
 .3 w
@@ -1181,7 +1175,7 @@ BT 1 0 0 1 0 2.8 Tm 16.8 TL /F3 14 Tf .12549 .262745 .360784 rg (Sistema de Eval
 Q
 Q
 q
-1 0 0 1 40.01575 307.8394 cm
+1 0 0 1 40.01575 325.8394 cm
 q
 .8 .8 .8 RG
 .3 w
@@ -1193,13 +1187,13 @@ BT 1 0 0 1 0 2.4 Tm 14.4 TL /F3 12 Tf .12549 .262745 .360784 rg (Acceso al Siste
 Q
 Q
 q
-1 0 0 1 40.01575 277.8394 cm
+1 0 0 1 40.01575 295.8394 cm
 q
 BT 1 0 0 1 0 14 Tm 1.111175 Tw 12 TL /F1 10 Tf 0 0 0 rg (Para empezar la encuesta ingresamos a la direcci\363n ) Tj 0 0 .501961 rg (evaluaciondocente.unl.edu.ec) Tj 0 0 0 rg (, seguidamente se presenta la) Tj T* 0 Tw (pantalla de bienvenida al Sistema:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 40.01575 277.8394 cm
+1 0 0 1 40.01575 295.8394 cm
 Q
 q
 1 0 0 1 34.01575 807.2126 cm
@@ -1974,24 +1968,24 @@ xref
 0001444601 00000 n
 0001446615 00000 n
 0001446750 00000 n
-0001452471 00000 n
-0001454223 00000 n
-0001458068 00000 n
-0001459222 00000 n
-0001459937 00000 n
-0001462176 00000 n
-0001463458 00000 n
-0001463635 00000 n
-0001463674 00000 n
-0001463713 00000 n
-0001463752 00000 n
-0001463791 00000 n
-0001463830 00000 n
-0001463869 00000 n
-0001463908 00000 n
-0001463947 00000 n
-0001463986 00000 n
-0001464025 00000 n
+0001452362 00000 n
+0001454114 00000 n
+0001457959 00000 n
+0001459113 00000 n
+0001459828 00000 n
+0001462067 00000 n
+0001463349 00000 n
+0001463526 00000 n
+0001463565 00000 n
+0001463604 00000 n
+0001463643 00000 n
+0001463682 00000 n
+0001463721 00000 n
+0001463760 00000 n
+0001463799 00000 n
+0001463838 00000 n
+0001463877 00000 n
+0001463916 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
@@ -2001,7 +1995,7 @@ trailer
  /Root 48 0 R
  /Size 81 >>
 startxref
-1464064
+1463955
 %%EOF
 %PDF-1.4
 %“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
@@ -2135,7 +2129,7 @@ endobj
  /Dest [ 27 0 R
  /XYZ
  40.01575
- 657.8394
+ 675.8394
  0 ]
  /Rect [ 80.01575
  718.7894
@@ -2152,7 +2146,7 @@ endobj
  /Dest [ 27 0 R
  /XYZ
  40.01575
- 657.8394
+ 675.8394
  0 ]
  /Rect [ 549.6998
  718.7894
@@ -2169,7 +2163,7 @@ endobj
  /Dest [ 27 0 R
  /XYZ
  40.01575
- 355.0394
+ 373.0394
  0 ]
  /Rect [ 80.01575
  700.7894
@@ -2186,7 +2180,7 @@ endobj
  /Dest [ 27 0 R
  /XYZ
  40.01575
- 355.0394
+ 373.0394
  0 ]
  /Rect [ 549.6998
  700.7894
@@ -2203,7 +2197,7 @@ endobj
  /Dest [ 27 0 R
  /XYZ
  40.01575
- 322.2394
+ 340.2394
  0 ]
  /Rect [ 100.0157
  682.7894
@@ -2220,7 +2214,7 @@ endobj
  /Dest [ 27 0 R
  /XYZ
  40.01575
- 322.2394
+ 340.2394
  0 ]
  /Rect [ 549.6998
  682.7894
@@ -2348,9 +2342,9 @@ endobj
  791.0394
  0 ]
  /Rect [ 145.0908
- 623.7894
+ 641.7894
  350.7222
- 635.7894 ]
+ 653.7894 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -2362,9 +2356,9 @@ endobj
  0
  0 ]
  /Rect [ 502.4698
- 599.7894
+ 617.7894
  553.2331
- 611.7894 ]
+ 629.7894 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -2376,9 +2370,9 @@ endobj
  0
  0 ]
  /Rect [ 40.01575
- 587.7894
+ 605.7894
  114.4957
- 599.7894 ]
+ 617.7894 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -2390,9 +2384,9 @@ endobj
  0
  0 ]
  /Rect [ 284.5551
- 290.5894
+ 308.5894
  416.8551
- 302.5894 ]
+ 320.5894 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -2770,7 +2764,7 @@ endobj
 << /Dest [ 27 0 R
  /XYZ
  40.01575
- 657.8394
+ 675.8394
  0 ]
  /Next 54 0 R
  /Parent 52 0 R
@@ -2781,7 +2775,7 @@ endobj
  /Dest [ 27 0 R
  /XYZ
  40.01575
- 355.0394
+ 373.0394
  0 ]
  /First 55 0 R
  /Last 56 0 R
@@ -2793,7 +2787,7 @@ endobj
 << /Dest [ 27 0 R
  /XYZ
  40.01575
- 322.2394
+ 340.2394
  0 ]
  /Next 56 0 R
  /Parent 54 0 R
@@ -3020,7 +3014,7 @@ Q
 endstream
 endobj
 62 0 obj
-<< /Length 5664 >>
+<< /Length 5555 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
@@ -3061,13 +3055,7 @@ BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (A continuaci\363n se presenta la lista de con
 Q
 Q
 q
-1 0 0 1 40.01575 673.8394 cm
-q
-BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (Contenidos:) Tj T* ET
-Q
-Q
-q
-1 0 0 1 40.01575 641.0394 cm
+1 0 0 1 40.01575 659.0394 cm
 q
 .8 .8 .8 RG
 .3 w
@@ -3079,30 +3067,30 @@ BT 1 0 0 1 0 2.8 Tm 16.8 TL /F3 14 Tf .12549 .262745 .360784 rg (Introducci\363n
 Q
 Q
 q
-1 0 0 1 40.01575 587.0394 cm
+1 0 0 1 40.01575 605.0394 cm
 q
 BT 1 0 0 1 0 38 Tm .006273 Tw 12 TL /F1 10 Tf 0 0 0 rg (El presente Manual del ) Tj /F4 10 Tf 0 0 .501961 rg (SISTEMA DE EVALUACI\323N DE DOCENTES ) Tj /F1 10 Tf 0 0 0 rg (\(SEDD\) tiene como principal objetivo servir de) Tj T* 0 Tw .525479 Tw (gu\355a y de consulta para las personas involucradas en el proceso de evaluaci\363n. En \351l se contemplan todos y cada) Tj T* 0 Tw 2.026711 Tw (uno de los aspectos que giran en torno al Sistema de Evaluaci\363n del Desempe\361o Docente en la ) Tj 0 0 .501961 rg (Universidad) Tj T* 0 Tw (Nacional de Loja) Tj 0 0 0 rg (.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 40.01575 473.0394 cm
+1 0 0 1 40.01575 491.0394 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 98 Tm /F1 10 Tf 12 TL 1.929653 Tw (El SEDD, constituye una herramienta de gran utilidad y riqueza tanto para la propia Instituci\363n como para las) Tj T* 0 Tw .260829 Tw (personas que participan del mismo, evaluadores y evaluados. La evaluaci\363n de un docente a trav\351s de un sistema,) Tj T* 0 Tw 1.519606 Tw (es una operaci\363n sistem\341tica, integrada en la actividad educativa con el objetivo de conseguir su mejoramiento) Tj T* 0 Tw .1973 Tw (continuo, mediante el conocimiento lo m\341s exacto posible del alumno, directivos y hasta el mismo docente hacia un) Tj T* 0 Tw 1.998273 Tw (docente en todos los aspectos de su personalidad, aportando una informaci\363n pertinente para que el proceso) Tj T* 0 Tw .890273 Tw (educativo logre sus objetivos fundamentales y confrontar los fijados con los realmente alcanzados. El car\341cter de) Tj T* 0 Tw 1.075881 Tw (perfeccionamiento surge cuando el docente es capaz de autoevaluar su desempe\361o, no teme a sus errores sino) Tj T* 0 Tw 1.173005 Tw (que aprende de ellos y toma m\341s conscientemente su trabajo y es as\355 como surge la incontenible necesidad de) Tj T* 0 Tw (auto perfeccionamiento.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 40.01575 455.0394 cm
+1 0 0 1 40.01575 473.0394 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (El sistema de Evaluaci\363n para docentes tiene como objetivo:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 40.01575 449.0394 cm
+1 0 0 1 40.01575 467.0394 cm
 Q
 q
-1 0 0 1 40.01575 401.0394 cm
+1 0 0 1 40.01575 419.0394 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 BT 1 0 0 1 0 2 Tm  T* ET
@@ -3164,17 +3152,17 @@ q
 Q
 Q
 q
-1 0 0 1 40.01575 401.0394 cm
+1 0 0 1 40.01575 419.0394 cm
 Q
 q
-1 0 0 1 40.01575 371.0394 cm
+1 0 0 1 40.01575 389.0394 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .390205 Tw (Por tal raz\363n, el objetivo principal de este manual, es guiar de manera clara, sencilla y precisa al usuario, para que) Tj T* 0 Tw (cumpla con su compromiso como es el de evaluar a los docentes.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 40.01575 338.2394 cm
+1 0 0 1 40.01575 356.2394 cm
 q
 .8 .8 .8 RG
 .3 w
@@ -3186,7 +3174,7 @@ BT 1 0 0 1 0 2.8 Tm 16.8 TL /F3 14 Tf .12549 .262745 .360784 rg (Sistema de Eval
 Q
 Q
 q
-1 0 0 1 40.01575 307.8394 cm
+1 0 0 1 40.01575 325.8394 cm
 q
 .8 .8 .8 RG
 .3 w
@@ -3198,13 +3186,13 @@ BT 1 0 0 1 0 2.4 Tm 14.4 TL /F3 12 Tf .12549 .262745 .360784 rg (Acceso al Siste
 Q
 Q
 q
-1 0 0 1 40.01575 277.8394 cm
+1 0 0 1 40.01575 295.8394 cm
 q
 BT 1 0 0 1 0 14 Tm 1.111175 Tw 12 TL /F1 10 Tf 0 0 0 rg (Para empezar la encuesta ingresamos a la direcci\363n ) Tj 0 0 .501961 rg (evaluaciondocente.unl.edu.ec) Tj 0 0 0 rg (, seguidamente se presenta la) Tj T* 0 Tw (pantalla de bienvenida al Sistema:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 40.01575 277.8394 cm
+1 0 0 1 40.01575 295.8394 cm
 Q
 q
 1 0 0 1 34.01575 807.2126 cm
@@ -3979,24 +3967,24 @@ xref
 0001444601 00000 n
 0001446615 00000 n
 0001446750 00000 n
-0001452471 00000 n
-0001454223 00000 n
-0001458068 00000 n
-0001459222 00000 n
-0001459937 00000 n
-0001462176 00000 n
-0001463458 00000 n
-0001463635 00000 n
-0001463674 00000 n
-0001463713 00000 n
-0001463752 00000 n
-0001463791 00000 n
-0001463830 00000 n
-0001463869 00000 n
-0001463908 00000 n
-0001463947 00000 n
-0001463986 00000 n
-0001464025 00000 n
+0001452362 00000 n
+0001454114 00000 n
+0001457959 00000 n
+0001459113 00000 n
+0001459828 00000 n
+0001462067 00000 n
+0001463349 00000 n
+0001463526 00000 n
+0001463565 00000 n
+0001463604 00000 n
+0001463643 00000 n
+0001463682 00000 n
+0001463721 00000 n
+0001463760 00000 n
+0001463799 00000 n
+0001463838 00000 n
+0001463877 00000 n
+0001463916 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
@@ -4006,5 +3994,5 @@ trailer
  /Root 48 0 R
  /Size 81 >>
 startxref
-1464064
+1463955
 %%EOF
