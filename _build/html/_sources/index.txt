@@ -12,12 +12,12 @@ Bienvenidos a la guia de referencia del Sistema de Evaluación de Docentes de la
 
 A continuación se presenta la lista de contenidos: 
 
-.. _contents-list
+.. _contents-list:
+
 **Contenidos:**
-===============
+
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    /library/intro.rst
    /library/StudentSurveys/developmentSurveys.rst

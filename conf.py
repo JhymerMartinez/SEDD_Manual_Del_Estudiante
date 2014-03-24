@@ -198,7 +198,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'SEDD_Manual_Del_Estudiante.tex', u'SEDD\\_Manual\\_Del\\_Estudiante Documentation',
+  ('index', u'SEDD_Manual_Del_Estudiante.tex', u'SEDD\\ Manual\\ Del\\ Estudiante Documentation',
    u'Ing. Milton Labanda, Jhymer Martínez', 'manual'),
 ]
 
@@ -221,7 +221,8 @@ latex_documents = [
 
 # If false, no module index is generated.
 #latex_domain_indices = True
-
+pdf_documents = [('index', u'SEDD_Manual_Del_Estudiante',
+u'Sphinx', u'Ing. Milton Labanda, Jhymer Martínez'),]
 
 # -- Options for manual page output ---------------------------------------
 
@@ -259,6 +260,5 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
-pdf_documents = [('index', u'SEDD_Manual_Del_Estudiante',
-u'Sphinx', u'Ing. Milton Labanda, Jhymer Martínez'),]
+
 

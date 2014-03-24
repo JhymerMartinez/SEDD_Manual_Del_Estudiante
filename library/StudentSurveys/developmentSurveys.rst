@@ -108,7 +108,7 @@ Una vez terminada, tenemos la opción de guardar o cancelar la encuesta:
 
 .. _developmentSurveys-img-developmentSurveys_save_cancel_option:
 
-.. figure:: ../../_static/studentSurveys/developmentSurveys_save_cancel_option.jpg 
+.. figure:: ../../_static/studentSurveys/developmentSurveys_save_cancel_option.png
     :align: center
     :alt: Guardar o Cancelar Encuesta
     :figclass: align-center
@@ -124,6 +124,7 @@ Una vez seleccionada la opción de guardar, se presenta un mensaje de confirmaci
     :align: center
     :alt: Mensaje de Confirmación
     :figclass: align-center
+    :scale: 80 
 
     **Mensaje de Confirmación**
 
