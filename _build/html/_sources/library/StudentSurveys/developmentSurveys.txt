@@ -96,19 +96,41 @@ A continuación se presenta la estructura inicial de la encuesta:
 
 .. _developmentSurveys-img-developmentSurveys_complete:
 
-.. figure:: ../../_static/studentSurveys/developmentSurveys_complete.jpg 
+.. figure:: ../../_static/studentSurveys/developmentSurveys_complete_1.jpg 
     :align: center
     :alt: Estructura de la Encuesta
     :figclass: align-center
 
-    **Estructura de la Encuesta**
+    **Estructura de la Encuesta parte 1**
+
+
+.. _developmentSurveys-img-developmentSurveys_complete_2:
+
+.. figure:: ../../_static/studentSurveys/developmentSurveys_complete_2.jpg 
+    :align: center
+    :alt: Estructura de la Encuesta
+    :figclass: align-center
+
+    **Estructura de la Encuesta parte 2**
+
+
+.. _developmentSurveys-img-developmentSurveys_complete_3:
+
+.. figure:: ../../_static/studentSurveys/developmentSurveys_complete_3.jpg 
+    :align: center
+    :alt: Estructura de la Encuesta
+    :figclass: align-center
+
+    **Estructura de la Encuesta parte 3**
+
+
 
 
 Una vez terminada, tenemos la opción de guardar o cancelar la encuesta:
 
 .. _developmentSurveys-img-developmentSurveys_save_cancel_option:
 
-.. figure:: ../../_static/studentSurveys/developmentSurveys_save_cancel_option.png
+.. figure:: ../../_static/studentSurveys/developmentSurveys_save_cancel_option.jpg
     :align: center
     :alt: Guardar o Cancelar Encuesta
     :figclass: align-center

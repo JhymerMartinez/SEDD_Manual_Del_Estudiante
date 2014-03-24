@@ -18,6 +18,7 @@ A continuación se presenta la lista de contenidos:
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
 
    /library/intro.rst
    /library/StudentSurveys/developmentSurveys.rst
